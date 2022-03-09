@@ -1,0 +1,41 @@
+.breadscrumbs {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 4px 0;
+    list-style: none;
+}
+
+.breadscrumbs a {
+    color: #9B9B9B;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+}
+
+.breadscrumbs li {    
+    display: flex;
+    align-items: center;
+}
+
+.breadscrumbs li:not(:first-child)::before {
+    display: block;
+    content: "";
+    height: 6px;
+    width: 6px;
+    border-color: #9B9B9B;
+    border-style: solid;
+    border-width: 1px 1px 0 0;
+    transform: rotate(45deg);
+    margin: 0 10px;
+}
+
+.catalog-content h1 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    color: #12335F;
+    margin: 24px 0 32px;
+}

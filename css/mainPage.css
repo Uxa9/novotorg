@@ -1,0 +1,169 @@
+.main-page-banner > img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 80px;
+}
+
+.main-page-content section header h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #12335F;
+}
+
+.main-page-cakes-list {
+    margin-top: 33px;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(auto-fill, 300px);
+    row-gap: 20px;
+}
+
+.main-page-cakes-assembly {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 140px 0 174px;
+}
+
+.main-page-cakes-assembly header {
+    max-width: 350px;
+    padding-right: 10%;
+}
+
+.main-page-cakes-assembly h2 {
+    margin: 0;
+}
+
+.main-page-cakes-assembly h4 {
+    color: #747474;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    margin: 10px 0 50px;
+}
+
+.main-page-cakes-assembly-button { 
+    padding: 16px 28px;
+}
+
+.main-page-cakes-assembly-image {
+    flex-grow: 1;
+    min-width: 400px;
+    max-width: 983px;
+    min-height: 300px;
+    max-height: 1314px;
+    padding: 40px 0;
+    border-radius: 5px;
+    background-image: url(../images/cakeAssembly.png);
+    background-position: center;
+    background-size: cover;
+    background-color: red;
+}
+
+.main-page-cakes-about-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cakes-about-card {
+    width: 358px;
+    padding: 36px;
+    
+    transition: all .5s;
+}
+
+.cakes-about-card h3 {
+    color: #12335F;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 12px;
+}
+
+.cakes-about-card p {
+    color: #747474;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0;
+}
+
+.cakes-about-card:hover {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 30px 1px rgba(43, 63, 101, 0.08);
+    border-radius: 10px;
+}
+
+.main-page-promos {
+    display: flex;
+    margin-top: 200px;
+    justify-content: space-between;
+}
+
+.promo {
+    border-radius: 10px;
+    max-width: 670px;
+}
+
+.promo img {
+    max-width: 100%;
+}
+
+.main-page-shops > header {
+    margin-top: 140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-page-shops > header a {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.shops-cards {
+    margin-top: 33px;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(auto-fill, 300px);
+    row-gap: 20px;
+}
+
+.shop-card {
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 4px 30px 1px rgba(43, 63, 101, 0.08);
+}
+
+.shops-card-image img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.shop-card header {
+    font-weight: 700;
+    font-size: 20px;
+    color: #12335F;
+    margin-top: 24px;
+    margin-left: 16px;
+}
+
+.shop-card .adress {
+    font-size: 16px;
+    color: #747474;
+    margin-top: 10px;
+    margin-left: 16px;
+}
+
+.shop-card footer {
+    font-weight: 600;
+    font-size: 16px;
+    color: #12335F;
+    margin-bottom: 16px;
+    margin-left: 16px;
+}
+
+.splide__slide img {
+    width: 100%;
+    height: auto;
+}

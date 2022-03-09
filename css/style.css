@@ -1,0 +1,59 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #FEFEFE;
+}
+
+.wrapper {
+    min-height: 100vh;
+    width: 1440px;
+    background: #F8F9FC;
+}
+
+.wrapper > main {
+    padding: 32px 40px;
+}
+
+ul {
+    list-style: none;
+}
+
+.button {
+    color: white;
+    background-color: #12335F;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.selector {
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    color: #9B9B9B;
+    font-size: 16px;
+}
+
+.selector li {
+    padding: 10px 16px;
+    cursor: pointer;
+
+    transition: background-color .5s, color .5s;
+}
+
+.selector li:hover {
+    color: #12335F;
+}
+
+.selector-selected {
+    background-color: #12335F;
+    color: white;
+    border-radius: 32px;
+}
+
+.selector-selected:hover {
+    color: white !important;
+}

@@ -1,0 +1,39 @@
+.page-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 40px;
+    height: 76px;
+    box-shadow: 0px 4px 30px 1px rgba(43, 63, 101, 0.08);
+    position: sticky;
+    top: 0px;
+    background-color: #F8F9FC;
+    z-index: 99999;
+}
+
+.header-menu, .header-phone-cart-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+}
+
+.logo-link {
+    width: 115px;
+    height: 75px;
+}
+
+.header-links {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.header-link {
+    min-width: max-content;
+    margin: 0 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #12335F;
+}
