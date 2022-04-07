@@ -1,0 +1,312 @@
+.card-info-images {
+    display: flex;
+}
+
+.card-info {
+    display: flex;
+    margin-top: 42px;
+}
+
+#thumbnail-slider {
+    margin: 25px 0;
+}
+
+#main-slider {
+    margin-left: 20px;
+}
+
+.splide__arrow--prev {
+    top: -30px !important;
+    transform: translate(-50%) scaleY(0.8) !important;
+}
+
+.splide__arrow--next {
+    bottom: -30px !important;
+    transform: translate(-50%) scaleY(0.8) !important;
+}
+
+.splide__arrow--prev svg,
+.splide__arrow--next svg {
+    fill: #9B9B9B !important;
+}
+
+.splide__slide {
+    border-radius: 10px;
+}
+
+.card-info-text header h2 {
+    margin-top: 0;
+}
+
+.card-info-text {
+    margin-left: 48px;
+    font-weight: 500;
+}
+
+.rating-and-info {
+    display: flex;
+}
+
+.fa-star {
+    color: #E3E3E3;
+}
+
+.rating .selected,
+.review-rating .selected {
+    color: #ffd54c !important;
+}
+
+.rating .starring,
+.review-rating .starring {
+    transition: color .5s;
+    color: #F4C634;
+}
+
+.info {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 120%;
+    margin-left: 12px;
+
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #9B9B9B;
+}
+
+.description {
+    line-height: 140%;
+}
+
+.cake-stats > div {
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.buy-button {
+    padding: 12px 54px;
+    margin-right: 20px;
+}
+
+.card-reviews {
+    max-width: 677px;
+}
+
+.card-reviews h3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 110%;
+    color: #12335F;
+}
+
+.card-reviews textarea {
+    width: 100%;
+    height: 174px;
+    border: 1px solid #E3E3E3;
+    border-radius: 10px;
+    padding: 22px 24px;
+    box-sizing: border-box;
+    resize: none;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #2C2C2C;
+    transition: border-color .5s;
+}
+
+.card-reviews textarea::placeholder {
+    color: #9B9B9B;
+}
+
+.card-reviews textarea:hover,
+.card-reviews textarea:focus,
+.card-reviews textarea:active {
+    border-color: #12335F;
+    outline: none;
+}
+
+.review-field {
+    position: relative;
+    width: 100%;
+    height: 214px;
+}
+
+.buttons-wrapper {
+    display: flex;
+    
+    position: absolute;
+    right: 12px;
+    bottom: 52px;
+}
+
+.buttons-wrapper button {
+    background: none;
+    border: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #9B9B9B;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.buttons-wrapper input[type=submit] {
+    padding: 13px 28px;
+    border: none;
+    cursor: pointer;
+}
+
+.review-stars {
+    display: flex;
+    align-items: center;
+}
+
+.review-stars p {
+    color: #2C2C2C;
+    margin-right: 14px;
+}
+
+.review-stars input[type=number] {
+    display: none;
+}
+
+.amount-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    background: #EDF1F7;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 44px;
+    cursor: pointer;
+}
+
+.amount input[type=number] {
+    width: 44px;
+    height: 44px;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #12335F;
+    text-align: center;
+}
+
+.amount input[type=number]::-webkit-outer-spin-button,
+.amount input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.amount {
+    display: flex;
+    align-items: center;
+}
+
+.buy-and-amount {
+    display: flex;
+    align-items: center;
+}
+
+.minus::after {
+    display: block;
+    content: '';
+    width: 16px;
+    height: 1px;
+    background-color: #12335F;
+}
+
+.plus::after,
+.plus::before {
+    display: block;
+    content: '';
+    width: 16px;
+    height: 1px;
+    background-color: #12335F;
+}
+
+.plus::before {
+    transform: rotate(90deg);
+    position: absolute;
+}
+
+.users-reviews {
+    margin: 81px 0 100px;
+    max-width: 677px;
+}
+
+.review {
+    width: 100%;
+}
+
+.review-rating {
+    display: flex;
+}
+
+.review-date {
+    margin-right: 16px;
+    font-size: 16px;
+    line-height: 120%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #9B9B9B;
+}
+
+.review header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.user-name,
+.response-author {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 130%;
+    color: #12335F;
+}
+
+.review-text,
+.review-response {
+    font-size: 16px;
+    line-height: 140%;
+    color: #2C2C2C;
+}
+
+.review-response {
+    padding-left: 12px;
+    margin-left: 40px;
+    border-left: solid 2px #E3E3E3;
+}
+
+.users-reviews article:not(:first-child) {
+    margin-top: 50px;
+}
+
+.load-reviews {
+    padding: 16px 76px;
+    max-width: 280px;
+    background-color: #EDF1F7;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #12335F;
+    border-radius: 5px;
+    border: none;
+    margin-top: 60px;
+    align-self: center;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.users-reviews {
+    display: flex;
+    flex-direction: column;
+}

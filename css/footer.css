@@ -50,11 +50,31 @@
 
 .page-footer-wrapper {
     display: flex;
+    position: relative;
     justify-content: space-between;
     align-items: flex-start;
     background: #F0F4FC;
     padding: 36px 40px 22px;
     height: 300px;
+}
+
+.page-footer-wrapper::before,
+.page-footer-wrapper::after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    background-color: #F0F4FC;
+    width: calc((100vw - 1440px) /2);
+    height: 100%;
+}
+
+.page-footer-wrapper::before {
+    left: calc((1440px - 100vw) /2);
+}
+
+.page-footer-wrapper::after {
+    right: calc((1440px - 100vw) /2);
 }
 
 .footer-links-wrapper {

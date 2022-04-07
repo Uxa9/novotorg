@@ -16,36 +16,92 @@
 <body>
     <div class="wrapper">
         <header class="page-header-wrapper">
-            <div class="header-menu">
+            <div class="header-desktop-menu">
+                <div class="header-menu">
+                    <a class="logo-link" href="">
+                        <img src="images/logo.png" alt="Логотип">
+                    </a>
+                    <ul class="header-links">
+                        <li class="header-link">
+                            <a href="">Каталог</a>
+                        </li>
+                        <li class="header-link">
+                            <a href="">Торты на заказ</a>
+                        </li>
+                        <li class="header-link">
+                            <a href="">Доставка и оплата</a>
+                        </li>
+                        <li class="header-link">
+                            <a href="">О нас</a>
+                        </li>
+                        <li class="header-link">
+                            <a href="">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header-phone-cart-search">
+                    <a href="tel:+79098598050">+7 (909) 859-80-50</a>
+                    <a href="">
+                        <img src="images/cart.svg" alt="Корзина">
+                    </a>
+                    <form action=""></form>
+                    <input type="text" name="" id="searchField">      
+                    <a href="">
+                        <img src="images/search.svg" alt="Поиск">
+                    </a>    
+                </div>
+            </div>
+            <div class="header-mobile-menu">
                 <a class="logo-link" href="">
                     <img src="images/logo.png" alt="Логотип">
                 </a>
-                <ul class="header-links">
-                    <li class="header-link">
-                        <a href="">Каталог</a>
-                    </li>
-                    <li class="header-link">
-                        <a href="">Торты на заказ</a>
-                    </li>
-                    <li class="header-link">
-                        <a href="">Доставка и оплата</a>
-                    </li>
-                    <li class="header-link">
-                        <a href="">О нас</a>
-                    </li>
-                    <li class="header-link">
-                        <a href="">Контакты</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="header-phone-cart-search">
-                <a href="tel:+79098598050">+7 (909) 859-80-50</a>
-                <a href="">
-                    <img src="images/cart.svg" alt="Корзина">
-                </a>            
-                <a href="">
-                    <img src="images/search.svg" alt="Поиск">
-                </a>    
+                <div class="mobile-icons">
+                    <a href="">
+                        <img src="images/search.svg" alt="Поиск">
+                    </a>
+                    <a href="">
+                        <img src="images/cartMobile.svg" alt="Корзина">
+                    </a>
+                    <input type="checkbox" name="" id="showMobileMenu">
+                    <div class="hamburger-lines" id="hamburgerMenu">
+                        <div class="line line1"></div>
+                        <div class="line line2"></div>
+                        <div class="line line3"></div>
+                    </div>
+                </div>
+                <div class="mobile-menu">
+                    <ul class="mobile-header-links">
+                        <li class="header-link">
+                            <a href="">Каталог</a>
+                        </li>
+                        <li class="header-link">
+                            <a href="">Торты на заказ</a>
+                        </li>
+                        <li class="header-link">
+                            <a href="">Доставка и оплата</a>
+                        </li>
+                        <li class="header-link">
+                            <a href="">О нас</a>
+                        </li>
+                        <li class="header-link">
+                            <a href="">Контакты</a>
+                        </li>
+                    </ul>
+                    <div class="mobile-menu-footer">
+                        <p>
+                            680009, г. Хабаровск, ул. Почтовая, 51
+                        </p>
+                        <a href="tel:+79098598050">+7 (909) 859-80-50</a>
+                        <div class="socials">
+                            <a href="">
+                                <img src="images/telegramMobile.svg" alt="">
+                            </a>
+                            <a href="">
+                                <img src="images/vkMobile.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
         <main class="main-page-content">
@@ -190,29 +246,33 @@
                             </h3>
                         </header>
                         <p>
-                            Для приготовления наших тортов мы всегда используем самые свежие ингредиенты он наших проверенных поставщиков
+                            Мы заботимся о Вашем здоровье, 
+                            поэтому используем натуральные 
+                            продукты для наших тортов
                         </p>
                     </article>
                     <article class="cakes-about-card">
                         <header>
                             <img class="cakes-about-card-icon" src="images/cakePiece.svg" alt="иконка">
                             <h3>
-                                Готовим десерты любой сложности
+                                Широкий ассортимент
                             </h3>
                         </header>
                         <p>
-                            Для приготовления наших тортов мы всегда используем самые свежие ингредиенты он наших проверенных поставщиков
+                            Для Вас всегда в наличии более 50 видов готовых тортов, 
+                            а также пирожные, выпечка   и печенье
                         </p>
                     </article>
                     <article class="cakes-about-card">
                         <header>
                             <img class="cakes-about-card-icon" src="images/truck.svg" alt="иконка">
                             <h3>
-                                Привезем заказ в любую точку города
+                                Быстрая доставка
                             </h3>
                         </header>
                         <p>
-                            Для приготовления наших тортов мы всегда используем самые свежие ингредиенты он наших проверенных поставщиков
+                            Чтобы сохранить свежесь и вкус тортов на высоте, 
+                            мы осуществляем быструю доставку по городу
                         </p>
                     </article>
                 </div>
@@ -240,7 +300,6 @@
                     </a>
                 </header>
                 <ul class="selector shops-cities-list-selector">
-                    <!-- чи как вообще -->
                     <li class="selector-selected">г. Хабаровск</li>
                     <li>г. Комсомольск-на-Амуре</li>
                     <li>с. Некрасовка</li>
@@ -365,8 +424,11 @@
                         <div class="footer-contact">
                             <p>Мы в соцсетях</p>
                             <a href="">
-                                <img src="images/instagram.svg" alt="инстаграм">
-                            </a>                            
+                                <img src="images/vk.svg" alt="вконтакте">
+                            </a>  
+                            <a href="">
+                                <img src="images/telegram.svg" alt="телеграм">
+                            </a>                          
                         </div>
                     </div>
                     <div class="footer-contacts-col">
@@ -389,7 +451,36 @@
 
     <script src="js/splide/splide.min.js"></script>
     <script>
-        new Splide( '#image-slider' ).mount();
+        var splide = new Splide( '#image-slider', {
+            type     : 'loop',
+            autoplay : true,
+
+        });
+
+        splide.mount();
+    </script>
+    <script>
+        //open mobile menu
+        let burgerMenu = document.getElementById('hamburgerMenu');
+        let isMenuOpen = document.getElementById('showMobileMenu');
+        let mobileMenu = document.querySelector('.mobile-menu');
+        let body       = document.querySelector('.wrapper');
+
+        burgerMenu.onclick = () => {
+            if ( !isMenuOpen.checked ) {
+                burgerMenu.classList.add('opened');
+                mobileMenu.classList.add('show');
+                body.classList.add('fix');
+
+                isMenuOpen.checked = true;
+            } else {
+                burgerMenu.classList.remove('opened');
+                mobileMenu.classList.remove('show');
+                body.classList.remove('fix');
+
+                isMenuOpen.checked = false;
+            }
+        }
     </script>
 </body>
 </html>
