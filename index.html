@@ -44,21 +44,25 @@
                     <a href="">
                         <img src="images/cart.svg" alt="Корзина">
                     </a>
-                    <form action=""></form>
-                    <input type="text" name="" id="searchField">      
-                    <a href="">
+                    <form class="searchFieldWrapper" action="">
+                        <div class="clearSearch" id="clearSearch"></div>
+                        <input type="text" class="searchField" name="" placeholder="Поиск" id="searchField">      
+                    </form>
+                    <input type="checkbox" id="isSearchOpen">
+                    <div id="searchButton">
                         <img src="images/search.svg" alt="Поиск">
-                    </a>    
+                    </div>    
                 </div>
             </div>
             <div class="header-mobile-menu">
                 <a class="logo-link" href="">
                     <img src="images/logo.png" alt="Логотип">
                 </a>
-                <div class="mobile-icons">
-                    <a href="">
+                <div class="mobile-icons">                    
+                    <div id="searchButtonMobile">
                         <img src="images/search.svg" alt="Поиск">
-                    </a>
+                    </div>
+                    <input type="checkbox" name="" id="showMobileSearch">
                     <a href="">
                         <img src="images/cartMobile.svg" alt="Корзина">
                     </a>
@@ -68,6 +72,16 @@
                         <div class="line line2"></div>
                         <div class="line line3"></div>
                     </div>
+                </div>
+                <div class="search-menu">
+                    <div class="search-menu-header">
+                        <form class="searchFieldWrapper" action="">
+                            <div class="clearSearch" id="clearSearchMobile"></div>
+                            <input type="text" class="searchField" name="" placeholder="Поиск" id="searchFieldMobile">      
+                        </form>
+                        <span id="cancelMobileSearch">Отмена</span>
+                    </div>
+                    <button class="button">Найти</button>
                 </div>
                 <div class="mobile-menu">
                     <ul class="mobile-header-links">
@@ -480,6 +494,71 @@
 
                 isMenuOpen.checked = false;
             }
+        }
+
+        //open search menu
+        let searchButton = document.getElementById('searchButton');
+        let headerLinks  = document.querySelector('.header-menu')
+                                   .querySelector('.header-links');
+        let links        = document.querySelector('.header-phone-cart-search')
+                                   .querySelectorAll('a');
+        let isSearchOpen = document.getElementById('isSearchOpen');
+        let searchWrapper = document.querySelector('.searchFieldWrapper');
+        let linksWrapper = document.querySelector('.header-phone-cart-search');
+
+        searchButton.onclick = () => {
+            if ( !isSearchOpen.checked ) {
+                headerLinks.style.display = 'none';
+                links.forEach(link => link.style.display = 'none');
+                searchWrapper.style.display = 'block';
+                linksWrapper.style.flexGrow = 1;
+
+                isSearchOpen.checked = true;
+            } else {
+                headerLinks.style.display = 'flex';
+                links.forEach(link => link.style.display = 'inline');
+                searchWrapper.style.display = 'none';
+                linksWrapper.style.flexGrow = 0;
+
+                isSearchOpen.checked = false;
+            }
+        }
+
+        //clear search
+        let clearSearch  = document.getElementById('clearSearch');
+
+        clearSearch.onclick = () => {
+            searchWrapper.querySelector('#searchField').value = '';
+        }
+
+        //same shit for mobile
+        let searchButtonMobile = document.getElementById('searchButtonMobile');
+        let isMobileSearchOpen = document.getElementById('showMobileSearch');
+        let mobileSearch = document.querySelector('.search-menu');
+
+        searchButtonMobile.onclick = () => {
+            if ( !isMenuOpen.checked ) {
+                mobileSearch.style.display = 'flex';
+                body.classList.add('fix');
+
+                isMobileSearchOpen.checked = true;
+            }
+        }
+
+        //clear search
+        let clearSearchMobile = document.getElementById('clearSearchMobile');
+
+        clearSearchMobile.onclick = () => {
+            searchWrapper.querySelector('#searchFieldMobile').value = '';
+        }
+
+        let cancelMobileSearch = document.getElementById('cancelMobileSearch');
+
+        cancelMobileSearch.onclick = () => {
+            mobileSearch.style.display = 'none';
+            body.classList.remove('fix');
+
+            isMobileSearchOpen.checked = false;
         }
     </script>
 </body>
