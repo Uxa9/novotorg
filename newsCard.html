@@ -8,434 +8,169 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/newsCard.css">
+    <link rel="stylesheet" href="css/news.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/cakeCard.css">
     <link rel="stylesheet" href="css/splide/splide.min.css">
     <script src="https://kit.fontawesome.com/86224789ba.js" crossorigin="anonymous"></script>
-    <style>
-        .rating {
-            content: "\f089";
-        }
-    </style>
 </head>
 <body>
     <div class="wrapper">
-        <header class="page-header-wrapper">
-            <div class="header-menu">
-                <a class="logo-link" href="">
-                    <img src="images/logo.png" alt="Логотип">
-                </a>
-                <ul class="header-links">
-                    <li class="header-link">
-                        <a href="">Каталог</a>
-                    </li>
-                    <li class="header-link">
-                        <a href="">Торты на заказ</a>
-                    </li>
-                    <li class="header-link">
-                        <a href="">Доставка и оплата</a>
-                    </li>
-                    <li class="header-link">
-                        <a href="">О нас</a>
-                    </li>
-                    <li class="header-link">
-                        <a href="">Контакты</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="header-phone-cart-search">
-                <a href="tel:+79098598050">+7 (909) 859-80-50</a>
-                <a href="">
-                    <img src="images/cart.svg" alt="Корзина">
-                </a>            
-                <a href="">
-                    <img src="images/search.svg" alt="Поиск">
-                </a>    
-            </div>
-        </header>
+        <!-- header -->
         <main class="card-content">
             <ol class="breadscrumbs">
                 <li>
                     <a href="">Главная</a>
                 </li>
                 <li>
-                    <a href="">Каталог</a>
+                    <a href="">О нас</a>
                 </li>
                 <li>
-                    <a href="">Торты</a>
+                    <a href="">Новости</a>
                 </li>
                 <li>
                     <a href="">Фруктовые</a>
                 </li>
-                <li class="breadscrumbs-selected">
-                    <a href="">Банановое румбо</a>
+                <li>
+                    <a href="">«Кондитерская Академия» открыта!</a>
                 </li>
             </ol>
-            <div class="card-info">
-                <div class="card-info-images">
-                    <div id="thumbnail-slider" class="splide">
-                        <div class="splide__track">
-                            <ul class="splide__list">
-                                <li class="splide__slide">
-                                    <img src="images/cakeExampleBig.png">
-                                </li>
-                                <li class="splide__slide">
-                                    <img src="images/cakeExample2.png">
-                                </li>
-                                <li class="splide__slide">
-                                    <img src="images/cakeExampleBig.png">
-                                </li>
-                                <li class="splide__slide">
-                                    <img src="images/cakeExample2.png">
-                                </li>
-                                <li class="splide__slide">
-                                    <img src="images/cakeExampleBig.png">
-                                </li>
-                                <li class="splide__slide">
-                                    <img src="images/cakeExample2.png">
-                                </li>
-                                <li class="splide__slide">
-                                    <img src="images/cakeExampleBig.png">
-                                </li>
-                                <li class="splide__slide">
-                                    <img src="images/cakeExample2.png">
-                                </li>
-                                <li class="splide__slide">
-                                    <img src="images/cakeExampleBig.png">
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- смотрэ, тут картинки должны дублироваться -->
-                    <div id="main-slider" class="splide">
-                        <div class="splide__track">
-                            <ul class="splide__list">
-                                <li class="splide__slide">
-                                    <img src="images/cakeExampleBig.png">
-                                </li>
-                                <li class="splide__slide">
-                                    <img src="images/cakeExample2.png">
-                                </li>
-                                <li class="splide__slide">
-                                    <img src="images/cakeExampleBig.png">
-                                </li>
-                                <li class="splide__slide">
-                                    <img src="images/cakeExample2.png">
-                                </li>
-                                <li class="splide__slide">
-                                    <img src="images/cakeExampleBig.png">
-                                </li>
-                                <li class="splide__slide">
-                                    <img src="images/cakeExample2.png">
-                                </li>
-                                <li class="splide__slide">
-                                    <img src="images/cakeExampleBig.png">
-                                </li>
-                                <li class="splide__slide">
-                                    <img src="images/cakeExample2.png">
-                                </li>
-                                <li class="splide__slide">
-                                    <img src="images/cakeExampleBig.png">
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <article class="card-info-text">
-                    <header>
-                        <h2>Торт «Банановое румбо»</h2>
-                        <div class="rating-and-info">
-                            <div class="rating">
-                                <i class="fa-solid fa-star selected"></i>
-                                <i class="fa-solid fa-star selected"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <div class="info">
-                                <span>
-                                    4 отзыва <!-- -вов -->
-                                </span>
-                            </div>
-                        </div>
-                    </header>
-                    <main>
-                        <p class="description">
-                            Желтый сдобный бисквит с банановым сиропом и 
-                            сметанным суфле. Декорирован гляссажем, 
-                            кремом из сливок и шоколадной глазурью
+            <section class="news-info">
+                <header class="news-head-image">
+                    <img src="images/newsCardExample.png" alt="">
+                </header>
+                <article class="news-description">
+                    <header class="news=header">
+                        <p class="date">
+                            01.12.2021
                         </p>
-                        <div class="cake-stats">
-                            <div class="weight">
-                                <span>Вес:&nbsp</span>
-                                <span>900 г</span>
-                            </div>
-                            <div class="expire-date">
-                                <span>Срок годности:&nbsp</span>
-                                <span>228 часов</span>
-                            </div>
-                            <div class="temp">
-                                <span>Температура хранения:&nbsp</span>
-                                <span>от +2°С до +6°С</span>
-                            </div>
-                        </div>
-                        <p class="price">
-                            582 ₽
-                        </p>
-                        <form action="" class="buy-and-amount">
-                            <input class="button buy-button" type="submit" value="Купить" >
-                            <div class="amount">
-                                <div class="amount-button minus" id="decreasePieces"></div>
-                                <input type="number" id="piecesAmount" value="1" disabled/>
-                                <div class="amount-button plus" id="increasePieces"></div>
-                            </div>
-                        </form>
-                    </main>
-                </article>
-            </div>
-            <div class="card-reviews">
-                <h3>Отзывы</h3>
-                <form action="" class="review-field">
-                    <textarea name="" id="userReview" placeholder="Ваш отзыв"></textarea>
-                    <div class="buttons-wrapper">
-                        <button id="clearButton">
-                            Очистить
-                        </button>
-                        <input class="button" type="submit">
-                    </div>
-                    <div class="review-stars">
-                        <p>Оцените товар</p>
-                        <div class="review-rating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <input type="number" id="userRating">
-                    </div>
-                </form>
-            </div>
-            <div class="users-reviews">
-                <article class="review">
-                    <header>
-                        <span class="user-name">
-                            Наталья Иванова
-                        </span>
-                        <div class="review-rating">
-                            <span class="review-date">28 мая 2021</span>
-                            <div class="rating">
-                                <i class="fa-solid fa-star selected"></i>
-                                <i class="fa-solid fa-star selected"></i>
-                                <i class="fa-solid fa-star selected"></i>
-                                <i class="fa-solid fa-star selected"></i>
-                                <i class="fa-solid fa-star selected"></i>
-                            </div>
-                        </div>
+                        <h1>
+                            «Кондитерская Академия» открыта!
+                        </h1>
                     </header>
                     <main>
-                        <div class="review-text">
+                        <div class="news-text">
+                            <!-- вставьте вашу пожилую разметку -->
                             <p>
-                                Желтый сдобный бисквит с банановым сиропом и сметанным суфле. 
-                                Декорирован гляссажем, кремом из сливок и шоколадной глазурью 
-                                сдобный бисквит с банановым сиропом и сметанным суфле. 
-                                Декорирован гляссажем, кремом из сливок и шоколадной глазурью.
+                                В Хабаровске открылась «Кондитерская Академия» компании Новоторг.    
+                                Это не обычный магазин. Это бутик, пекарня и кондитерская в одном 
+                                формате. Здесь вас ждет вкуснейшая свежая выпечка, которая готовиться 
+                                на ваших глазах. Здесь же можно присесть за столик и выпить чашечку 
+                                ароматного кофе и полистать каталог заказных тортов. Понравившийся 
+                                торт можно тут же заказать или оформить заказ по Вашему 
+                                индивидуальному  дизайну
+                            </p>
+                            <p>
+                                Открытие магазина состоялось 18 ноября ровно в полдень. 
+                                На открытии «Академия» встречала гостей дегустацией новых тортов, 
+                                шоу с приготовлением мороженого из хлеба , так же мастер-классы  от 
+                                кондитеров и викторины с розыгрышем тортов.
+                            </p>
+                            <p>
+                                Помимо этого в «Кондитерской Академии» вскоре начнутся экскурсии на 
+                                кондитерское производство, где дети смогут посмотреть за творением 
+                                наших кодитеров и попробуют самостоятельно сделать свое пирожное или 
+                                тортик.
+                            </p>
+                            <p>
+                                «Кондитерская Академия» Новоторга  открыта для Вас на ул. 
+                                Почтовой, 51. Там же, где находится наш производственный цех.  
+                                Отныне здесь Вы сможете купить все самое свежее и вкусное по 
+                                ценам производителя, которые ниже, чем в других магазинах города.
                             </p>
                         </div>
-                        <div class="review-response">
-                            <span class="response-author">
-                                Администрация
-                            </span>
-                            <p>
-                                Благодарим за отзыв!
-                            </p>
+                        <div class="news-photo-gallery">
+                            <!-- вставьте ваши пожилые картинки -->
                         </div>
                     </main>
                 </article>
-                <article class="review">
-                    <header>
-                        <span class="user-name">
-                            Жмых Пожилой
-                        </span>
-                        <div class="review-rating">
-                            <span class="review-date">22 августа 1488</span>
-                            <div class="rating">
-                                <i class="fa-solid fa-star selected"></i>
-                                <i class="fa-solid fa-star selected"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                        </div>
-                    </header>
-                    <main>
-                        <div class="review-text">
-                            <p>
-                                Торт ваш пооооолная хуйня!
-                            </p>
-                        </div>
-                        <div class="review-response">
-                            <span class="response-author">
-                                Пенис Детров
-                            </span>
-                            <p>
-                                Дед, ты заебал уже всех
-                            </p>
-                        </div>
-                    </main>
-                </article>
-                <button class="load-reviews">
-                    Больше отзывов
-                </button>
-            </div>
+            </section>
             <section class="recommended-cakes">
                 <header>
                     <h3>
-                        Рекомендуем попробовать
+                        Другие новости
                     </h3>
                 </header>
-                <div class="recommended-cakes-list">
-                    <article class="cake-card">
-                        <div class="cake-card-image">
-                            <img src="images/cakeExample.png" alt="торт">
+                <section class="news-feed">
+                    <article class="news">
+                        <div class="news-image">
+                            <img src="images/newsExample.png" alt="">
                         </div>
-                        <header class="cake-card-name">
-                            Торт «Банановое румбо»
+                        <header class="news-header">
+                            Приняли участие в XII Международной Конференции и были награждены
                         </header>
-                        <p class="cake-card-price">
-                            582 ₽
+                        <p class="news-brief">
+                            Состоялась XII Международная Конференция 
+                            «Торты. Вафли. Печенье. Пряники-2020»
                         </p>
-                        <footer class="cake-card-weight">
-                            228 г
+                        <footer class="news-date">
+                            01.12.2021
                         </footer>
-                        <a href="" class="button cake-card-buy-button">
-                            Купить
-                        </a>
                     </article>
-                    <article class="cake-card">
-                        <div class="cake-card-image">
-                            <img src="images/cakeExample.png" alt="торт">
+                    <article class="news">
+                        <div class="news-image">
+                            <img src="images/newsExample.png" alt="">
                         </div>
-                        <header class="cake-card-name">
-                            Торт «Банановое румбо»
+                        <header class="news-header">
+                            Приняли участие в XII Международной Конференции и были награждены
                         </header>
-                        <p class="cake-card-price">
-                            582 ₽
+                        <p class="news-brief">
+                            Состоялась XII Международная Конференция 
+                            «Торты. Вафли. Печенье. Пряники-2020»
                         </p>
-                        <footer class="cake-card-weight">
-                            228 г
+                        <footer class="news-date">
+                            01.12.2021
                         </footer>
-                        <a href="" class="button cake-card-buy-button">
-                            Купить
-                        </a>
                     </article>
-                    <article class="cake-card">
-                        <div class="cake-card-image">
-                            <img src="images/cakeExample.png" alt="торт">
+                    <article class="news">
+                        <div class="news-image">
+                            <img src="images/newsExample.png" alt="">
                         </div>
-                        <header class="cake-card-name">
-                            Торт «Банановое румбо»
+                        <header class="news-header">
+                            Приняли участие в XII Международной Конференции и были награждены
                         </header>
-                        <p class="cake-card-price">
-                            582 ₽
+                        <p class="news-brief">
+                            Состоялась XII Международная Конференция 
+                            «Торты. Вафли. Печенье. Пряники-2020»
                         </p>
-                        <footer class="cake-card-weight">
-                            228 г
+                        <footer class="news-date">
+                            01.12.2021
                         </footer>
-                        <a href="" class="button cake-card-buy-button">
-                            Купить
-                        </a>
                     </article>
-                    <article class="cake-card">
-                        <div class="cake-card-image">
-                            <img src="images/cakeExample.png" alt="торт">
+                    <article class="news">
+                        <div class="news-image">
+                            <img src="images/newsExample.png" alt="">
                         </div>
-                        <header class="cake-card-name">
-                            Торт «Банановое румбо»
+                        <header class="news-header">
+                            Приняли участие в XII Международной Конференции и были награждены
                         </header>
-                        <p class="cake-card-price">
-                            582 ₽
+                        <p class="news-brief">
+                            Состоялась XII Международная Конференция 
+                            «Торты. Вафли. Печенье. Пряники-2020»
                         </p>
-                        <footer class="cake-card-weight">
-                            228 г
+                        <footer class="news-date">
+                            01.12.2021
                         </footer>
-                        <a href="" class="button cake-card-buy-button">
-                            Купить
-                        </a>
                     </article>
-                </div>
+                    <article class="news">
+                        <div class="news-image">
+                            <img src="images/newsExample.png" alt="">
+                        </div>
+                        <header class="news-header">
+                            Приняли участие в XII Международной Конференции и были награждены
+                        </header>
+                        <p class="news-brief">
+                            Состоялась XII Международная Конференция 
+                            «Торты. Вафли. Печенье. Пряники-2020»
+                        </p>
+                        <footer class="news-date">
+                            01.12.2021
+                        </footer>
+                    </article>
+                </section>
             </section>
         </main>
-        <footer class="page-footer-wrapper">
-            <div class="footer-links-wrapper">
-                <div class="footer-links-wrapper-adress">
-                    <div>
-                        <img class="footer-logotype" src="images/logo.png" alt="логотип">
-                        <p>
-                            680009, г. Хабаровск,
-                        </p>
-                        <p>
-                            ул. Почтовая, 51
-                        </p>
-                        <img class="logo-2gis" src="images/2gis.svg" alt="">
-                    </div>
-                    <p>
-                        © 2022 Новоторг
-                    </p>
-                </div>
-                <div class="footer-links">
-                    <div class="links-list">
-                        <ul>
-                            <li><a href="">Каталог</a> </li>
-                            <li><a href="">Торты на заказ</a></li>
-                            <li><a href="">Доставка и оплата</a></li>
-                            <li><a href="">О нас</a> </li>
-                            <li><a href="">Контакты</a> </li>
-                        </ul>
-                        <ul>
-                            <li><a href="">Новости</a></li>
-                            <li><a href="">Акции</a></li>
-                            <li><a href="">Мастер-классы</a></li>
-                            <li><a href="">История и достижения</a></li>
-                            <li><a href="">Миссия и ценности</a></li>
-                        </ul>
-                    </div>
-                    <p>
-                        <a href="">Политика конфиденциальности</a>
-                    </p>
-                </div>
-            </div>
-            <div class="footer-contacts-wrapper">
-                <div class="footer-contacts">
-                    <div class="footer-contacts-col">
-                        <div class="footer-contact">
-                            <p>Компания Новоторг</p>
-                            <p>+7 (909) 859-80-50</p>
-                        </div>
-                        <div class="footer-contact">
-                            <p>Мы в соцсетях</p>
-                            <a href="">
-                                <img src="images/instagram.svg" alt="инстаграм">
-                            </a>                            
-                        </div>
-                    </div>
-                    <div class="footer-contacts-col">
-                        <div class="footer-contact">
-                            <p>Стол заказов Муравьева-Амурского</p>
-                            <p>+7 (4212) 200-999</p>
-                        </div>
-                        <div class="footer-contact">
-                            <p>Стол заказов Почтовая</p>
-                            <p>+7 (4212) 40-82-57</p>
-                        </div>
-                    </div>
-                </div>
-                <p>
-                    <a href="https://goodwork.pro">Сделано в GoodWork</a>                    
-                </p>
-            </div>
-        </footer>
+        <!-- footer -->
     </div>
 
     <script src="js/splide/splide.min.js"></script>

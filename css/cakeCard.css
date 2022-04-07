@@ -68,3 +68,34 @@
 .cake-card:hover .cake-card-buy-button {
     opacity: 1;
 }
+
+.rating {
+    content: "\f089";
+}
+
+#thumbnail-slider {
+    margin: 25px 0;
+}
+
+#main-slider {
+    margin-left: 20px;
+}
+
+.splide__arrow--prev {
+    top: -30px !important;
+    transform: translate(-50%) scaleY(0.8) !important;
+}
+
+.splide__arrow--next {
+    bottom: -30px !important;
+    transform: translate(-50%) scaleY(0.8) !important;
+}
+
+.splide__arrow--prev svg,
+.splide__arrow--next svg {
+    fill: #9B9B9B !important;
+}
+
+.splide__slide {
+    border-radius: 10px;
+}
