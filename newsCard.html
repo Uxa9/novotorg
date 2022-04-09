@@ -11,8 +11,7 @@
     <link rel="stylesheet" href="css/newsCard.css">
     <link rel="stylesheet" href="css/news.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/splide/splide.min.css">
-    <script src="https://kit.fontawesome.com/86224789ba.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/photoswipe.css">
 </head>
 <body>
     <div class="wrapper">
@@ -79,8 +78,32 @@
                                 ценам производителя, которые ниже, чем в других магазинах города.
                             </p>
                         </div>
-                        <div class="news-photo-gallery">
+                        <div class="news-photo-gallery pswp-gallery pswp-gallery--single-column" id="photoGallery">
                             <!-- вставьте ваши пожилые картинки -->
+                            <a href="images/newsExample.png" 
+                                data-pswp-width="1669" 
+                                data-pswp-height="2500" 
+                                target="_blank">
+                                <img src="images/newsExample.png" alt="" />
+                            </a>
+                            <a href="images/newsExample.png" 
+                                data-pswp-width="1669" 
+                                data-pswp-height="2500" 
+                                target="_blank">
+                                <img src="images/newsExample.png" alt="" />
+                            </a>
+                            <a href="images/newsExample.png" 
+                                data-pswp-width="1669" 
+                                data-pswp-height="2500" 
+                                target="_blank">
+                                <img src="images/newsExample.png" alt="" />
+                            </a>
+                            <a href="images/newsExample.png" 
+                                data-pswp-width="1669" 
+                                data-pswp-height="2500" 
+                                target="_blank">
+                                <img src="images/newsExample.png" alt="" />
+                            </a>
                         </div>
                     </main>
                 </article>
@@ -173,40 +196,20 @@
         <!-- footer -->
     </div>
 
-    <script src="js/splide/splide.min.js"></script>
-    <script>
-        document.addEventListener( 'DOMContentLoaded', function () {
-            var main = new Splide( '#main-slider', {
-                type      : 'fade',
-                fixedWidth : 562,
-                fixedHeight: 562,
-                rewind    : true,
-                pagination: false,
-                arrows    : false,
-                cover     : true,
-            });
+    <script type="module">
+        import PhotoSwipeLightbox from '../novotorg/js/photoswipe/photoswipe-lightbox.esm.js';
 
-            var thumbnails = new Splide( '#thumbnail-slider', {
-                fixedWidth  : 95,
-                fixedHeight : 95,
-                gap         : 10,
-                rewind      : true,
-                pagination  : false,
-                cover       : true,
-                isNavigation: true,
-                perMove     : 1,
-                perPage     : 5,
-                direction   : 'ttb',
-                height      : '502px',
-                wheel       : true,
-                releaseWheel: true,
-                trimSpace   : 'move',
-            });
+        const lightbox = new PhotoSwipeLightbox({
+            // may select multiple "galleries"
+            gallery: '#photoGallery',
 
-            main.sync( thumbnails );
-            main.mount();
-            thumbnails.mount();
+            // Elements within gallery (slides)
+            children: 'a',
+
+            // setup PhotoSwipe Core dynamic import
+            pswpModule: () => import('../js/photoswipe/photoswipe.esm.js')
         });
+        lightbox.init();
     </script>
 </body>
 </html>
