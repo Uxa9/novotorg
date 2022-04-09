@@ -1,4 +1,62 @@
 .master-class {
     display: flex;
     flex-direction: column;
+    margin-bottom: 80px;
+}
+
+.master-class-banner {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.master-class-banner img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.master-class-text {
+    padding: 40px;
+    background: white;
+    box-shadow: 0px 4px 30px 1px rgba(43, 63, 101, 0.08);
+    border-radius: 10px;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 110%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #12335F;
+}
+
+.text-wrapper {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #2C2C2C;
+}
+
+.text-wrapper p {
+    margin: 0 auto;
+}
+
+.text-wrapper p:nth-child(3) {
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.text-wrapper ul {
+    list-style: inside;
+    padding-left: 10px;
+    margin: 0 0 30px;
+}
+
+.text-wrapper p:nth-child(10) {
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.text-wrapper p:nth-child(11) {
+    font-weight: bold;
 }
