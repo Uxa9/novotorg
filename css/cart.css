@@ -1,0 +1,146 @@
+.cart-header {
+    width: calc(100% - 460px);
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 72px 0 36px;
+}
+
+.cart-header h1 {
+    margin: 0;
+}
+
+.cart-header span {
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 130%;
+    color: #94A3D1;
+}
+
+.cart-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cart-list {
+    display: flex;
+    flex-direction: column;
+    max-width: 900px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 30px 1px rgba(43, 63, 101, 0.08);
+    border-radius: 10px;
+    flex-grow: 1;
+    padding: 28px 24px;
+    margin-right: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-item:not(:last-child) {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #E3E3E3;
+}
+
+.cart-item-head {
+    display: flex;
+}
+
+.cart-item-head img {
+    width: 142px;
+    height: 95px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 25px;
+}
+
+.cart-item-head p:first-child {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    color: #2C2C2C;
+    margin: 10px 0 0;
+}
+
+.cart-item-head p:last-child {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 120%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #9B9B9B;
+    margin: 0;
+}
+
+.cart-item-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.amount {
+    align-items: flex-start;
+}
+
+.cart-item-price {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 120%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #2C2C2C;
+    margin: 0;
+}
+
+.cart-item-total-price {
+    margin: 0 48px;
+}
+
+.cart-item-piece-price {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 120%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #9B9B9B;
+    margin: 0 0;
+}
+
+.delete-item {
+    margin-top: 12px;
+    cursor: pointer;
+}
+
+.cart-price {
+    width: 392px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 30px 1px rgba(43, 63, 101, 0.08);
+    border-radius: 10px;
+    padding: 28px 24px;
+}
+
+.cart-price div p:first-child {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 110%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #2C2C2C;
+    margin: 0;
+}
+
+.cart-price div p:last-child {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #2C2C2C;
+    margin: 12px 0 0;
+}
+
+.button {
+    margin-top: 36px;
+    width: 100%;
+    padding: 13px 0;
+}

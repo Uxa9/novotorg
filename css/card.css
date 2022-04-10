@@ -148,67 +148,9 @@
     display: none;
 }
 
-.amount-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 44px;
-    height: 44px;
-    background: #EDF1F7;
-    border-radius: 5px;
-    text-align: center;
-    line-height: 44px;
-    cursor: pointer;
-}
-
-.amount input[type=number] {
-    width: 44px;
-    height: 44px;
-    background: none;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    font-feature-settings: 'pnum' on, 'lnum' on;
-    color: #12335F;
-    text-align: center;
-}
-
-.amount input[type=number]::-webkit-outer-spin-button,
-.amount input[type=number]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-.amount {
-    display: flex;
-    align-items: center;
-}
-
 .buy-and-amount {
     display: flex;
     align-items: center;
-}
-
-.minus::after {
-    display: block;
-    content: '';
-    width: 16px;
-    height: 1px;
-    background-color: #12335F;
-}
-
-.plus::after,
-.plus::before {
-    display: block;
-    content: '';
-    width: 16px;
-    height: 1px;
-    background-color: #12335F;
-}
-
-.plus::before {
-    transform: rotate(90deg);
-    position: absolute;
 }
 
 .users-reviews {
