@@ -1,0 +1,99 @@
+.history {
+    width: 900px;
+}
+
+.history header {
+    display: flex;
+    justify-content: space-between;
+
+    background: white;
+    padding: 24px 44px;
+    max-width: 812px;
+    box-shadow: 0px 4px 30px 1px rgba(43, 63, 101, 0.08);
+    border-radius: 10px;
+}
+
+.history header > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.history header > div:nth-child(1) {
+    max-width: 208px;
+}
+
+.history header > div:nth-child(2) {
+    max-width: 244px;
+    padding: 0 20px;
+}
+
+.history header > div:nth-child(3) {
+    max-width: 190px;
+}
+
+.history header > div p:first-child{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 140%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #12335F;
+    margin: 0 0 8px;
+}
+
+.history header > div p:last-child {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #2C2C2C;
+    margin: 0;
+}
+
+.filler-text {
+    padding: 48px 0 13px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #2C2C2C;
+}
+
+.filler-text p {
+    margin: 0 0 25px;
+}
+
+.history-period {
+    display: flex;
+    align-items: flex-start;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 30px 1px rgba(43, 63, 101, 0.08);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.history-year {
+    padding: 24px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 120%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #12335F;
+}
+
+.history-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #2C2C2C;
+    padding: 24px;
+}
+
+.history-text p:not(:last-child) {
+    margin: 0 0 24px;
+}
+
+.history-text p:last-child {
+    margin: 0;
+}
