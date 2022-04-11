@@ -57,9 +57,9 @@
                             <div class="cart-item-meta">
                                 <form action="" class="amount">
                                     <div class="amount">
-                                        <div class="amount-button minus" id="decreasePieces"></div>
-                                        <input type="number" id="piecesAmount" value="1" disabled/>
-                                        <div class="amount-button plus" id="increasePieces"></div>
+                                        <div class="amount-button minus" id=""></div>
+                                        <input class="piece-amount" type="number" id="" value="1" disabled/>
+                                        <div class="amount-button plus" id=""></div>
                                     </div>
                                 </form>
                                 <div class="cart-item-total-price">
@@ -90,9 +90,9 @@
                             <div class="cart-item-meta">
                                 <form action="" class="amount">
                                     <div class="amount">
-                                        <div class="amount-button minus" id="decreasePieces"></div>
-                                        <input type="number" id="piecesAmount" value="1" disabled/>
-                                        <div class="amount-button plus" id="increasePieces"></div>
+                                        <div class="amount-button minus" id=""></div>
+                                        <input class="piece-amount" type="number" id="" value="1" disabled/>
+                                        <div class="amount-button plus" id=""></div>
                                     </div>
                                 </form>
                                 <div class="cart-item-total-price">
@@ -123,9 +123,9 @@
                             <div class="cart-item-meta">
                                 <form action="" class="amount">
                                     <div class="amount">
-                                        <div class="amount-button minus" id="decreasePieces"></div>
-                                        <input type="number" id="piecesAmount" value="1" disabled/>
-                                        <div class="amount-button plus" id="increasePieces"></div>
+                                        <div class="amount-button minus" id=""></div>
+                                        <input class="piece-amount" type="number" id="" value="1" disabled/>
+                                        <div class="amount-button plus" id=""></div>
                                     </div>
                                 </form>
                                 <div class="cart-item-total-price">
@@ -192,6 +192,25 @@
                 document.body.style.overflowY = 'auto';
                 popup.style.display = 'none';
             }
+
+            // increase | decrease amounts
+            let increaseAmount = document.querySelectorAll('.plus');
+            let decreaseAmount = document.querySelectorAll('.minus');
+            let pieceAmount    = document.querySelectorAll('.piece-amount');
+
+            increaseAmount.forEach((item, index) => {
+                item.onclick = () => {
+                    console.log(item);
+                    console.log(pieceAmount[index]);
+                    pieceAmount[index].value = Number(pieceAmount[index].value) + 1;
+                }
+            });
+
+            decreaseAmount.forEach((item, index) => {
+                item.onclick = () => {
+                    if ( pieceAmount[index].value > 1 ) pieceAmount[index].value = Number(pieceAmount[index].value) - 1;
+                }
+            });
         </script>
     </div>
 </body>
