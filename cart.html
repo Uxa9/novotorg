@@ -15,10 +15,30 @@
     <div class="wrapper">
         <!-- header -->
         <main class="catalog-content">
+            <div class="popup-wrapper">
+                <div class="popup">
+                    <p>
+                        Очистить корзину
+                    </p>
+                    <p>
+                        Вы точно хотите удалить все товары? 
+                        Отменить действие будет невозможно
+                    </p>
+                    <div>
+                        <button class="button">
+                            Отменить
+                        </button>
+                        <button class="button">
+                            Да, удалить
+                        </button>
+                    </div>
+                    <div class="cross" id="closePopup"></div>
+                </div>
+            </div>
             <form action="">
                 <div class="cart-header">
                     <h1>Корзина</h1>
-                    <span>Очистить корзину</span>
+                    <span id="clearCart">Очистить корзину</span>
                 </div>
                 <div class="cart-wrapper">
                     <div class="cart-list">
@@ -131,8 +151,48 @@
                     </div>
                 </div>
             </form>
+            <div class="empty-cart">
+                <p>
+                    В корзине пока ничего нет, но вы можете
+                </p>
+                <div class="empty-cart-actions">
+                    <div style="background: linear-gradient(
+                            rgba(0, 0, 0, 0.4), 
+                            rgba(0, 0, 0, 0.4)
+                        ),
+                        url('images/choseCake.png')"
+                    >
+                        <span>Выбрать готовый торт</span>
+                    </div>
+                    <div style="background: linear-gradient(
+                            rgba(0, 0, 0, 0.4), 
+                            rgba(0, 0, 0, 0.4)
+                        ), 
+                        url('images/cakeAssembly.png')"
+                    >
+                        <span>Создать свой торт</span>
+                    </div>
+                </div>
+            </div>
         </main>
         <!-- footer -->
+        <script>
+            let clearCartButton = document.getElementById('clearCart');
+            let popup = document.querySelector('.popup-wrapper');
+            let closePopup = document.getElementById('closePopup');
+
+            clearCartButton.onclick = () => {
+                document.body.style.height = '100vh';
+                document.body.style.overflowY = 'hidden';
+                popup.style.display = 'flex';
+            }
+
+            closePopup.onclick = () => {
+                document.body.style.height = 'auto';
+                document.body.style.overflowY = 'auto';
+                popup.style.display = 'none';
+            }
+        </script>
     </div>
 </body>
 </html>
