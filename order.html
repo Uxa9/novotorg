@@ -28,14 +28,15 @@
                             </h2>
                         </header>
                         <div class="box-content">
-                            <input type="text" required placeholder="Имя*" id="">
-                            <input type="text" required placeholder="Телефон*" id="">
-                            <input type="text" required placeholder="E-mail" id="">
+                            <input type="text" required placeholder="Имя*" id="name">
+                            <input type="tel" required placeholder="Телефон*" id="phone">
+                            <input type="email" placeholder="E-mail" id="email">
                             <span>
                                 На указанный вами e-mail мы отправим
                                 всю информацию о заказе
                             </span>
                         </div>
+                        <p class="error" id="errorFirst">Укажите имя и телефон</p>
                     </article>
                     <article class="box order-delivery">
                         <header>
@@ -45,30 +46,42 @@
                         </header>
                         <div class="box-content">
                             <div class="buttons-wrapper">
-                                <button class="button">
-                                    Доставка
-                                </button>
-                                <button>
-                                    Самовывоз
-                                </button>
+                                <input type="button" value="Доставка" class="button" id="delivery">
+                                <input type="button" value="Самовывоз" id="selfPick">
                             </div>
-                            <p>
-                                Бесплатная доставка при сумме заказа от 1200 ₽
-                            </p>
-                            <input type="text" placeholder="Адрес доставки">
-                            <div>
-                                <input type="text" placeholder="Дата" name="" id="date">
-                                <select name="" id="time">
-                                    <option value="">10:00</option>
-                                    <option value="">11:00</option>
-                                    <option value="">12:00</option>
-                                    <option value="">13:00</option>
-                                    <option value="">14:00</option>
-                                    <option value="">15:00</option>
-                                    <option value="">16:00</option>
-                                    <option value="">17:00</option>
+                            <div class="delivery">
+                                <p>
+                                    Бесплатная доставка при сумме заказа от 1200 ₽
+                                </p>
+                                <input required type="text" placeholder="Адрес доставки">
+                                <div class="date-and-time">
+                                    <input required type="text" placeholder="Дата" name="" id="date">
+                                    <select required name="" id="time">
+                                        <!-- скока? -->
+                                        <option value="default" disabled selected hidden>Время</option>
+                                        <option value="">10:00</option>
+                                        <option value="">11:00</option>
+                                        <option value="">12:00</option>
+                                        <option value="">13:00</option>
+                                        <option value="">14:00</option>
+                                        <option value="">15:00</option>
+                                        <option value="">16:00</option>
+                                        <option value="">17:00</option>
+                                    </select>
+                                </div>
+                                <p class="error" id="errorSecond">
+                                    Укажите адрес и время доставки
+                                </p>
+                            </div>
+                            <div class="selfPick">
+                                <p>
+                                    При самовывозе с ул. Почтовой 
+                                    действует скидка на все выбранные позиции
+                                </p>
+                                <select required name="" id="time">
+                                    <!-- options -->
+                                    <option value="">г. Хабаровск, ул. Почтовая, 51</option>
                                 </select>
-                                <input type="text" placeholder="Время" name="" id="time">
                             </div>
                         </div>
                     </article>
@@ -80,16 +93,15 @@
                         </header>
                         <div class="box-content">
                             <div class="buttons-wrapper">
-                                <button class="button">
-                                    При получении
-                                </button>
-                                <button>
-                                    Оплата онлайн
-                                </button>
+                                <input type="button" value="При получении" class="button" id="payOffline">
+                                <input type="button" value="Оплата онлайн" id="payOnline">
                             </div>
-                            <p>
+                            <p class="payOffline">
                                 В магазине можно оплатить наличными или картой
                             </p>
+                            <div class="payOnline">
+                                <img src="images/sber.svg" alt="">
+                            </div>
                         </div>
                     </article>
                     <article class="box order-comment">
@@ -121,7 +133,7 @@
                         <span>Итого</span>
                         <span>1 360 ₽</span>
                     </div>
-                    <input placeholder="Оформить заказ" class="button" type="submit">
+                    <input value="Оформить заказ" class="button" type="submit" id="submit">
                     <p>
                         Нажимая на кнопку «Оформить заказ», вы соглашаетесь
                         с политикой обработки персональных данных
@@ -133,9 +145,98 @@
 
         <script src="/js/air-datepicker.js"></script>
         <script>
+            // date
             new AirDatepicker('#date', {
                 dateFormat: "dd MMMM yyyy"
             });
+
+            let delivery   = document.getElementById('delivery');
+            let selfPick   = document.getElementById('selfPick');
+            let payOffline = document.getElementById('payOffline');
+            let payOnline  = document.getElementById('payOnline');
+
+            delivery.onclick = () => {
+                if ( delivery.classList.contains('button') == false ) {
+                    delivery.classList.add('button');
+                    selfPick.classList.remove('button');
+                    document.querySelector('.delivery').style.display = 'block';
+                    document.querySelector('.selfPick').style.display = 'none';
+                }
+            }
+
+            selfPick.onclick = () => {
+                if ( selfPick.classList.contains('button') == false ) {
+                    selfPick.classList.add('button');
+                    delivery.classList.remove('button');
+                    document.querySelector('.selfPick').style.display = 'block';
+                    document.querySelector('.delivery').style.display = 'none';
+                }
+            }
+
+            payOffline.onclick = () => {
+                if ( payOffline.classList.contains('button') == false ) {
+                    payOffline.classList.add('button');
+                    payOnline.classList.remove('button');
+                    document.querySelector('.payOffline').style.display = 'block';
+                    document.querySelector('.payOnline').style.display = 'none';
+                }
+            }
+
+            payOnline.onclick = () => {
+                if ( payOnline.classList.contains('button') == false ) {
+                    payOnline.classList.add('button');
+                    payOffline.classList.remove('button');
+                    document.querySelector('.payOnline').style.display = 'flex';
+                    document.querySelector('.payOffline').style.display = 'none';
+                }
+            }
+
+            //submit form 
+            let submitButton = document.getElementById('submit');
+            let nameField  = document.getElementById('name');
+            let phoneField = document.getElementById('phone');
+            let dateField  = document.getElementById('date');
+            let timeField  = document.getElementById('time');
+
+            let errorFirst  = document.getElementById('errorFirst');
+            let errorSecond = document.getElementById('errorSecond');
+
+            submitButton.onclick = (e) => {
+                e.preventDefault();
+
+                if ( nameField.value == '' )  {
+                    nameField.classList.add('invalid');
+                    errorFirst.style.opacity = 1;
+                }
+                if ( phoneField.value == '' ) {
+                    phoneField.classList.add('invalid');
+                    errorFirst.style.opacity = 1;
+                }
+                if ( dateField.value == '' )  {
+                    dateField.classList.add('invalid');
+                    errorSecond.style.opacity = 1;
+                }
+                if ( timeField.selectedIndex == '0' ) {
+                    timeField.classList.add('invalid');
+                    errorSecond.style.opacity = 1;
+                }
+            }
+
+            nameField.onchange = () => {
+                if ( nameField.value != '' ) nameField.classList.remove('invalid');
+            }
+
+            phoneField.onchange = () => {
+                if ( phoneField.value != '' ) phoneField.classList.remove('invalid');
+            }
+
+            dateField.blur = () => {
+                if ( dateField.value != '' ) dateField.classList.remove('invalid');
+            }
+
+            timeField.onchange = () => {
+                if ( timeField.selectedIndex != '0' ) timeField.classList.remove('invalid');
+            }
         </script>
     </div>
 </body>
