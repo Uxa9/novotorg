@@ -1,0 +1,107 @@
+.order-forms {
+    margin-right: 20px;
+}
+
+.box {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 30px 1px rgba(43, 63, 101, 0.08);
+    border-radius: 10px;
+    padding: 32px 30px 30px;
+    margin-bottom: 24px;
+}
+
+.box header h2{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 110%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #12335F;
+}
+
+.order-contacts .box-content {
+    width: 630px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    grid-gap: 20px;
+}
+
+.order-contacts .box-content input {
+    padding: 15px 20px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    border: 1px solid #E3E3E3;
+    box-sizing: border-box;
+    border-radius: 5px;
+    transition: border-color .5s;
+}
+
+.order-contacts .box-content input:active,
+.order-contacts .box-content input:focus {
+    border-color: #12335F;
+    outline: none;
+}
+
+.checkValid:invalid {
+    border-color: #D72C07 !important;
+}
+
+.checkValid:valid {
+    border-color: rgb(38, 154, 0) !important;
+}
+
+
+.order-contacts .box-content input::placeholder {
+    color: #9B9B9B;
+}
+
+.order-contacts .box-content span {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #9B9B9B;
+    align-self: flex-end;
+}
+
+.buttons-wrapper {
+    background: #EDF1F7;
+    border-radius: 5px;
+    display: flex;
+}
+
+.buttons-wrapper button {
+    padding: 13px 28px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    background-color: #EDF1F7;
+    color: #12335F;
+    overflow: hidden;
+    transition: all .5s;
+}
+
+.buttons-wrapper button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250%;
+    height: 100%;
+    background: #12335F;
+    transform: translateX(-101%);
+    transition: all .5s;
+    /* z-index: -1; */
+}
+
+.button {
+    background-color: #12335F !important;
+    color: #FFFFFF !important;
+}

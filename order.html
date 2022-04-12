@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/order.css">
+    <link rel="stylesheet" href="css/air-datepicker.css">
 </head>
 <body>
     <div class="wrapper">
@@ -56,8 +57,18 @@
                             </p>
                             <input type="text" placeholder="Адрес доставки">
                             <div>
-                                <input type="date" placeholder="Дата" name="" id="">
-                                <input type="time" placeholder="Время" name="" id="">
+                                <input type="text" placeholder="Дата" name="" id="date">
+                                <select name="" id="time">
+                                    <option value="">10:00</option>
+                                    <option value="">11:00</option>
+                                    <option value="">12:00</option>
+                                    <option value="">13:00</option>
+                                    <option value="">14:00</option>
+                                    <option value="">15:00</option>
+                                    <option value="">16:00</option>
+                                    <option value="">17:00</option>
+                                </select>
+                                <input type="text" placeholder="Время" name="" id="time">
                             </div>
                         </div>
                     </article>
@@ -119,6 +130,13 @@
             </form>
         </main>
         <!-- footer -->
+
+        <script src="/js/air-datepicker.js"></script>
+        <script>
+            new AirDatepicker('#date', {
+                dateFormat: "dd MMMM yyyy"
+            });
+        </script>
     </div>
 </body>
 </html>
