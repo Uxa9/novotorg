@@ -12,7 +12,7 @@ body {
 
 .wrapper {
     min-height: 100vh;
-    width: 1440px;
+    max-width: 1440px;
     background: #F8F9FC;
 }
 
@@ -34,6 +34,11 @@ ul {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+    color: #12335F;
+}
+
 .button {
     color: white !important;
     background-color: #12335F;
@@ -50,11 +55,28 @@ ul {
     padding: 0;
     color: #9B9B9B;
     font-size: 16px;
+    overflow-x: scroll;
+}
+
+
+.selector::-webkit-scrollbar {
+    height: 5px;
+}
+ 
+.selector::-webkit-scrollbar-track {
+    margin: 1px 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+ 
+.selector::-webkit-scrollbar-thumb {
+    background-color: #D1D1D1;
+    border-radius: 5px;
 }
 
 .selector li {
     padding: 10px 16px;
     cursor: pointer;
+    white-space: nowrap;
 
     transition: background-color .5s, color .5s;
 }
@@ -183,6 +205,11 @@ ul {
     position: absolute;
 }
 
+@media screen and (max-width: 440px) {
+    .selector::-webkit-scrollbar {
+        height: 3px;
+    }
+}
 /* end of common styles */
 
 /* header */
@@ -529,19 +556,24 @@ ul {
 /* footer */
 
 .footer-contacts-wrapper {
-    height: 100%;
-    width: 50%;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
+    position: relative;
 }
 
-.footer-contacts-wrapper > p > a,
+.doneBy > a,
 .footer-links > p > a {
     line-height: 24px;
     color: #94A3D1;
     text-decoration: none;
+}
+
+.doneBy {
+    position: absolute;
+    bottom: 0;
 }
 
 .footer-contacts-wrapper > p {
@@ -558,11 +590,9 @@ ul {
     flex-direction: column;
 }
 
-.footer-contacts-col > div {
-    margin-top: 15px;
-    margin-left: 80px;
+.footer-contact {
+    min-width: 240px;
 }
-
 
 .footer-contact p:first-child {
     font-weight: 500;
@@ -582,10 +612,9 @@ ul {
     display: flex;
     position: relative;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: stretch;
     background: #F0F4FC;
     padding: 36px 40px 22px;
-    height: 300px;
 }
 
 .page-footer-wrapper::before,
@@ -609,7 +638,6 @@ ul {
 
 .footer-links-wrapper {
     min-height: 100%;
-    width: 50%;
     display: flex;
     justify-content: space-between;
 }
@@ -618,6 +646,7 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-right: 40px;
 }
 
 .footer-links-wrapper-adress p {
@@ -628,6 +657,7 @@ ul {
 
 .footer-logotype {
     width: 120px;    
+    height: 79px;
     margin-bottom: 28px;
 }
 
@@ -636,7 +666,7 @@ ul {
     margin-top: 28px;
 }
 
-.footer-links-wrapper-adress p:last-child {
+.footer-links-wrapper-adress > p:last-child {
     margin: 0;
     line-height: 24px;
     color: #94A3D1;
@@ -652,6 +682,14 @@ ul {
     display: flex;
     justify-content: space-between;
     color: #12335F;
+}
+
+.links-list ul li a {
+    transition: all .5s;
+}
+
+.links-list ul li a:hover {
+    color: #94A3D1;
 }
 
 .footer-links p {
@@ -674,6 +712,43 @@ ul {
 
 .page-footer-wrapper a {
     text-decoration: none;
+}
+
+.mobile-footer {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.mobile-footer p,
+.mobile-footer p a {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    font-feature-settings: 'pnum' on, 'lnum' on;    
+    color: #94A3D1;
+    margin: 0 0 4px;
+}
+
+@media screen and (max-width: 910px) {
+    .mobile-footer {
+        display: flex;
+    }
+
+    .footer-links-wrapper-adress > p,
+    .footer-links > p,
+    .doneBy {
+        display: none;
+    }
+
+    .footer-contacts-wrapper {
+        align-items: flex-start;
+    }
+
+    .footer-contacts {
+        flex-direction: column-reverse;
+    }
 }
 
 /* end of footer */
@@ -726,6 +801,12 @@ ul {
 
 .main-page-cakes-assembly-button { 
     padding: 16px 28px;
+    transition: all .5s;
+}
+
+.main-page-cakes-assembly-button:hover {
+    background: #1A4A8E;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
 }
 
 .main-page-cakes-assembly-image {
@@ -800,6 +881,7 @@ ul {
 .main-page-shops > header a {
     font-weight: 600;
     font-size: 16px;
+    white-space: nowrap;
 }
 
 .shops-cards {
@@ -821,19 +903,21 @@ ul {
     width: 100%;
 }
 
+.shop-card-text {
+    margin-left: 18px;
+}
+
 .shop-card header {
     font-weight: 700;
     font-size: 20px;
     color: #12335F;
     margin-top: 24px;
-    margin-left: 16px;
 }
 
 .shop-card .adress {
     font-size: 16px;
     color: #747474;
     margin-top: 10px;
-    margin-left: 16px;
 }
 
 .shop-card footer {
@@ -841,7 +925,6 @@ ul {
     font-size: 16px;
     color: #12335F;
     margin-bottom: 16px;
-    margin-left: 16px;
 }
 
 .splide__slide {
@@ -868,17 +951,202 @@ ul {
 .splide__arrows .splide__arrow--prev {
     left: 14px !important;
     top: -50px !important;
+    border-radius: 10px 0 0 10px !important;
     background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(44, 44, 44, 0.2) 68.23%, rgba(44, 44, 44, 0.2) 99.99%, rgba(44, 44, 44, 0.2) 100%) !important;
 }
 
 .splide__arrow--next {
     right: -13px !important;
     top: -50px !important;
+    border-radius: 0 10px 10px 0 !important;
     background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(44, 44, 44, 0.2) 68.23%, rgba(44, 44, 44, 0.2) 99.99%, rgba(44, 44, 44, 0.2) 100%) !important;
 }
 
 .splide__arrows .splide__arrow svg {
     fill: #FFFFFF !important;
+}
+
+.splide__track {
+    /* background: rgba(199, 199, 199, 0.2); */
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 1020px) {
+    .splide__arrow {
+        display: none !important;
+    }
+
+    .main-page-cakes-list,
+    .shops-cards {
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+
+    .cake-card-weight,
+    .cake-card-buy-button {
+        font-size: 14px !important;
+        opacity: 1 !important;
+        z-index: 9999;
+    }
+
+    .cake-card-name {
+        font-size: 14px !important;
+        line-height: 120%;
+    }
+
+    .cake-card-price {
+        font-size: 18px !important;
+        line-height: 120%;
+    }
+
+    .main-page-cakes-assembly {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    .main-page-cakes-assembly-image {
+        width: 100%;
+        margin-bottom: 14px;
+    }
+
+    .main-page-cakes-about-cards,
+    .main-page-promos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-page-promos {
+        margin-top: 60px;
+    }
+
+    .wrapper {
+        max-width: none;
+        width: 100vw;
+    }
+
+    .wrapper > main {
+        padding: 20px 30px;
+    }
+
+    
+}
+
+@media screen and (max-width: 950px) {
+    .links-list ul:last-child {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 910px) {
+    .wrapper > main {
+        padding: 20px 15px;
+    }
+
+    .page-footer-wrapper {
+        flex-direction: column;
+    }
+
+    .footer-links-wrapper-adress {
+        margin-right: 0;
+    }
+
+    .footer-links-wrapper-adress > div {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer-links-wrapper-adress > div > div {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        align-items: flex-end;
+        text-align: right;
+    }
+
+    .footer-links-wrapper-adress > div > div p {
+        font-size: 14px;
+    }
+
+    .footer-links-wrapper {
+        flex-direction: column;
+    }
+
+    .logo-2gis {
+        margin-top: 0;
+    }
+
+    .page-footer-wrapper {
+        padding: 28px 15px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .main-page-cakes-list,
+    .shops-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cake-card,
+    .shop-card {
+        max-height: none !important;
+        width: 400px !important;
+    }
+
+    .cake-card-image {
+        height: auto !important;
+        width: auto !important;
+    }
+
+    .main-page-shops header {
+        margin-top: 70px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .shop-card {
+        display: flex;
+        height: 100px;
+    }
+
+    .shops-card-image {
+        margin: 6px;
+        width: 90px;
+        height: 85px;
+    }
+
+    .shops-card-image img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .shop-card-text {
+        margin: 10px 12px;
+    }
+
+    .adress {
+        font-size: 14px;
+    }
+
+    .shop-card-text header {
+        font-size: 16px;
+        margin-top: 0;
+    }
+
+    .cake-card {
+        width: 90vw !important;
+    }
+
+    .main-page-cakes-assembly-image {
+        min-width: auto;
+    }
+
+    .cakes-about-card {
+        width: auto;
+        padding: 10px 0;
+    }
 }
 
 /* end of index page */
