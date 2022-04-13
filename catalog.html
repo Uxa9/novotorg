@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +13,7 @@
     <link rel="stylesheet" href="css/catalog.css">
     <link rel="stylesheet" href="css/cakeCard.css">
 </head>
+
 <body>
     <div class="wrapper">
         <!-- header -->
@@ -320,24 +322,20 @@
                 </article>
             </section>
             <section class="pagination-wrapper">
-                <ol class="pagination">
-                    <li class="hidden">
+                <ul class="page-numbers">
+                    <a class="prev page-numbers" href="/">
                         <div class="arrow arrow-left"></div>
                         <span>Предыдущая страница</span>
-                    </li>
-                    <li class="selected">1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                    <li>6</li>
-                    <li>7</li>
-                    <li>...</li>
+                    </a>
+                    <li><span aria-current="page" class="page-numbers current">1</span></li>
+                    <li><a class="page-numbers" href="/">2</a></li>
                     <li>
-                        <span>Следующая страница</span>
-                        <div class="arrow arrow-right"></div>
+                        <a class="next page-numbers" href="/">
+                            <span>Следующая страница</span>
+                            <div class="arrow arrow-right"></div>
+                        </a>
                     </li>
-                </ol>
+                </ul>
             </section>
             <section class="recommended-cakes">
                 <header>
@@ -420,4 +418,5 @@
         <!-- footer -->
     </div>
 </body>
+
 </html>
