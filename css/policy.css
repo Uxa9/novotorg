@@ -1,0 +1,17 @@
+.policy-page p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #2C2C2C;
+    margin: 24px 0 0;
+}
+
+.policy-page article h2 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 110%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #12335F;
+    margin: 40px 0 24px;
+}
