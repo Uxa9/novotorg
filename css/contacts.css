@@ -1,0 +1,273 @@
+.shop-city-selector {
+    position: relative;
+}
+  
+.shop-city-selector select {
+    display: none;
+}
+  
+.select-selected {
+    background-color: #12335F;
+}
+  
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: calc(50% - 6px);
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #fff transparent transparent transparent;
+    transition: all .5s;
+}
+
+.select-selected.select-arrow-active:after {
+    transform: scaleY(-1);
+}
+  
+.select-arrow-active {
+    -webkit-box-shadow:inset 0 0 1px 0 #94A3D1;
+    -moz-box-shadow:inset 0 0 1px 0 #94A3D1;
+    box-shadow:inset 0 0 1px 0 #94A3D1;
+    border-radius: 10px 5px 0 0 !important;
+}
+
+.select-items div,
+.select-selected {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    padding: 20px 20px;
+    cursor: pointer;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.select-items {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+
+    background-color: #12335F;
+}
+
+.select-hide {
+    display: none;
+}
+  
+.select-items div:hover, 
+.same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.same-as-selected {
+    color: #94A3D1 !important;
+}
+
+.select-items {
+    border-radius: 0 0 5px 5px;
+}
+
+.shops-and-map {
+    display: flex;
+    justify-content: space-between;
+}
+
+.shop-list {
+    width: 325px;
+    max-height: 540px;
+    margin-right: 20px;
+}
+
+.map-wrapper {
+    width: calc(100vw - 345px);
+}
+
+.shop-city-list {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 30px 1px rgba(43, 63, 101, 0.08);
+    border-radius: 10px;
+    padding: 4px 20px;
+    max-height: 455px;
+    overflow-y: scroll;
+}
+
+.shop-city-list::-webkit-scrollbar {
+    width: 3px;
+}
+ 
+.shop-city-list::-webkit-scrollbar-track {
+    margin: 10px 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+ 
+.shop-city-list::-webkit-scrollbar-thumb {
+    background-color: #D1D1D1;
+}
+
+.shop-city-list h2 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 130%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #12335F;
+    margin: 0 0 4px;
+}
+
+.shop-city-list span {
+    text-transform: lowercase;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #9B9B9B;
+    cursor: pointer;
+}
+
+.shop-city-list li {
+    padding: 16px 0;
+}
+
+.shop-city-list li:not(:last-child) {
+    border-bottom: 1px solid #E3E3E3;
+}
+
+.contacts { 
+    margin: 80px 0 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 120%;
+    color: #12335F;
+    margin-top: 0;
+}
+
+.contacts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.contact {
+    margin: 0 10px 14px;
+}
+
+.contact p:first-child {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 130%;
+    color: #94A3D1;
+    margin: 0 0 4px;
+}
+
+.contact p:last-child {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 130%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #12335F;
+    margin: 0;
+}
+
+.contact-form {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 30px 1px rgba(43, 63, 101, 0.08);
+    border-radius: 10px;
+    padding: 48px;
+    max-width: 650px;
+    height: max-content;
+}
+
+.contact-form h2 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 110%;
+    color: #12335F;
+}
+
+.name-and-phone {
+    display: flex;
+    justify-content: space-between;
+}
+
+.name-and-phone input:first-child {
+    margin-right: 17px;
+}
+
+.name-and-phone input,
+.contact-form textarea {
+    flex-grow: 1;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 15px 20px;
+    color: #12335F;
+    border: 1px solid #E3E3E3;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    width: 100%;
+    margin-top: 17px;
+    height: 100px;
+    resize: none;
+}
+
+.name-and-phone input:active,
+.name-and-phone input:focus,
+.contact-form textarea:active,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #12335F;
+}
+
+.name-and-phone input::placeholder,
+.contact-form textarea::placeholder {
+    color: #9B9B9B;
+}
+
+.submit-row {
+    margin-top: 16px;
+    display: flex;
+}
+
+.submit-row span {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #747474;
+}
+
+.submit-row input  {
+    padding: 13px 28px;
+    margin-left: 70px;
+}
+
+.props {
+    margin-bottom: 96px;
+}
+
+.props p {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #12335F;
+    margin: 0;
+}
+
+.props p:nth-child(3) {
+    margin-bottom: 20px;
+}
+
+.props p:last-child {
+    margin-top: 20px;
+}
