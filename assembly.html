@@ -6,16 +6,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Конструктор</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/splide/splide.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/cakeCard.css">
-    <link rel="stylesheet" href="css/assembly.css">
 </head>
 <body>
     <div class="wrapper">
-        <!-- header -->
+        <header class="page-header-wrapper">
+            <div class="header-desktop-menu">
+                <div class="header-menu">
+                    <a class="logo-link" href="">
+                        <img src="images/logo.png" alt="Логотип">
+                    </a>
+                    <ul class="header-links">
+                        <li class="header-link">
+                            <a href="">Каталог</a>
+                        </li>
+                        <li class="header-link">
+                            <a href="">Торты на заказ</a>
+                        </li>
+                        <li class="header-link">
+                            <a href="">Доставка и оплата</a>
+                        </li>
+                        <li class="header-link">
+                            <a href="">О нас</a>
+                        </li>
+                        <li class="header-link">
+                            <a href="">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header-phone-cart-search">
+                    <a href="tel:+79098598050">+7 (909) 859-80-50</a>
+                    <a href="">
+                        <img src="images/cart.svg" alt="Корзина">
+                    </a>
+                    <form class="searchFieldWrapper" action="">
+                        <div class="clearSearch" id="clearSearch"></div>
+                        <input type="text" class="searchField" name="" placeholder="Поиск" id="searchField">      
+                    </form>
+                    <input type="checkbox" id="isSearchOpen">
+                    <div id="searchButton">
+                        <img src="images/search.svg" alt="Поиск">
+                    </div>    
+                </div>
+            </div>
+            <div class="header-mobile-menu">
+                <a class="logo-link" href="">
+                    <img src="images/logo.png" alt="Логотип">
+                </a>
+                <div class="mobile-icons">                    
+                    <div id="searchButtonMobile">
+                        <img src="images/search.svg" alt="Поиск">
+                    </div>
+                    <input type="checkbox" name="" id="showMobileSearch">
+                    <a href="">
+                        <img src="images/cartMobile.svg" alt="Корзина">
+                    </a>
+                    <input type="checkbox" name="" id="showMobileMenu">
+                    <div class="hamburger-lines" id="hamburgerMenu">
+                        <div class="line line1"></div>
+                        <div class="line line2"></div>
+                        <div class="line line3"></div>
+                    </div>
+                </div>
+                <div class="search-menu">
+                    <div class="search-menu-header">
+                        <form class="searchFieldWrapper" action="">
+                            <div class="clearSearch" id="clearSearchMobile"></div>
+                            <input type="text" class="searchField" name="" placeholder="Поиск" id="searchFieldMobile">      
+                        </form>
+                        <span id="cancelMobileSearch">Отмена</span>
+                    </div>
+                    <button class="button">Найти</button>
+                </div>
+                <div class="mobile-menu">
+                    <ul class="mobile-header-links">
+                        <li class="header-link">
+                            <a href="">Каталог</a>
+                        </li>
+                        <li class="header-link">
+                            <a href="">Торты на заказ</a>
+                        </li>
+                        <li class="header-link">
+                            <a href="">Доставка и оплата</a>
+                        </li>
+                        <li class="header-link">
+                            <a href="">О нас</a>
+                        </li>
+                        <li class="header-link">
+                            <a href="">Контакты</a>
+                        </li>
+                    </ul>
+                    <div class="mobile-menu-footer">
+                        <p>
+                            680009, г. Хабаровск, ул. Почтовая, 51
+                        </p>
+                        <a href="tel:+79098598050">+7 (909) 859-80-50</a>
+                        <div class="socials">
+                            <a href="">
+                                <img src="images/telegramMobile.svg" alt="">
+                            </a>
+                            <a href="">
+                                <img src="images/vkMobile.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
         <main class="cake-assembler-wrapper">
             <form action="" method="post">
                 <h1>Торты на заказ</h1>
@@ -36,7 +133,7 @@
                                     <h3>Форма</h3>
                                 </header>
                                 <div class="cake-assembler-option-wrapper cake-assembler-option-icons">
-                                    <div>
+                                    <div class="selected">
                                         <img src="images/square.svg" alt="">
                                         <span>Квадрат</span>
                                     </div>
@@ -82,49 +179,49 @@
                                     <h3>Бисквит</h3>
                                 </header>
                                 <div class="cake-assembler-option-wrapper">
-                                    <div>
+                                    <div class="option">
                                         <div class="option-image">
                                             <img src="images/classic.png" alt="">
                                         </div>
                                         <span>Классический белый</span>
                                     </div>
-                                    <div>
+                                    <div class="option selected">
                                         <div class="option-image">
                                             <img src="images/sourCream.png" alt="">
                                         </div>
                                         <span>Сметанный</span>
                                     </div>
-                                    <div>
+                                    <div class="option">
                                         <div class="option-image">
                                             <img src="images/honey.png" alt="">
                                         </div>
                                         <span>Медовый</span>
                                     </div>
-                                    <div>
+                                    <div class="option">
                                         <div class="option-image">
                                             <img src="images/sourCreamCacao.png" alt="">
                                         </div>
                                         <span>Сметанный с какао</span>
                                     </div>
-                                    <div>
+                                    <div class="option">
                                         <div class="option-image">
                                             <img src="images/milk.png" alt="">
                                         </div>
                                         <span>На сгущенном молоке</span>
                                     </div>
-                                    <div>
+                                    <div class="option">
                                         <div class="option-image">
                                             <img src="images/carrot.png" alt="">
                                         </div>
                                         <span>Морковный с грецким орехом и карамелью</span>
                                     </div>
-                                    <div>
+                                    <div class="option">
                                         <div class="option-image">
                                             <img src="images/redVelvet.png" alt="">
                                         </div>
                                         <span>Красный бархат</span>
                                     </div>
-                                    <div>
+                                    <div class="option">
                                         <div class="option-image">
                                             <img src="images/chokolate.png" alt="">
                                         </div>
@@ -137,49 +234,49 @@
                                     <h3>Крем</h3>
                                 </header>
                                 <div class="cake-assembler-option-wrapper">
-                                    <div>
+                                    <div class="option">
                                         <div class="option-image">
                                             <img src="images/classic.png" alt="">
                                         </div>
                                         <span>Классический белый</span>
                                     </div>
-                                    <div>
+                                    <div class="option">
                                         <div class="option-image">
                                             <img src="images/sourCream.png" alt="">
                                         </div>
                                         <span>Сметанный</span>
                                     </div>
-                                    <div>
+                                    <div class="option">
                                         <div class="option-image">
                                             <img src="images/honey.png" alt="">
                                         </div>
                                         <span>Медовый</span>
                                     </div>
-                                    <div>
+                                    <div class="option">
                                         <div class="option-image">
                                             <img src="images/sourCreamCacao.png" alt="">
                                         </div>
                                         <span>Сметанный с какао</span>
                                     </div>
-                                    <div>
+                                    <div class="option">
                                         <div class="option-image">
                                             <img src="images/milk.png" alt="">
                                         </div>
                                         <span>На сгущенном молоке</span>
                                     </div>
-                                    <div>
+                                    <div class="option">
                                         <div class="option-image">
                                             <img src="images/carrot.png" alt="">
                                         </div>
                                         <span>Морковный с грецким орехом и карамелью</span>
                                     </div>
-                                    <div>
+                                    <div class="option">
                                         <div class="option-image">
                                             <img src="images/redVelvet.png" alt="">
                                         </div>
                                         <span>Красный бархат</span>
                                     </div>
-                                    <div>
+                                    <div class="option">
                                         <div class="option-image">
                                             <img src="images/chokolate.png" alt="">
                                         </div>
@@ -192,49 +289,49 @@
                                     <h3>Начинка</h3>
                                 </header>
                                 <div class="cake-assembler-option-wrapper">
-                                    <div>
+                                    <div class="option">
                                         <div class="option-image">
                                             <img src="images/classic.png" alt="">
                                         </div>
                                         <span>Классический белый</span>
                                     </div>
-                                    <div>
+                                    <div class="option">
                                         <div class="option-image">
                                             <img src="images/sourCream.png" alt="">
                                         </div>
                                         <span>Сметанный</span>
                                     </div>
-                                    <div>
+                                    <div class="option">
                                         <div class="option-image">
                                             <img src="images/honey.png" alt="">
                                         </div>
                                         <span>Медовый</span>
                                     </div>
-                                    <div>
+                                    <div class="option">
                                         <div class="option-image">
                                             <img src="images/sourCreamCacao.png" alt="">
                                         </div>
                                         <span>Сметанный с какао</span>
                                     </div>
-                                    <div>
+                                    <div class="option">
                                         <div class="option-image">
                                             <img src="images/milk.png" alt="">
                                         </div>
                                         <span>На сгущенном молоке</span>
                                     </div>
-                                    <div>
+                                    <div class="option">
                                         <div class="option-image">
                                             <img src="images/carrot.png" alt="">
                                         </div>
                                         <span>Морковный с грецким орехом и карамелью</span>
                                     </div>
-                                    <div>
+                                    <div class="option">
                                         <div class="option-image">
                                             <img src="images/redVelvet.png" alt="">
                                         </div>
                                         <span>Красный бархат</span>
                                     </div>
-                                    <div>
+                                    <div class="option">
                                         <div class="option-image">
                                             <img src="images/chokolate.png" alt="">
                                         </div>
@@ -432,7 +529,95 @@
                 </div>
             </form>
         </main>
-        <!-- footer -->
+        <footer class="page-footer-wrapper">
+            <div class="footer-links-wrapper">
+                <div class="footer-links-wrapper-adress">
+                    <div>
+                        <img class="footer-logotype" src="images/logo.png" alt="логотип">
+                        <div>
+                            <div>
+                                <p>
+                                    680009, г. Хабаровск,
+                                </p>
+                                <p>
+                                    ул. Почтовая, 51
+                                </p>
+                            </div>
+                            <a href="https://2gis.ru/khabarovsk/branches/70000001021231936">
+                                <img class="logo-2gis" src="images/2gis.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <p>
+                        © 2022 Новоторг
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <div class="links-list">
+                        <ul>
+                            <li><a href="">Каталог</a> </li>
+                            <li><a href="">Торты на заказ</a></li>
+                            <li><a href="">Доставка и оплата</a></li>
+                            <li><a href="">О нас</a> </li>
+                            <li><a href="">Контакты</a> </li>
+                        </ul>
+                        <ul>
+                            <li><a href="">Новости</a></li>
+                            <li><a href="">Акции</a></li>
+                            <li><a href="">Мастер-классы</a></li>
+                            <li><a href="">История и достижения</a></li>
+                            <li><a href="">Миссия и ценности</a></li>
+                        </ul>
+                    </div>
+                    <p>
+                        <a href="">Политика конфиденциальности</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-contacts-wrapper">
+                <div class="footer-contacts">
+                    <div class="footer-contacts-col">
+                        <div class="footer-contact">
+                            <p>Стол заказов</p>
+                            <p>+7 (909) 859-80-50</p>
+                        </div>
+                        <div class="footer-contact">
+                            <p>Мы в соцсетях</p>
+                            <a href="">
+                                <img src="images/vk.svg" alt="вконтакте">
+                            </a>  
+                            <a href="">
+                                <img src="images/telegram.svg" alt="телеграм">
+                            </a>                          
+                        </div>
+                    </div>
+                    <div class="footer-contacts-col">
+                        <div class="footer-contact">
+                            <p>Стол заказов Муравьева-Амурского</p>
+                            <p>+7 (4212) 200-999</p>
+                        </div>
+                        <div class="footer-contact">
+                            <p>Стол заказов Почтовая</p>
+                            <p>+7 (4212) 40-82-57</p>
+                        </div>
+                        <p class="doneBy">
+                            <a href="https://goodwork.pro">Сделано в GoodWork</a>                    
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-footer">
+                <p>
+                    © 2022 Новоторг
+                </p>
+                <p>
+                    <a href="">Политика конфиденциальности</a>
+                </p>
+                <p>
+                    <a href="https://goodwork.pro">Сделано в GoodWork</a>                    
+                </p>
+            </div>
+        </footer>
     </div>
 
     <!-- Переключатель размера торта -->
