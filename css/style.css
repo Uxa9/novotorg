@@ -132,8 +132,9 @@ a {
     margin: 0 10px;
 }
 
-.breadscrumbs li:last-child a {
+.breadscrumbs li:last-child {
     color: #12335F;
+    font-size: 14px;
 }
 
 .recommended-cakes h3 {
