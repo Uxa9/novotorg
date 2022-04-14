@@ -288,6 +288,11 @@
                                 <header>
                                     <h3>Начинка</h3>
                                 </header>
+                                <p class="assembly-warn">
+                                    Вы можете выбрать 2  начинки. 
+                                    Для добавления еще одной увеличьте 
+                                    количество ярусов.
+                                </p>
                                 <div class="cake-assembler-option-wrapper">
                                     <div class="option">
                                         <div class="option-image">
@@ -380,13 +385,20 @@
                                 <header>
                                     <h3>Оформление торта</h3>
                                 </header>
+                                <p class="assembly-warn">
+                                    Важно! Оформление может содержать 
+                                    несъедобные элементы искусственного 
+                                    декора. Вы можете выбрать оформление 
+                                    торта из представленных примеров или 
+                                    добавить свое фото с описанием.
+                                </p>
                                 <div>
                                     <ul class="selector">
                                         <li class="selector-selected">Все</li>
                                         <li>Детские</li>
                                         <li>Для женщин</li>
                                     </ul>
-                                    <div id="image-slider" class="splide">
+                                    <div id="cake-decor" class="splide">
                                         <div class="splide__track">
                                             <ul class="splide__list">
                                                 <li class="splide__slide">
@@ -479,7 +491,7 @@
                                     </div>
                                 </div>
                             </article>
-                            <article class="cake-assembler-option">
+                            <article class="cake-assembler-option dnd-and-text">
                                 <header>
                                     <h3>Дополнительные пожелания</h3>
                                 </header>
@@ -493,9 +505,13 @@
                                         <input type="file" id="fileElem" multiple accept="image/*">
                                         <div id="gallery"></div>
                                         <label class="dnd-button" for="fileElem"></label>
-                                        <p>
+                                        <p class="attach-image-text">
                                             Загрузите или перетащите 
                                             сюда ваше изображние,
+                                            и мы нанесем его на торт
+                                        </p>
+                                        <p class="mobile-attach-image-text">
+                                            Загрузите сюда ваше изображние,
                                             и мы нанесем его на торт
                                         </p>
                                     </div>
@@ -517,7 +533,7 @@
                                 <span>582 ₽</span>
                             </div>
                         </div>
-                        <input class="my-cake-order-button" type="submit" value="Оформить заказ">
+                        <input class="button my-cake-order-button" type="submit" value="Оформить заказ">
                         <footer>
                             <p>
                                 Оператор проверит и уточнит все данные, 
@@ -620,174 +636,7 @@
         </footer>
     </div>
 
-    <!-- Переключатель размера торта -->
-    <script> 
-        let cakeWeight = document.getElementById('cakeRange');
-        let cakeWeightValue = document.querySelector('.cake-weight-selector').children;
-        let outputCakeWeight = document.querySelector('.output-cake-weight');
-
-        Array.from(cakeWeightValue).forEach((element, index) => {
-            element.onclick = () => {
-                switch (index) {
-                    case 0:
-                        cakeWeight.value = 3;
-                        changeWeightInfo(3);
-                        break;
-                    case 1:
-                        cakeWeight.value = 6;
-                        changeWeightInfo(6);
-                        break;
-                    case 2:
-                        cakeWeight.value = 9;
-                        changeWeightInfo(9);
-                        break;
-                    case 3:
-                        cakeWeight.value = 12;
-                        changeWeightInfo(12);
-                        break;
-                    case 4:
-                        cakeWeight.value = 18;
-                        changeWeightInfo(18);
-                        break;
-                    default:
-                        cakeWeight.value = 3;
-                        changeWeightInfo(3);
-                        break;
-                }
-            }
-        });
-
-        cakeWeight.oninput = function() {
-            changeWeightInfo(this.value);
-        }
-
-        cakeWeight.onchange = function() {
-            changeWeightInfo(this.value);
-        }
-
-        changeWeightInfo = (value = 3, portions = 5) => {
-            outputCakeWeight.children[0].innerHTML = `${value} кг`;
-            outputCakeWeight.children[1].innerHTML = `хз порций`; //ну рэально
-        }
-    </script>
     <script src="js/splide/splide.min.js"></script>
-    <!-- Инициализация splide -->
-    <script>
-        var splide = new Splide( '#image-slider', {
-            perPage: 4,
-            perMove: 1,
-            rewind : true,
-        });
-        splide.mount();
-    </script>
-    <!-- Drag-&-Drop -->
-    <script>
-        let dropArea = document.getElementById('dropArea');
-        let formButton = document.getElementById('fileElem');
-        let filesArray = [];
-
-        dropArea.onclick = (e) => {
-            formButton.click();
-        }
-        formButton.addEventListener('change', buttonChange, false);
-
-        function buttonChange(event) {
-            let files = formButton.files;
-            handleFiles(files);
-        }
-
-        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
-            dropArea.addEventListener(eventName, preventDefaults, false);
-        });
-
-        function preventDefaults (e) {
-            e.preventDefault();
-            e.stopPropagation();
-        }
-
-        ['dragenter', 'dragover'].forEach(eventName => {
-            dropArea.addEventListener(eventName, highlight, false);
-        });
-
-        ['dragleave', 'drop'].forEach(eventName => {
-            dropArea.addEventListener(eventName, unhighlight, false);
-        });
-
-        function highlight(e) {
-            dropArea.classList.add('highlight');
-        }
-
-        function unhighlight(e) {
-            dropArea.classList.remove('highlight');
-        }
-
-        dropArea.addEventListener('drop', handleDrop, false);
-
-        function handleDrop(e) {
-            let dt = e.dataTransfer;
-            let files = dt.files;
-
-            handleFiles(files);
-        }
-
-        async function previewFile(file) {
-            let reader = new FileReader();
-            let gallery = document.getElementById('gallery');
-            reader.readAsDataURL(file);
-            reader.onloadend = await function() {
-                let imageContainer = document.createElement('div');
-                let img = document.createElement('img');
-                let crossHover = document.createElement('div');
-                let cross = document.createElement('div');
-                
-                imageContainer.classList.add('imageBlock');
-                crossHover.classList.add('cross-hover');
-                cross.classList.add('cross');
-                img.src = reader.result;
-
-                crossHover.appendChild(cross);
-                imageContainer.appendChild(img);
-                imageContainer.appendChild(crossHover);
-
-                // crossHover.addEventListener('click', removeImage, false);
-                imageContainer.addEventListener('click', preventDefaults, false);
-
-                gallery.appendChild(imageContainer);
-            }
-
-            // gallery.childNodes.forEach((image, index) => {
-            //     console.log(image);
-            //     image.onClick = (e) => {
-            //         preventDefaults(e);
-            //         filesArray.splice(index, 1);
-            //         gallery.childNodes[index].remove();
-            //     }
-            // });
-        }
-
-        async function handleFiles(files) {
-            files = [...files];
-
-            filesArray = [ ...filesArray, ...files ];
-
-            if (files.length != 0) {
-                let dropAreaText = document.getElementById('dropArea').querySelectorAll('p');
-                dropAreaText[0].style.display = 'none';
-                dropAreaText[1].style.display = 'none';
-            }
-
-            document.getElementById('gallery').innerHTML = '';
-            await filesArray.forEach(previewFile);
-
-            // document.getElementById('gallery').childNodes.forEach((image, index) => {
-            //     console.log(image);
-            //     image.onClick = (e) => {
-            //         // preventDefaults(e);
-            //         filesArray.splice(index, 1);
-            //         gallery.childNodes[index].remove();
-            //     }
-            // });
-        }
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>

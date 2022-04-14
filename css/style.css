@@ -953,52 +953,52 @@ a {
     margin-bottom: 16px;
 }
 
-.splide__slide {
+.main-page-content .splide__slide {
     height: 400px;
 }
 
-.splide__slide img {
+.main-page-content .splide__slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.splide__arrow {
+.main-page-content .splide__arrow {
     border-radius: 0 !important;
     height: 500px !important;
     transition: all .5s;
 }
 
-.splide__arrow--next:hover,
-.splide__arrow--prev:hover  {
+.main-page-content .splide__arrow--next:hover,
+.main-page-content .splide__arrow--prev:hover  {
     background-position: 0 0;
 }
 
-.splide__arrows .splide__arrow--prev {
+.main-page-content .splide__arrows .splide__arrow--prev {
     left: 14px !important;
     top: -50px !important;
     border-radius: 10px 0 0 10px !important;
     background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(44, 44, 44, 0.2) 68.23%, rgba(44, 44, 44, 0.2) 99.99%, rgba(44, 44, 44, 0.2) 100%) !important;
 }
 
-.splide__arrow--next {
+.main-page-content .splide__arrow--next {
     right: -13px !important;
     top: -50px !important;
     border-radius: 0 10px 10px 0 !important;
     background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(44, 44, 44, 0.2) 68.23%, rgba(44, 44, 44, 0.2) 99.99%, rgba(44, 44, 44, 0.2) 100%) !important;
 }
 
-.splide__arrows .splide__arrow svg {
+.main-page-content .splide__arrows .splide__arrow svg {
     fill: #FFFFFF !important;
 }
 
-.splide__track {
+.main-page-content .splide__track {
     /* background: rgba(199, 199, 199, 0.2); */
     border-radius: 10px;
 }
 
 @media screen and (max-width: 1020px) {
-    .splide__arrow {
+    .main-page-content .splide__arrow {
         display: none !important;
     }
 
@@ -1128,6 +1128,7 @@ a {
     .shop-card {
         display: flex;
         height: 100px;
+        width: 100%;
     }
 
     .shops-card-image {
@@ -1146,7 +1147,7 @@ a {
     }
 
     .adress {
-        font-size: 14px;
+        font-size: 14px !important;
     }
 
     .shop-card-text header {
@@ -1250,22 +1251,22 @@ a {
     margin-left: 20px;
 }
 
-.splide__arrow--prev {
+.cake-card .splide__arrow--prev {
     top: -30px !important;
     transform: translate(-50%) scaleY(0.8) !important;
 }
 
-.splide__arrow--next {
+.cake-card .splide__arrow--next {
     bottom: -30px !important;
     transform: translate(-50%) scaleY(0.8) !important;
 }
 
-.splide__arrow--prev svg,
-.splide__arrow--next svg {
+.cake-card .splide__arrow--prev svg,
+.cake-card .splide__arrow--next svg {
     fill: #9B9B9B !important;
 }
 
-.splide__slide {
+.cake-card .splide__slide {
     border-radius: 10px;
 }
 
@@ -1508,13 +1509,21 @@ ul.page-numbers .hidden {
     color: #12335F;
 }
 
+.cake-assembler-wrapper .splide__arrow--prev {
+    left: 0;
+}
+
+.cake-assembler-wrapper .splide__arrow--next {
+    right: 0;
+}
+
 .cake-assembler-and-calculator {
     display: flex;
     justify-content: space-between;
 }
 
 .price-calculator {
-    width: 392px;
+    max-width: 390px;
     height: 244px;
     padding: 36px 24px 25px;
     background-color: white;
@@ -1553,16 +1562,8 @@ ul.page-numbers .hidden {
 }
 
 .my-cake-order-button {
-    width: 392px;
+    width: 100%;
     height: 44px;
-    background-color: #12335F;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    color: #FFFFFF;
 }
 
 .price-calculator footer {
@@ -1571,6 +1572,10 @@ ul.page-numbers .hidden {
     line-height: 120%;
     text-align: center;
     color: #9B9B9B;
+}
+
+.price-calculator footer p {
+    margin-top: 10px;
 }
 
 .cake-assembler > header {
@@ -1596,7 +1601,7 @@ ul.page-numbers .hidden {
 }
 
 .cake-assembler > header > p:first-child {
-    width: 487px;
+    max-width: 487px;
     font-size: 30px;
     line-height: 36px;
     font-weight: bold;
@@ -1624,13 +1629,17 @@ ul.page-numbers .hidden {
     color: #12335F;
 }
 
+.cake-option-weight h3 {
+    margin-bottom: 15px !important;
+}
+
 .cake-assembler-option-wrapper {
     margin: 24px 0 120px;
     min-height: 200px;
     display: grid;
     justify-content: space-between;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    row-gap: 20px;
+    gap: 20px;
 }
 
 .cake-assembler-option-wrapper > div {
@@ -1666,8 +1675,7 @@ ul.page-numbers .hidden {
 
 .option-image {
     border-radius: 10px;
-    width: 180px;
-    height: 160px;
+    width: 100%;
     position: relative;
 }
 
@@ -1778,6 +1786,19 @@ ul.page-numbers .hidden {
     height: 2px;
 }
 
+.assembly-warn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #12335F;
+    background: #EDF1F7;
+    border-radius: 10px;
+    padding: 16px;
+    margin: 26px 0 30px;
+    max-width: max-content;
+}
+
 .output-cake-weight {
     display: flex;
     flex-direction: column;
@@ -1803,8 +1824,9 @@ ul.page-numbers .hidden {
 }
 
 .cake-weight-selector {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 18px;
     margin: 60px 0 120px;
 }
 
@@ -1813,12 +1835,16 @@ ul.page-numbers .hidden {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 156px;
     height: 100px;
     border: 2px solid #F1F3F9;
     box-sizing: border-box;
     border-radius: 10px;
     cursor: pointer;
+    transition: all .5s;
+}
+
+.cake-weight-selector > div:hover {
+    border-color: #12335F;
 }
 
 .cake-weight-selector > div > p:first-child {
@@ -1845,7 +1871,7 @@ ul.page-numbers .hidden {
 
 .cake-assembler-option textarea {
     padding: 22px 24px;
-    width: 586px;
+    max-width: 586px;
     height: 175px;
     border: 1px solid #E3E3E3;
     box-sizing: border-box;
@@ -1872,7 +1898,7 @@ ul.page-numbers .hidden {
     outline: none;
 }
 
-.splide__slide {
+/* .splide__slide {
     width: 180px !important;
     height: auto !important;
     margin-right: 18px !important;
@@ -1907,12 +1933,17 @@ ul.page-numbers .hidden {
 .splide__track {
     width: calc(100% - 48px);
     overflow: hidden;
-}
+} */
 
-#image-slider {
+#cake-decor {
     display: flex;
     justify-content: center;
     margin: 44px 0 120px;
+    padding: 0 5%;
+}
+
+.cake-assembler-wrapper .splide__arrow svg {
+    fill: #9B9B9B;
 }
 
 .selector {
@@ -1923,7 +1954,7 @@ ul.page-numbers .hidden {
     border: 1px dashed #E3E3E3;
     border-radius: 10px;
     padding: 22px 24px;
-    width: 536px;
+    max-width: 536px;
     margin-top: 20px;
     display: flex;
     flex-direction: column;
@@ -1945,10 +1976,15 @@ ul.page-numbers .hidden {
     line-height: 21px;
 }
 
-.drag-n-drop > p:last-child {
+.mobile-attach-image-text,
+.attach-image-text {
     font-weight: 500;
     font-size: 16px;
     line-height: 120%;
+}
+
+.mobile-attach-image-text {
+    display: none;
 }
 
 .drag-n-drop:hover {
@@ -2046,6 +2082,73 @@ ul.page-numbers .hidden {
     transform: translateX(50%) translateY(-50%) rotate(90deg);
 }
 
+.dnd-and-text > div {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 900px) {
+    .cake-assembler-and-calculator {
+        flex-direction: column;
+    }
+
+    .cake-assembler {
+        margin-right: 0;
+    }
+
+    .price-calculator {
+        margin-top: 20px;
+        max-width: none;
+    }
+
+    .price-calculator footer p {
+        margin-top: 16px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .cake-assembler-options {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .cake-assembler-option-wrapper,
+    .cake-weight-selector,
+    #cake-decor {
+        margin-bottom: 60px;
+    }
+
+    .cake-assembler-wrapper .splide__arrow--prev {
+        display: none;
+    }
+    
+    .cake-assembler-wrapper .splide__arrow--next {
+        display: none;
+    }
+
+    .cake-assembler > p {
+        margin: 0;
+    }
+
+    .mobile-attach-image-text {
+        display: block;
+    }
+
+    .attach-image-text {
+        display: none;
+    }  
+
+    .price-calculator {
+        height: 254px;
+    }
+}
+
+@media screen and (max-width: 481px) {
+    .cake-assembler-option-wrapper {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 10px;
+    }
+}
 /* end of assembly */
 
 
