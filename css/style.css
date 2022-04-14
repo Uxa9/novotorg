@@ -69,7 +69,7 @@ a {
 }
  
 .selector::-webkit-scrollbar-thumb {
-    background-color: #D1D1D1;
+    background-color: rgba(0, 0, 0, 0);
     border-radius: 5px;
 }
 
@@ -771,7 +771,7 @@ a {
     margin-top: 33px;
     display: grid;
     justify-content: space-between;
-    grid-template-columns: repeat(auto-fill, 300px);
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     row-gap: 20px;
 }
 
@@ -887,9 +887,10 @@ a {
 .shops-cards {
     margin-top: 33px;
     display: grid;
-    justify-content: space-between;
-    grid-template-columns: repeat(auto-fill, 300px);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     row-gap: 20px;
+    column-gap: 20px;
+    gap: 20px;
 }
 
 .shop-card {
@@ -974,12 +975,6 @@ a {
 @media screen and (max-width: 1020px) {
     .splide__arrow {
         display: none !important;
-    }
-
-    .main-page-cakes-list,
-    .shops-cards {
-        grid-template-columns: 1fr 1fr;
-        justify-items: center;
     }
 
     .cake-card-weight,
@@ -1092,7 +1087,6 @@ a {
     .cake-card,
     .shop-card {
         max-height: none !important;
-        width: 400px !important;
     }
 
     .cake-card-image {
@@ -1155,8 +1149,6 @@ a {
 
 .cake-card {
     position: relative;
-    max-height: 300px;
-    width: max-content;
     padding: 12px;
     cursor: pointer;
     text-decoration: none;
@@ -1165,11 +1157,11 @@ a {
 }
 
 .cake-card-image {
-    height: 200px;
-    width: 300px;
+    width: 100%;
 }
 
 .cake-card-image img {
+    object-fit: cover;
     height: 100%;
     width: 100%;
     border-radius: 10px;
