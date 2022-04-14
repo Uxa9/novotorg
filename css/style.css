@@ -49,6 +49,10 @@ a {
     cursor: pointer;
 }
 
+.button a {
+    color: white;
+}
+
 .selector {
     display: flex;
     justify-content: flex-start;
@@ -783,7 +787,6 @@ a {
 }
 
 .main-page-cakes-assembly header {
-    max-width: 350px;
     padding-right: 10%;
 }
 
@@ -792,6 +795,7 @@ a {
 }
 
 .main-page-cakes-assembly h4 {
+    max-width: 350px;
     color: #747474;
     font-size: 16px;
     font-weight: 500;
@@ -799,12 +803,12 @@ a {
     margin: 10px 0 50px;
 }
 
-.main-page-cakes-assembly-button { 
+.assembly-button { 
     padding: 16px 28px;
     transition: all .5s;
 }
 
-.main-page-cakes-assembly-button:hover {
+.assembly-button:hover {
     background: #1A4A8E;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
 }
@@ -833,6 +837,12 @@ a {
     padding: 36px;
     
     transition: all .5s;
+}
+
+.cakes-about-card header img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
 }
 
 .cakes-about-card h3 {
