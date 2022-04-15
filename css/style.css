@@ -1674,6 +1674,11 @@ ul.page-numbers .hidden {
     font-weight: 500;
     font-size: 16px;
     line-height: 120%;
+    width: 100%;
+}
+
+.cake-assembler-option-icons {
+    justify-items: center;
 }
 
 .cake-assembler-option-icons > div {
@@ -1681,6 +1686,7 @@ ul.page-numbers .hidden {
     padding: 24px 35px;
     border-radius: 10px;
     transition: all .5s;
+    max-width: 120px;
 }
 
 .cake-assembler-option-icons > div:hover {
