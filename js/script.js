@@ -450,6 +450,11 @@ if (cakePageSlider != null) {
     main.sync(thumbnails);
     main.mount();
     thumbnails.mount();
+
+    lightGallery(document.getElementById('cakePageLightgallery'), {
+      licenseKey: '0000-0000-0000-0001',
+      speed: 500,
+    });
   });
 }
 
