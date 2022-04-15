@@ -913,12 +913,12 @@ a {
     justify-content: space-between;
 }
 
-.promo {
+.main-page-promos .promo {
     border-radius: 10px;
     max-width: 670px;
 }
 
-.promo img {
+.main-page-promos .promo img {
     max-width: 100%;
 }
 
@@ -2867,6 +2867,19 @@ ul.page-numbers .hidden {
 }
 
 /* end of single news */
+
+/* promos */
+
+.promo-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.promo-content .promo {
+    display: flex;
+}
+
+/* end of promos */
 
 /* splide */
 

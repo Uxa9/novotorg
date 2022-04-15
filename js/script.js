@@ -535,3 +535,12 @@ if (cardInfoText != null) {
   
   document.addEventListener('scroll', checkOffset);
 }
+
+let newsPhotoGallery = document.getElementById('newsPhotoGallery');
+
+if ( newsPhotoGallery != null ) {
+  lightGallery(document.getElementById('newsPhotoGallery'), {
+      licenseKey: '0000-0000-0000-0001',
+      speed: 500,
+  });
+}
