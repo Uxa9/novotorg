@@ -7,16 +7,116 @@
     <title>Картошка</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/card.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/cakeCard.css">
-    <link rel="stylesheet" href="css/splide/splide.min.css">
+    <!-- <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/cakeCard.css"> -->
+    <!-- <link rel="stylesheet" href="css/splide/splide.min.css"> -->
     <script src="https://kit.fontawesome.com/86224789ba.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="wrapper">
-        <!-- header -->
+        <header class="page-header-wrapper">
+            <div class="header-desktop-menu">
+                <div class="header-menu">
+                    <a class="logo-link" href="">
+                        <img src="images/logo.png" alt="Логотип">
+                    </a>
+                    <ul class="header-links">
+                        <li class="header-link">
+                            <a href="">Каталог</a>
+                        </li>
+                        <li class="header-link">
+                            <a href="">Торты на заказ</a>
+                        </li>
+                        <li class="header-link">
+                            <a href="">Доставка и оплата</a>
+                        </li>
+                        <li class="header-link">
+                            <a href="">О нас</a>
+                        </li>
+                        <li class="header-link">
+                            <a href="">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header-phone-cart-search">
+                    <a href="tel:+79098598050">+7 (909) 859-80-50</a>
+                    <a href="">
+                        <img src="images/cart.svg" alt="Корзина">
+                    </a>
+                    <form class="searchFieldWrapper" action="">
+                        <div class="clearSearch" id="clearSearch"></div>
+                        <input type="text" class="searchField" name="" placeholder="Поиск" id="searchField">      
+                    </form>
+                    <input type="checkbox" id="isSearchOpen">
+                    <div id="searchButton">
+                        <img src="images/search.svg" alt="Поиск">
+                    </div>    
+                </div>
+            </div>
+            <div class="header-mobile-menu">
+                <a class="logo-link" href="">
+                    <img src="images/logo.png" alt="Логотип">
+                </a>
+                <div class="mobile-icons">                    
+                    <div id="searchButtonMobile">
+                        <img src="images/search.svg" alt="Поиск">
+                    </div>
+                    <input type="checkbox" name="" id="showMobileSearch">
+                    <a href="">
+                        <img src="images/cartMobile.svg" alt="Корзина">
+                    </a>
+                    <input type="checkbox" name="" id="showMobileMenu">
+                    <div class="hamburger-lines" id="hamburgerMenu">
+                        <div class="line line1"></div>
+                        <div class="line line2"></div>
+                        <div class="line line3"></div>
+                    </div>
+                </div>
+                <div class="search-menu">
+                    <div class="search-menu-header">
+                        <form class="searchFieldWrapper" action="">
+                            <div class="clearSearch" id="clearSearchMobile"></div>
+                            <input type="text" class="searchField" name="" placeholder="Поиск" id="searchFieldMobile">      
+                        </form>
+                        <span id="cancelMobileSearch">Отмена</span>
+                    </div>
+                    <button class="button">Найти</button>
+                </div>
+                <div class="mobile-menu">
+                    <ul class="mobile-header-links">
+                        <li class="header-link">
+                            <a href="">Каталог</a>
+                        </li>
+                        <li class="header-link">
+                            <a href="">Торты на заказ</a>
+                        </li>
+                        <li class="header-link">
+                            <a href="">Доставка и оплата</a>
+                        </li>
+                        <li class="header-link">
+                            <a href="">О нас</a>
+                        </li>
+                        <li class="header-link">
+                            <a href="">Контакты</a>
+                        </li>
+                    </ul>
+                    <div class="mobile-menu-footer">
+                        <p>
+                            680009, г. Хабаровск, ул. Почтовая, 51
+                        </p>
+                        <a href="tel:+79098598050">+7 (909) 859-80-50</a>
+                        <div class="socials">
+                            <a href="">
+                                <img src="images/telegramMobile.svg" alt="">
+                            </a>
+                            <a href="">
+                                <img src="images/vkMobile.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
         <main class="card-content">
             <ol class="breadscrumbs">
                 <li>
@@ -32,12 +132,12 @@
                     <a href="">Фруктовые</a>
                 </li>
                 <li>
-                    <a href="">Банановое румбо</a>
+                    Банановое румбо
                 </li>
             </ol>
             <div class="card-info">
                 <div class="card-info-images">
-                    <div id="thumbnail-slider" class="splide">
+                    <div id="thumbnailSlider" class="splide">
                         <div class="splide__track">
                             <ul class="splide__list">
                                 <li class="splide__slide">
@@ -71,7 +171,7 @@
                         </div>
                     </div>
                     <!-- смотрэ, тут картинки должны дублироваться -->
-                    <div id="main-slider" class="splide">
+                    <div id="cakePageSlider" class="splide">
                         <div class="splide__track">
                             <ul class="splide__list">
                                 <li class="splide__slide">
@@ -258,7 +358,7 @@
                         Рекомендуем попробовать
                     </h3>
                 </header>
-                <div class="recommended-cakes-list">
+                <div class="catalogue recommended-cakes-list">
                     <article class="cake-card">
                         <div class="cake-card-image">
                             <img src="images/cakeExample.png" alt="торт">
@@ -311,18 +411,20 @@
                         </a>
                     </article>
                     <article class="cake-card">
-                        <div class="cake-card-image">
-                            <img src="images/cakeExample.png" alt="торт">
-                        </div>
-                        <header class="cake-card-name">
-                            Торт «Банановое румбо»
-                        </header>
-                        <p class="cake-card-price">
-                            582 ₽
-                        </p>
-                        <footer class="cake-card-weight">
-                            228 г
-                        </footer>
+                        <a href="">
+                            <div class="cake-card-image">
+                                <img src="images/cakeExample.png" alt="торт">
+                            </div>
+                            <header class="cake-card-name">
+                                Торт «Банановое румбо»
+                            </header>
+                            <p class="cake-card-price">
+                                582 ₽
+                            </p>
+                            <footer class="cake-card-weight">
+                                228 г
+                            </footer>
+                        </a>
                         <a href="" class="button cake-card-buy-button">
                             Купить
                         </a>
@@ -330,94 +432,98 @@
                 </div>
             </section>
         </main>
-        <!-- footer -->
+        <footer class="page-footer-wrapper">
+            <div class="footer-links-wrapper">
+                <div class="footer-links-wrapper-adress">
+                    <div>
+                        <img class="footer-logotype" src="images/logo.png" alt="логотип">
+                        <div>
+                            <div>
+                                <p>
+                                    680009, г. Хабаровск,
+                                </p>
+                                <p>
+                                    ул. Почтовая, 51
+                                </p>
+                            </div>
+                            <a href="https://2gis.ru/khabarovsk/branches/70000001021231936">
+                                <img class="logo-2gis" src="images/2gis.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <p>
+                        © 2022 Новоторг
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <div class="links-list">
+                        <ul>
+                            <li><a href="">Каталог</a> </li>
+                            <li><a href="">Торты на заказ</a></li>
+                            <li><a href="">Доставка и оплата</a></li>
+                            <li><a href="">О нас</a> </li>
+                            <li><a href="">Контакты</a> </li>
+                        </ul>
+                        <ul>
+                            <li><a href="">Новости</a></li>
+                            <li><a href="">Акции</a></li>
+                            <li><a href="">Мастер-классы</a></li>
+                            <li><a href="">История и достижения</a></li>
+                            <li><a href="">Миссия и ценности</a></li>
+                        </ul>
+                    </div>
+                    <p>
+                        <a href="">Политика конфиденциальности</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-contacts-wrapper">
+                <div class="footer-contacts">
+                    <div class="footer-contacts-col">
+                        <div class="footer-contact">
+                            <p>Стол заказов</p>
+                            <p>+7 (909) 859-80-50</p>
+                        </div>
+                        <div class="footer-contact">
+                            <p>Мы в соцсетях</p>
+                            <a href="">
+                                <img src="images/vk.svg" alt="вконтакте">
+                            </a>  
+                            <a href="">
+                                <img src="images/telegram.svg" alt="телеграм">
+                            </a>                          
+                        </div>
+                    </div>
+                    <div class="footer-contacts-col">
+                        <div class="footer-contact">
+                            <p>Стол заказов Муравьева-Амурского</p>
+                            <p>+7 (4212) 200-999</p>
+                        </div>
+                        <div class="footer-contact">
+                            <p>Стол заказов Почтовая</p>
+                            <p>+7 (4212) 40-82-57</p>
+                        </div>
+                        <p class="doneBy">
+                            <a href="https://goodwork.pro">Сделано в GoodWork</a>                    
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-footer">
+                <p>
+                    © 2022 Новоторг
+                </p>
+                <p>
+                    <a href="">Политика конфиденциальности</a>
+                </p>
+                <p>
+                    <a href="https://goodwork.pro">Сделано в GoodWork</a>                    
+                </p>
+            </div>
+        </footer>
     </div>
 
     <script src="js/splide/splide.min.js"></script>
-    <script>
-        document.addEventListener( 'DOMContentLoaded', function () {
-            var main = new Splide( '#main-slider', {
-                type      : 'fade',
-                fixedWidth : 562,
-                fixedHeight: 562,
-                rewind    : true,
-                pagination: false,
-                arrows    : false,
-                cover     : true,
-            });
-
-            var thumbnails = new Splide( '#thumbnail-slider', {
-                fixedWidth  : 95,
-                fixedHeight : 95,
-                gap         : 10,
-                rewind      : true,
-                pagination  : false,
-                cover       : true,
-                isNavigation: true,
-                perMove     : 1,
-                perPage     : 5,
-                direction   : 'ttb',
-                height      : '502px',
-                wheel       : true,
-                releaseWheel: true,
-                trimSpace   : 'move',
-            });
-
-            main.sync( thumbnails );
-            main.mount();
-            thumbnails.mount();
-        });
-    </script>
-    <script>
-        //clear user review
-        let clearButton = document.getElementById('clearButton');
-        clearButton.onclick = (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            document.getElementById('userReview').value = '';
-        }
-
-        //user rating
-        let starsRatingWrapper = document.querySelector('.review-rating');
-        let starsRating = starsRatingWrapper.querySelectorAll('i');
-
-        starsRating.forEach((star, index) => {
-            star.onmouseover = (e) => {
-                for (i = 0; i <= index; i++) {
-                    if (!starsRating[i].classList.contains('starring')) {
-                        starsRating[i].classList.add('starring');
-                    }
-                }
-                for (i = index+1; i < 5; i++) {
-                    if (starsRating[i].classList.contains('starring')) {
-                        starsRating[i].classList.remove('starring');
-                    }
-                }
-            }
-
-            star.onclick = (e) => {
-                for (i = 0; i <= index; i++) {
-                    if (!starsRating[i].classList.contains('selected')) {
-                        starsRating[i].classList.add('selected');
-                    }
-                }
-                for (i = index+1; i < 5; i++) {
-                    if (starsRating[i].classList.contains('selected')) {
-                        starsRating[i].classList.remove('selected');
-                    }
-                }
-
-                document.getElementById('userRating').value = index;
-            }
-
-            //increase / decrease amount of pieces
-            let piecesAmount = document.getElementById('piecesAmount');
-            let increase = document.getElementById('increasePieces');
-            let decrease = document.getElementById('decreasePieces');
-
-            increase.onclick = () => piecesAmount.value = Number(piecesAmount.value) + 1;
-            decrease.onclick = () => (piecesAmount.value != 1) && (piecesAmount.value = Number(piecesAmount.value) - 1);
-        });
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>

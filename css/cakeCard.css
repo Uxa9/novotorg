@@ -1,4 +1,4 @@
-.cake-card {
+.card-content .cake-card {
     position: relative;
     max-height: 300px;
     width: max-content;
@@ -8,32 +8,32 @@
     transition: all .5s;
 }
 
-.cake-card-image {
+.card-content .cake-card-image {
     height: 200px;
     width: 300px;
 }
 
-.cake-card-image img {
+.card-content .cake-card-image img {
     height: 100%;
     width: 100%;
     border-radius: 10px;
 }
 
-.cake-card-name {
+.card-content .cake-card-name {
     font-size: 18px;
     color: #2C2C2C;
     font-weight: 500;
     margin-top: 16px;
 }
 
-.cake-card-price {
+.card-content .cake-card-price {
     font-size: 22px;
     color: #2C2C2C;
     font-weight: 700;
     margin: 16px 0 0 0;
 }
 
-.cake-card-weight {
+.card-content .cake-card-weight {
     color: #9B9B9B;
     font-size: 15px;
     opacity: 0;
@@ -41,7 +41,7 @@
     transition: opacity .5s;
 }
 
-.cake-card-buy-button {
+.card-content .cake-card-buy-button {
     padding: 13px 28px 12px;
     font-size: 16px;
     font-weight: 600;
@@ -54,48 +54,59 @@
     transition: opacity .5s;
 }
 
-.cake-card:hover {
+.card-content .cake-card:hover {
     z-index: 9999;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0px 4px 30px 1px rgba(43, 63, 101, 0.08);
 }
 
-.cake-card:hover .cake-card-weight {
+.card-content .cake-card:hover .cake-card-weight {
     opacity: 1;
 }
 
-.cake-card:hover .cake-card-buy-button {
+.card-content .cake-card:hover .cake-card-buy-button {
     opacity: 1;
 }
 
-.rating {
+.card-content .rating {
     content: "\f089";
 }
 
-#thumbnail-slider {
+.card-content #thumbnailSlider{
     margin: 25px 0;
 }
 
-#main-slider {
+.card-content #cakePageSlider {
     margin-left: 20px;
 }
 
-.splide__arrow--prev {
+.card-content .splide__arrow--prev {
     top: -30px !important;
     transform: translate(-50%) scaleY(0.8) !important;
 }
 
-.splide__arrow--next {
+.card-content .splide__arrow--next {
     bottom: -30px !important;
     transform: translate(-50%) scaleY(0.8) !important;
 }
 
-.splide__arrow--prev svg,
-.splide__arrow--next svg {
+.card-content .splide__arrow--prev svg,
+.card-content .splide__arrow--next svg {
     fill: #9B9B9B !important;
 }
 
-.splide__slide {
+.card-content .splide__slide {
     border-radius: 10px;
+}
+
+@media screen and (max-width: 981px) {
+    .card-content .card-info {
+        flex-direction: column;
+    }
+
+    .card-content .card-info-images {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
 }

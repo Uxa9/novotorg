@@ -230,15 +230,15 @@ if (cakeWeight != null) {
       }
     }
   });
-  
+
   cakeWeight.oninput = function () {
     changeWeightInfo(this.value);
   }
-  
+
   cakeWeight.onchange = function () {
     changeWeightInfo(this.value);
   }
-  
+
   changeWeightInfo = (value = 3) => {
     outputCakeWeight.children[0].innerHTML = `${value} кг`;
     outputCakeWeight.children[1].innerHTML = `${Math.floor(value * 5)} порций`; //ну рэально
@@ -248,13 +248,13 @@ if (cakeWeight != null) {
 let cakeDecor = document.getElementById('cake-decor');
 
 if (cakeDecor != null) {
-  var splide = new Splide( '#cake-decor', {
+  var splide = new Splide('#cake-decor', {
     pagination: false,
     autoWidth: true,
     // perPage: 4,
     // padding: { left: '5%', right: '5%' },
     gap: 18,
-    rewind : true,
+    rewind: true,
   });
   splide.mount();
 }
@@ -265,105 +265,268 @@ let filesArray = [];
 
 if (dropArea != null && formButton != null) {
   dropArea.onclick = (e) => {
-      formButton.click();
+    formButton.click();
   }
   formButton.addEventListener('change', buttonChange, false);
-  
+
   function buttonChange(event) {
-      let files = formButton.files;
-      handleFiles(files);
+    let files = formButton.files;
+    handleFiles(files);
   }
-  
+
   ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
-      dropArea.addEventListener(eventName, preventDefaults, false);
+    dropArea.addEventListener(eventName, preventDefaults, false);
   });
-  
-  function preventDefaults (e) {
-      e.preventDefault();
-      e.stopPropagation();
+
+  function preventDefaults(e) {
+    e.preventDefault();
+    e.stopPropagation();
   }
-  
+
   ['dragenter', 'dragover'].forEach(eventName => {
-      dropArea.addEventListener(eventName, highlight, false);
+    dropArea.addEventListener(eventName, highlight, false);
   });
-  
+
   ['dragleave', 'drop'].forEach(eventName => {
-      dropArea.addEventListener(eventName, unhighlight, false);
+    dropArea.addEventListener(eventName, unhighlight, false);
   });
-  
+
   function highlight(e) {
-      dropArea.classList.add('highlight');
+    dropArea.classList.add('highlight');
   }
-  
+
   function unhighlight(e) {
-      dropArea.classList.remove('highlight');
+    dropArea.classList.remove('highlight');
   }
-  
+
   dropArea.addEventListener('drop', handleDrop, false);
-  
+
   function handleDrop(e) {
-      let dt = e.dataTransfer;
-      let files = dt.files;
-  
-      handleFiles(files);
+    let dt = e.dataTransfer;
+    let files = dt.files;
+
+    handleFiles(files);
   }
-  
+
   async function previewFile(file) {
-      let reader = new FileReader();
-      let gallery = document.getElementById('gallery');
-      reader.readAsDataURL(file);
-      reader.onloadend = await function() {
-          let imageContainer = document.createElement('div');
-          let img = document.createElement('img');
-          let crossHover = document.createElement('div');
-          let cross = document.createElement('div');
-          
-          imageContainer.classList.add('imageBlock');
-          crossHover.classList.add('cross-hover');
-          cross.classList.add('cross');
-          img.src = reader.result;
-  
-          crossHover.appendChild(cross);
-          imageContainer.appendChild(img);
-          imageContainer.appendChild(crossHover);
-  
-          // crossHover.addEventListener('click', removeImage, false);
-          imageContainer.addEventListener('click', preventDefaults, false);
-  
-          gallery.appendChild(imageContainer);
-      }
-  
-      // gallery.childNodes.forEach((image, index) => {
-      //     console.log(image);
-      //     image.onClick = (e) => {
-      //         preventDefaults(e);
-      //         filesArray.splice(index, 1);
-      //         gallery.childNodes[index].remove();
-      //     }
-      // });
+    let reader = new FileReader();
+    let gallery = document.getElementById('gallery');
+    reader.readAsDataURL(file);
+    reader.onloadend = await function () {
+      let imageContainer = document.createElement('div');
+      let img = document.createElement('img');
+      let crossHover = document.createElement('div');
+      let cross = document.createElement('div');
+
+      imageContainer.classList.add('imageBlock');
+      crossHover.classList.add('cross-hover');
+      cross.classList.add('cross');
+      img.src = reader.result;
+
+      crossHover.appendChild(cross);
+      imageContainer.appendChild(img);
+      imageContainer.appendChild(crossHover);
+
+      // crossHover.addEventListener('click', removeImage, false);
+      imageContainer.addEventListener('click', preventDefaults, false);
+
+      gallery.appendChild(imageContainer);
+    }
+
+    // gallery.childNodes.forEach((image, index) => {
+    //     console.log(image);
+    //     image.onClick = (e) => {
+    //         preventDefaults(e);
+    //         filesArray.splice(index, 1);
+    //         gallery.childNodes[index].remove();
+    //     }
+    // });
   }
-  
+
   async function handleFiles(files) {
-      files = [...files];
-  
-      filesArray = [ ...filesArray, ...files ];
-  
-      if (files.length != 0) {
-          let dropAreaText = document.getElementById('dropArea').querySelectorAll('p');
-          dropAreaText[0].style.display = 'none';
-          dropAreaText[1].style.display = 'none';
-      }
-  
-      document.getElementById('gallery').innerHTML = '';
-      await filesArray.forEach(previewFile);
-  
-      // document.getElementById('gallery').childNodes.forEach((image, index) => {
-      //     console.log(image);
-      //     image.onClick = (e) => {
-      //         // preventDefaults(e);
-      //         filesArray.splice(index, 1);
-      //         gallery.childNodes[index].remove();
-      //     }
-      // });
+    files = [...files];
+
+    filesArray = [...filesArray, ...files];
+
+    if (files.length != 0) {
+      let dropAreaText = document.getElementById('dropArea').querySelectorAll('p');
+      dropAreaText[0].style.display = 'none';
+      dropAreaText[1].style.display = 'none';
+    }
+
+    document.getElementById('gallery').innerHTML = '';
+    await filesArray.forEach(previewFile);
+
+    // document.getElementById('gallery').childNodes.forEach((image, index) => {
+    //     console.log(image);
+    //     image.onClick = (e) => {
+    //         // preventDefaults(e);
+    //         filesArray.splice(index, 1);
+    //         gallery.childNodes[index].remove();
+    //     }
+    // });
   }
+}
+
+let cakePageSlider = document.getElementById('cakePageSlider');
+
+if (cakePageSlider != null) {
+  document.addEventListener('DOMContentLoaded', function () {
+    var main = new Splide('#cakePageSlider', {
+      type: 'fade',
+      fixedWidth: 562,
+      fixedHeight: 562,
+      rewind: true,
+      pagination: false,
+      arrows: false,
+      cover: true,
+      breakpoints: {
+        1200: {
+          fixedWidth: 450,
+          fixedHeight: 450,
+        },
+        980: {
+          fixedWidth: 560,
+          fixedHeight: 560,
+        },
+        621: {
+          fixedWidth: 560,
+          fixedHeight: 560,
+        },
+        620: {
+          fixedWidth: 500,
+          fixedHeight: 500,
+        },
+        520: {
+          fixedWidth: 400,
+          fixedHeight: 400,
+        },
+        420: {
+          fixedWidth: 300,
+          fixedHeight: 300,
+        },
+        320: {
+          fixedWidth: 200,
+          fixedHeight: 200,
+        }
+      }
+    });
+
+    var thumbnails = new Splide('#thumbnailSlider', {
+      fixedWidth: 95,
+      fixedHeight: 95,
+      gap: 10,
+      rewind: true,
+      pagination: false,
+      cover: true,
+      isNavigation: true,
+      perMove: 1,
+      perPage: 5,
+      direction: 'ttb',
+      height: '502px',
+      wheel: true,
+      releaseWheel: true,
+      trimSpace: 'move',
+      breakpoints: {
+        1200: {
+          height: '400px',
+        },
+        981: {
+          direction: 'ttb',
+          height: '400px',
+          padding: 0,
+          arrows: true
+        },
+        980: {
+          direction: 'ltr',
+          autoHeight: true,
+          width: '80%',
+          padding: { left: '10%', right: '10%' },
+          arrows: false
+        }
+      }
+    });
+
+    main.sync(thumbnails);
+    main.mount();
+    thumbnails.mount();
+  });
+}
+
+//clear user review
+let clearButton = document.getElementById('clearButton');
+
+if (clearButton != null) {
+  clearButton.onclick = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    document.getElementById('userReview').value = '';
+  }
+}
+
+//user rating
+let starsRatingWrapper = document.querySelector('.review-rating');
+
+if (starsRatingWrapper != null) {
+  let starsRating = starsRatingWrapper.querySelectorAll('i');
+  starsRating.forEach((star, index) => {
+    star.onmouseover = (e) => {
+      for (i = 0; i <= index; i++) {
+        if (!starsRating[i].classList.contains('starring')) {
+          starsRating[i].classList.add('starring');
+        }
+      }
+      for (i = index + 1; i < 5; i++) {
+        if (starsRating[i].classList.contains('starring')) {
+          starsRating[i].classList.remove('starring');
+        }
+      }
+    }
+
+    star.onclick = (e) => {
+      for (i = 0; i <= index; i++) {
+        if (!starsRating[i].classList.contains('selected')) {
+          starsRating[i].classList.add('selected');
+        }
+      }
+      for (i = index + 1; i < 5; i++) {
+        if (starsRating[i].classList.contains('selected')) {
+          starsRating[i].classList.remove('selected');
+        }
+      }
+
+      document.getElementById('userRating').value = index;
+    }
+
+    //increase / decrease amount of pieces
+    let piecesAmount = document.getElementById('piecesAmount');
+    let increase = document.getElementById('increasePieces');
+    let decrease = document.getElementById('decreasePieces');
+
+    increase.onclick = () => piecesAmount.value = Number(piecesAmount.value) + 1;
+    decrease.onclick = () => (piecesAmount.value != 1) && (piecesAmount.value = Number(piecesAmount.value) - 1);
+  });
+}
+
+// хуйню эту справа чтобы нормально катало
+let cardInfoText = document.querySelector('.card-info-text');
+let loadReviews = document.querySelector('.load-reviews');
+
+if (cardInfoText != null) {
+  if (loadReviews.getBoundingClientRect().y <= 500) {
+    cardInfoText.style.position = 'absolute';
+    cardInfoText.style.top = '1200px';
+  }
+  
+  let checkOffset = () => {
+    if (loadReviews.getBoundingClientRect().y <= 500) {
+      cardInfoText.style.position = 'absolute';
+      cardInfoText.style.top = '1200px';
+    } else {
+      cardInfoText.style.position = 'fixed';
+      cardInfoText.style.top = 'auto';
+    }
+  }
+  
+  document.addEventListener('scroll', checkOffset);
 }

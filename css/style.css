@@ -102,8 +102,8 @@ a {
 .breadscrumbs {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     margin: 0;
-    padding: 4px 0;
     list-style: none;
 }
 
@@ -118,9 +118,10 @@ a {
 .breadscrumbs li {    
     display: flex;
     align-items: center;
+    margin: 6px 0;
 }
 
-.breadscrumbs li:not(:first-child)::before {
+.breadscrumbs li:not(:last-child)::after {
     display: block;
     content: "";
     height: 6px;
@@ -135,6 +136,7 @@ a {
 .breadscrumbs li:last-child {
     color: #12335F;
     font-size: 14px;
+    font-weight: 500;
 }
 
 .recommended-cakes h3 {
@@ -1266,6 +1268,8 @@ a {
 }
 
 .rating {
+    display: flex;
+    flex-wrap: nowrap;
     content: "\f089";
 }
 
@@ -2181,6 +2185,444 @@ ul.page-numbers .hidden {
 
 /* end of assembly */
 
+/* cake card */
+/* 
+.card-content .cake-card {
+    position: relative;
+    max-height: 300px;
+    width: max-content;
+    padding: 12px;
+    cursor: pointer;
+
+    transition: all .5s;
+}
+
+.card-content .cake-card-image {
+    height: 200px;
+    width: 300px;
+}
+
+.card-content .cake-card-image img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card-content .cake-card-name {
+    font-size: 18px;
+    color: #2C2C2C;
+    font-weight: 500;
+    margin-top: 16px;
+}
+
+.card-content .cake-card-price {
+    font-size: 22px;
+    color: #2C2C2C;
+    font-weight: 700;
+    margin: 16px 0 0 0;
+}
+
+.card-content .cake-card-weight {
+    color: #9B9B9B;
+    font-size: 15px;
+    opacity: 0;
+
+    transition: opacity .5s;
+} */
+/* 
+.card-content .cake-card-buy-button {
+    padding: 13px 28px 12px;
+    font-size: 16px;
+    font-weight: 600;
+
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    opacity: 0;
+
+    transition: opacity .5s;
+} */
+
+/* .card-content .cake-card:hover {
+    z-index: 9999;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 30px 1px rgba(43, 63, 101, 0.08);
+} */
+
+/* .card-content .cake-card:hover .cake-card-weight {
+    opacity: 1;
+}
+
+.card-content .cake-card:hover .cake-card-buy-button {
+    opacity: 1;
+} */
+
+.card-content .rating {
+    content: "\f089";
+}
+
+.card-content #thumbnailSlider{
+    margin: 25px 0;
+}
+
+.card-content #cakePageSlider {
+    margin-left: 20px;
+}
+
+.card-content .splide__arrow--prev {
+    top: -30px !important;
+    transform: translate(-50%) scaleY(0.8) !important;
+}
+
+.card-content .splide__arrow--next {
+    bottom: -30px !important;
+    transform: translate(-50%) scaleY(0.8) !important;
+}
+
+.card-content .splide__arrow--prev svg,
+.card-content .splide__arrow--next svg {
+    fill: #9B9B9B !important;
+}
+
+.card-content .splide__slide {
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+    .card-content .card-reviews,
+    .card-content .users-reviews {
+        max-width: 565px !important;
+    }
+}
+
+@media screen and (max-width: 981px) {
+    .card-content .card-info {
+        flex-direction: column;
+        position: relative;
+    }
+
+    .card-content .card-info-images {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .card-content .card-info-images {
+        margin-top: 100px;
+    }
+
+    .card-content .card-info-text {
+        position: static !important;
+        width: calc(100% - 48px) !important;
+    }
+    
+    .card-content .card-info-text main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-content .card-info-text .price {
+        order: -2;
+    }
+
+    .card-content .card-info-text .buy-and-amount {
+        order: -1;
+        margin-bottom: 30px;
+    }
+
+    .card-content .card-info-text header {
+        position: absolute;
+        top: 0;
+        left: 48px;
+
+        text-align: left;
+    }
+
+    .card-content #cakePageSlider {
+        margin-left: 0 !important;
+    }
+    
+    .card-content .users-reviews,
+    .card-content .card-reviews {
+        margin-left: 48px !important;
+    }
+
+    .card-content .description {
+        max-width: 80%;
+    }
+
+    .card-content .recommended-cakes {
+        margin-left: 48px;
+    }
+
+    .card-content .recommended-cakes .recommended-cakes-list {
+        justify-items: center;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .card-content .card-info-text header {
+        left: 0;
+    }
+
+    .card-content .card-info-text,
+    .card-content .card-reviews,
+    .card-content .users-reviews,
+    .card-content .recommended-cakes {
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
+
+    .card-content .description {
+        max-width: none;
+    }
+
+    .card-content .review-field .review-stars {
+        order: -2;
+    }
+
+    .card-content .buttons-wrapper {
+        margin-top: 15px;
+        position: static !important;
+        align-self: flex-end;
+    }
+}
+
+.card-content .card-info-images {
+    display: flex;
+}
+
+.card-content .card-info {
+    display: flex;
+    margin-top: 42px;
+}
+
+.card-content .card-info-text header h2 {
+    margin-top: 0;
+}
+
+.card-content .card-info-text {
+    margin-left: 48px;
+    font-weight: 500;
+    position: fixed;
+    left: calc(((1440px - 100vw) /-2) + 800px);
+    width: 35%;
+}
+
+.card-content .rating-and-info {
+    display: flex;
+}
+
+.card-content .fa-star {
+    color: #E3E3E3;
+}
+
+.card-content .rating .selected,
+.card-content .review-rating .selected {
+    color: #ffd54c !important;
+}
+
+.card-content .rating .starring,
+.card-content .review-rating .starring {
+    transition: color .5s;
+    color: #F4C634;
+}
+
+.card-content .info {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 120%;
+    margin-left: 12px;
+
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #9B9B9B;
+}
+
+.card-content .description {
+    line-height: 140%;
+}
+
+.card-content .cake-stats > div {
+    margin-bottom: 10px;
+}
+
+.card-content .price {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.card-content .buy-button {
+    padding: 12px 54px;
+    margin-right: 20px;
+}
+
+.card-content .card-reviews {
+    max-width: 677px;
+}
+
+.card-content .card-reviews h3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 110%;
+    color: #12335F;
+}
+
+.card-content .card-reviews textarea {
+    width: 100%;
+    height: 174px;
+    border: 1px solid #E3E3E3;
+    border-radius: 10px;
+    padding: 22px 24px;
+    box-sizing: border-box;
+    resize: none;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #2C2C2C;
+    transition: border-color .5s;
+}
+
+.card-content .card-reviews textarea::placeholder {
+    color: #9B9B9B;
+}
+
+.card-content .card-reviews textarea:hover,
+.card-content .card-reviews textarea:focus,
+.card-content .card-reviews textarea:active {
+    border-color: #12335F;
+    outline: none;
+}
+
+.card-content .review-field {
+    position: relative;
+    width: 100%;
+    height: 214px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content .buttons-wrapper {
+    display: flex;
+    
+    position: absolute;
+    right: 12px;
+    bottom: 62px;
+}
+
+.card-content .buttons-wrapper button {
+    background: none;
+    border: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #9B9B9B;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.card-content .buttons-wrapper input[type=submit] {
+    padding: 13px 28px;
+    border: none;
+    cursor: pointer;
+}
+
+.card-content .review-stars {
+    display: flex;
+    align-items: center;
+}
+
+.card-content .review-stars p {
+    color: #2C2C2C;
+    margin-right: 14px;
+}
+
+.card-content .review-stars input[type=number] {
+    display: none;
+}
+
+.card-content .buy-and-amount {
+    display: flex;
+    align-items: center;
+}
+
+.card-content .users-reviews {
+    margin: 81px 0 100px;
+    max-width: 677px;
+}
+
+.card-content .review {
+    width: 100%;
+}
+
+.card-content .review-rating {
+    display: flex;
+}
+
+.card-content .review-date {
+    margin-right: 16px;
+    font-size: 16px;
+    line-height: 120%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #9B9B9B;
+    white-space: nowrap;
+}
+
+.card-content .review header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.card-content .user-name,
+.card-content .response-author {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 130%;
+    color: #12335F;
+}
+
+.card-content .review-text,
+.card-content .review-response {
+    font-size: 16px;
+    line-height: 140%;
+    color: #2C2C2C;
+}
+
+.card-content .review-response {
+    padding-left: 12px;
+    margin-left: 40px;
+    border-left: solid 2px #E3E3E3;
+}
+
+.card-content .users-reviews article:not(:first-child) {
+    margin-top: 50px;
+}
+
+.card-content .load-reviews {
+    padding: 16px 76px;
+    max-width: 280px;
+    background-color: #EDF1F7;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #12335F;
+    border-radius: 5px;
+    border: none;
+    margin-top: 60px;
+    align-self: center;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.card-content .users-reviews {
+    display: flex;
+    flex-direction: column;
+}
+
+/* end of cake card */
 
 /* splide */
 
