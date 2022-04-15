@@ -146,10 +146,37 @@ a {
 
 .recommended-cakes-list {
     margin: 50px 0 110px;
+    row-gap: 20px;
+}
+
+.catalogue {
     display: grid;
     justify-content: space-between;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    row-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);        
+}
+
+@media screen and (max-width: 1380px) {
+    .catalogue {
+        grid-template-columns: repeat(3, 1fr);        
+    }
+}
+
+@media screen and (max-width: 1021px) {
+    .catalogue {
+        grid-template-columns: repeat(2, 1fr);        
+    }
+}
+
+@media screen and (max-width: 681px) {
+    .catalogue {
+        grid-template-columns: repeat(1, 1fr);        
+        justify-items: center;
+    }
+
+    .catalogue > div,
+    .catalogue > article {
+        width: 80%;
+    }
 }
 
 .amount-button {
@@ -281,7 +308,7 @@ a {
     padding-left: 0;
 }
 
-.header-link {
+.header-links li {
     min-width: max-content;
     margin: 0 10px;
 }
@@ -788,9 +815,6 @@ a {
 
 .main-page-cakes-list {
     margin-top: 33px;
-    display: grid;
-    justify-content: space-between;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     row-gap: 20px;
 }
 
@@ -965,8 +989,17 @@ a {
 
 .main-page-content .splide__arrow {
     border-radius: 0 !important;
-    height: 500px !important;
+    height: 400px !important;
     transition: all .5s;
+    transform: none !important;
+}
+
+.main-page-content .splide__arrow svg {
+    transform: scaleY(1.5) !important;
+}
+
+.main-page-content .splide__arrow--prev svg {
+    transform: scale(-1, 1.5) !important;
 }
 
 .main-page-content .splide__arrow--next:hover,
@@ -975,15 +1008,15 @@ a {
 }
 
 .main-page-content .splide__arrows .splide__arrow--prev {
-    left: 14px !important;
-    top: -50px !important;
+    left: 0 !important;
+    top: 0 !important;
     border-radius: 10px 0 0 10px !important;
     background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(44, 44, 44, 0.2) 68.23%, rgba(44, 44, 44, 0.2) 99.99%, rgba(44, 44, 44, 0.2) 100%) !important;
 }
 
 .main-page-content .splide__arrow--next {
-    right: -13px !important;
-    top: -50px !important;
+    right: 0 !important;
+    top: 0 !important;
     border-radius: 0 10px 10px 0 !important;
     background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(44, 44, 44, 0.2) 68.23%, rgba(44, 44, 44, 0.2) 99.99%, rgba(44, 44, 44, 0.2) 100%) !important;
 }
@@ -1102,13 +1135,6 @@ a {
 }
 
 @media screen and (max-width: 680px) {
-    .main-page-cakes-list,
-    .shops-cards {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
     .cake-card,
     .shop-card {
         max-height: none !important;
@@ -1128,7 +1154,7 @@ a {
     .shop-card {
         display: flex;
         height: 100px;
-        width: 100%;
+        width: 100% !important;
     }
 
     .shops-card-image {
@@ -1311,9 +1337,6 @@ a {
 
 .catalog-list {
     margin-top: 36px;
-    display: grid;
-    justify-content: space-between;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     row-gap: 20px;
 }
 
@@ -2149,6 +2172,7 @@ ul.page-numbers .hidden {
         gap: 10px;
     }
 }
+
 /* end of assembly */
 
 
