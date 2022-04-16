@@ -1,8 +1,16 @@
-.missions {
+.mission-content .missions {
     margin-bottom: 80px;
 }
 
-.missions article {
+.mission-content .our-mission {
+    position: relative;
+}
+
+.mission-content .our-mission .article-text {
+    z-index: 2;
+}
+
+.mission-content .missions article {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0px 4px 30px 1px rgba(43, 63, 101, 0.08);
@@ -14,7 +22,7 @@
     overflow: hidden;
 }
 
-article h2 {
+.mission-content article h2 {
     font-weight: 700;
     font-size: 36px;
     line-height: 110%;
@@ -23,11 +31,11 @@ article h2 {
     margin: 0 0 30px;
 }
 
-article .article-text {
+.mission-content article .article-text {
     padding: 48px 60px;
 }
 
-article .article-wrapper-text {
+.mission-content article .article-wrapper-text {
     font-weight: 500;
     font-size: 18px;
     line-height: 150%;
@@ -35,53 +43,53 @@ article .article-wrapper-text {
     color: #2C2C2C;
 }
 
-.article-image img {
+.mission-content .article-image img {
     height: 100%;
     position: relative;
     bottom: -10px;
 }
 
-.our-goal {
+.mission-content .our-goal {
     align-items: center !important;
     justify-content: space-between;
 }
 
-.our-goal .article-text {
-    width: 60%;
+.mission-content .our-goal .article-text {
+    width: 50%;
+    z-index: 2;
 }
 
-.our-goal .article-image {
-    width: 214px;
+.mission-content .our-goal .article-image {
+    min-width: 214px;
     height: 138px;
-    margin-right: 96px;
+    display: flex;
+    justify-content: flex-start;
+    width: 30%;
 }
 
-.our-goal .article-image img {
+.mission-content .our-goal .article-image img {
     image-rendering: -webkit-optimize-contrast;
-    width: 100%;
-    height: 100%;
     position: initial;
 }
 
-.our-valueables {
+.mission-content .our-valueables {
     display: flex;
     justify-content: space-between;
 }
 
-.our-valueables article {
+.mission-content .our-valueables article {
     align-items: normal;
     /* flex-grow: 1; */
     margin-bottom: 0;
     width: calc(50% - 10px);
 }
 
-.valueables {
+.mission-content .valueables {
     display: flex;
     flex-wrap: wrap;
-    width: 70%;
 }
 
-.valueable {
+.mission-content .valueable {
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
@@ -93,10 +101,92 @@ article .article-wrapper-text {
     margin: 0 10px 10px 0;
 }
 
-.our-valueables .image {
+.mission-content .our-valueables .image {
     image-rendering: -webkit-optimize-contrast;
-    background-image: url('../images/womans.png'); /* пиздец фотку зашакалило */
+    background-position: center;
     background-size: cover;
     border-radius: 10px;
     width: calc(50% - 10px);
+}
+
+@media screen and (max-width: 951px) {
+    .mission-content .our-goal .article-text {
+        width: 50%;
+    }
+
+    .mission-content .our-goal .article-image {
+        width: auto !important;
+        padding-right: 60px;
+    }
+
+    .mission-content article .article-text {
+        width: 330px;
+    }
+
+    .mission-content .our-mission .article-image {
+        position: absolute;
+        right: -10px;
+        bottom: -10px;
+    }
+
+    .mission-content .our-valueables > div {
+        height: 300px !important;
+    }
+}
+
+@media screen and (max-width: 761px) {
+    .mission-content .missions article {
+        flex-direction: column;
+    }
+
+    .mission-content .missions article > div {
+        width: auto !important;
+        padding: 20px 18px;
+    }
+
+    .mission-content .our-mission .article-text {
+        padding-bottom: 0;
+    }
+
+    .mission-content .our-mission .article-image {
+        padding-top: 0;
+        position: relative;
+        right: -20px;
+        bottom: -20px;
+
+        height: 60vw;
+        width: 90% !important;
+    }
+
+    .mission-content .our-mission .article-image img {
+        height: auto;
+        width: 100%;
+    }
+
+    .mission-content .our-goal .article-image {
+        padding: 18px 0;
+    }
+
+    .mission-content .our-valueables > div {
+        height: 220px !important;
+    }
+}
+
+@media screen and (max-width: 1071px) {
+    .mission-content .missions article {
+        margin-bottom: 20px;
+    }
+
+    .mission-content .our-valueables {
+        flex-direction: column;
+    }
+
+    .mission-content .our-valueables article,
+    .mission-content .our-valueables > div {
+        width: 100% !important;
+    }
+
+    .mission-content .our-valueables > div {
+        height: 360px;
+    }
 }
