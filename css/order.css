@@ -1,17 +1,17 @@
-.invalid {
+.order-content .invalid {
     border-color: #D72C07;
 }
 
-.order-wrapper {
+.order-content .order-wrapper {
     display: flex;
 }
 
-.order-forms {
+.order-content .order-forms {
     flex-grow: 1;
     margin-right: 20px;
 }
 
-.box {
+.order-content .box {
     background: #FFFFFF;
     box-shadow: 0px 4px 30px 1px rgba(43, 63, 101, 0.08);
     border-radius: 10px;
@@ -19,7 +19,7 @@
     margin-bottom: 24px;
 }
 
-.box header h2{
+.order-content .box header h2{
     font-weight: 700;
     font-size: 20px;
     line-height: 110%;
@@ -27,11 +27,11 @@
     color: #12335F;
 }
 
-.box-content {
+.order-content .box-content {
     max-width: 630px;
 }
 
-.order-contacts .box-content {
+.order-content .order-contacts .box-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -39,15 +39,15 @@
     grid-gap: 20px;
 }
 
-.delivery > input {
+.order-content .delivery > input {
     width: 100%;
 }
 
-.selfPick {
+.order-content .selfPick {
     display: none;
 }
 
-.selfPick select {
+.order-content .selfPick select {
     width: 100%;
 
     background-image: url('../images/selectArrow.svg');
@@ -62,8 +62,8 @@
 
 }
 
-input,
-select {
+.order-content input,
+.order-content select {
     padding: 15px 20px;
     font-weight: 500;
     font-size: 16px;
@@ -79,37 +79,37 @@ select {
     appearance:none;
 }
 
-.delivery select {
+.order-content .delivery select {
     background-image: url('../images/clock.svg');
     background-repeat: no-repeat;
     background-position: 95% 50%;
 }
 
-select:active,
-select:focus {
+.order-content select:active,
+.order-content select:focus {
     border-color: #12335F;
     outline: none;
 }
 
-input:active,
-input:focus {
+.order-content input:active,
+.order-content input:focus {
     border-color: #12335F;
     outline: none;
 }
 
-.checkValid:invalid {
+.order-content .checkValid:invalid {
     border-color: #D72C07 !important;
 }
 
-.checkValid:valid {
+.order-content .checkValid:valid {
     border-color: rgb(38, 154, 0) !important;
 }
 
-.order-contacts .box-content input::placeholder {
+.order-content .order-contacts .box-content input::placeholder {
     color: #9B9B9B;
 }
 
-.order-contacts .box-content span {
+.order-content .order-contacts .box-content span {
     font-weight: 500;
     font-size: 14px;
     line-height: 120%;
@@ -118,14 +118,14 @@ input:focus {
     align-self: flex-end;
 }
 
-.buttons-wrapper {
+.order-content .buttons-wrapper {
     background: #EDF1F7;
     border-radius: 5px;
     display: flex;
     width: max-content;
 }
 
-.buttons-wrapper input {
+.order-content .buttons-wrapper input {
     padding: 13px 28px;
     border: none;
     outline: none;
@@ -141,13 +141,13 @@ input:focus {
     transition: all .5s;
 }
 
-.button {
+.order-content .button {
     background-color: #12335F !important;
     color: #FFFFFF !important;
 }
 
-.box-content p:first-child,
-.order-payment p {
+.order-content .box-content p:first-child,
+.order-content .order-payment p {
     font-weight: 600;
     font-size: 16px;
     line-height: 120%;
@@ -156,12 +156,12 @@ input:focus {
     margin-top: 22px;
 }
 
-.date-and-time {
+.order-content .date-and-time {
     margin-top: 20px;
     display: flex;
 }
 
-.date-and-time input {
+.order-content .date-and-time input {
     margin-right: 20px;
     flex-grow: 1;
 
@@ -170,16 +170,16 @@ input:focus {
     background-position: 95% 50%;
 }
 
-.date-and-time select {
+.order-content .date-and-time select {
     flex-grow: 1;
 }
 
-.date-and-time input, 
-.date-and-time select {
+.order-content .date-and-time input, 
+.order-content .date-and-time select {
     width: 50%;
 }
 
-.date-and-time select option {
+.order-content .date-and-time select option {
     font-weight: 600;
     font-size: 16px;
     line-height: 130%;
@@ -191,7 +191,7 @@ input:focus {
     margin: 14px 0px;
 }
 
-textarea {
+.order-content textarea {
     padding: 15px 20px;
     border: 1px solid #E3E3E3;
     box-sizing: border-box;
@@ -203,15 +203,15 @@ textarea {
     color: #12335F;
     resize: none;
 
-    width: 600px;
+    width: 100%;
     height: 100px;
 }
 
-textarea::placeholder {
+.order-content textarea::placeholder {
     color: #9B9B9B;
 }
 
-.order-total {
+.order-content .order-total {
     max-width: 400px;
     height: max-content;
     background: #FFFFFF;
@@ -223,13 +223,13 @@ textarea::placeholder {
     top: 100px;
 }
 
-.order-total div {
+.order-content .order-total div {
     display: flex;
     justify-content: space-between;
 }
 
-.order-total div:first-child span,
-.order-total div:nth-child(4) span {
+.order-content .order-total div:first-child span,
+.order-content .order-total div:nth-child(4) span {
     font-weight: 700;
     font-size: 20px;
     line-height: 110%;
@@ -237,8 +237,8 @@ textarea::placeholder {
     color: #2C2C2C;
 }
 
-.order-total div:nth-child(2) span,
-.order-total div:nth-child(3) span {
+.order-content .order-total div:nth-child(2) span,
+.order-content .order-total div:nth-child(3) span {
     font-weight: 500;
     font-size: 16px;
     line-height: 130%;
@@ -246,24 +246,24 @@ textarea::placeholder {
     color: #747474;
 }
 
-.order-total div:first-child {
+.order-content .order-total div:first-child {
     margin-bottom: 24px;
 }
 
-.order-total div:nth-child(2) {
+.order-content .order-total div:nth-child(2) {
     margin-bottom: 4px;
 }
 
-.order-total div:nth-child(3) {
+.order-content .order-total div:nth-child(3) {
     margin-bottom: 14px;
 }
 
-.order-total input {
+.order-content .order-total input {
     margin: 24px 0 10px;
     width: 100%;
 }
 
-.order-total p {
+.order-content .order-total p {
     font-weight: 500;
     font-size: 14px;
     line-height: 130%;
@@ -273,7 +273,7 @@ textarea::placeholder {
     margin: 0;
 }
 
-.payOnline {
+.order-content .payOnline {
     display: none;
     justify-content: center;
     align-items: center;
@@ -286,7 +286,7 @@ textarea::placeholder {
     margin-top: 30px;
 }
 
-.error {
+.order-content .error {
     opacity: 0;
     font-weight: 700;
     font-size: 14px;
@@ -298,11 +298,11 @@ textarea::placeholder {
     transition: all .5s;
 }
 
-.order-confirm {
+.order-content .order-confirm {
     margin-top: 153px;
 }
 
-.order-confirm p {
+.order-content .order-confirm p {
     margin: 0;
     font-weight: 500;
     font-size: 16px;
@@ -311,17 +311,17 @@ textarea::placeholder {
     color: #747474;
 }
 
-.order-confirm div {
+.order-content .order-confirm div {
     margin-top: 48px;
     display: flex;
 }
 
-.order-confirm div a:first-child {
+.order-content .order-confirm div a:first-child {
     padding: 13px 52px;
     margin-right: 24px;
 }
 
-.order-confirm div a:last-child {
+.order-content .order-confirm div a:last-child {
     padding: 13px 45px;
     background: #EDF1F7;
     border-radius: 5px;
@@ -330,4 +330,64 @@ textarea::placeholder {
     line-height: 19px;
     text-align: center;
     color: #12335F;
+}
+
+@media screen and (max-width: 1130px) {
+    .order-content .order-contacts .box-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .order-content .date-and-time {
+        flex-direction: column;
+    }
+
+    .order-content .order-total {
+        max-width: 350px;
+    }
+
+    .order-content .date-and-time input, 
+    .order-content .date-and-time select {
+        margin-right: 0;
+        width: auto;
+    }
+
+    .order-content .date-and-time select {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 951px) {
+    .order-content .order-wrapper {
+        flex-direction: column;
+    }
+
+    .order-content .order-forms {
+        margin-right: 0;
+    }
+
+    .order-content .box-content {
+        max-width: none;
+    }
+
+    .order-content .box-content textarea {
+        height: 120px;
+    }
+
+    .order-content .order-total {
+        max-width: none;
+    }
+
+    .order-content .order-payment .buttons-wrapper {
+        width: 310px;
+        max-width: 100%;
+    }
+
+    .order-content .buttons-wrapper input {
+        padding: 15px 20px;
+    } 
+
+    .order-content .box {
+        padding: 24px 18px;
+    }
 }

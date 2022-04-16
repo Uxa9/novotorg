@@ -544,3 +544,218 @@ if ( newsPhotoGallery != null ) {
       speed: 500,
   });
 }
+
+// тут насрано, но это для красивого select
+
+let shopListSelector = document.getElementById('shopListSelector');
+
+if (shopListSelector != null) {
+  var x, i, j, l, ll, selElmnt, a, b, c;
+  
+  x = document.getElementsByClassName("shop-city-selector");
+  l = x.length;
+  for (i = 0; i < l; i++) {
+      selElmnt = x[i].getElementsByTagName("select")[0];
+      ll = selElmnt.length;
+  
+      a = document.createElement("DIV");
+      a.setAttribute("class", "select-selected");
+      a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+      x[i].appendChild(a);
+      b = document.createElement("DIV");
+      b.setAttribute("class", "select-items select-hide");
+      for (j = 0; j < ll; j++) {
+          c = document.createElement("DIV");
+          c.innerHTML = selElmnt.options[j].innerHTML;
+          c.addEventListener("click", function (e) {
+              console.log(c);
+              var y, i, k, s, h, sl, yl;
+              s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+              sl = s.length;
+              h = this.parentNode.previousSibling;
+              for (i = 0; i < sl; i++) {
+                  if (s.options[i].innerHTML == this.innerHTML) {
+                      s.selectedIndex = i;
+                      h.innerHTML = this.innerHTML;
+                      y = this.parentNode.getElementsByClassName("same-as-selected");
+                      yl = y.length;
+                      for (k = 0; k < yl; k++) {
+                          y[k].removeAttribute("class");
+                      }
+                      this.setAttribute("class", "same-as-selected");
+                      break;
+                  }
+              }
+              h.click();
+          });
+          b.appendChild(c);
+      }
+      x[i].appendChild(b);
+      a.addEventListener("click", function (e) {
+          e.stopPropagation();
+          closeAllSelect(this);
+          this.nextSibling.classList.toggle("select-hide");
+          this.classList.toggle("select-arrow-active");
+      });
+  }
+  
+  function closeAllSelect(elmnt) {
+      var x, y, i, xl, yl, arrNo = [];
+      x = document.getElementsByClassName("select-items");
+      y = document.getElementsByClassName("select-selected");
+      xl = x.length;
+      yl = y.length;
+      for (i = 0; i < yl; i++) {
+          if (elmnt == y[i]) {
+              arrNo.push(i)
+          } else {
+              y[i].classList.remove("select-arrow-active");
+          }
+      }
+      for (i = 0; i < xl; i++) {
+          if (arrNo.indexOf(i)) {
+              x[i].classList.add("select-hide");
+          }
+      }
+  }
+  
+  document.addEventListener("click", closeAllSelect);
+}
+
+// 
+
+let clearCartButton = document.getElementById('clearCart');
+
+if (clearCartButton != null) {
+  let popup = document.querySelector('.popup-wrapper');
+  let closePopup = document.getElementById('closePopup');
+  let body = document.querySelector('.wrapper');
+  
+  clearCartButton.onclick = () => {
+      popup.style.display = 'flex';
+      body.classList.add('fix');
+  
+  }
+  
+  closePopup.onclick = () => {
+      popup.style.display = 'none';
+      body.classList.remove('fix');
+  }
+  
+  // increase | decrease amounts
+  let increaseAmount = document.querySelectorAll('.plus');
+  let decreaseAmount = document.querySelectorAll('.minus');
+  let pieceAmount    = document.querySelectorAll('.piece-amount');
+  
+  increaseAmount.forEach((item, index) => {
+      item.onclick = () => {
+          console.log(item);
+          console.log(pieceAmount[index]);
+          pieceAmount[index].value = Number(pieceAmount[index].value) + 1;
+      }
+  });
+  
+  decreaseAmount.forEach((item, index) => {
+      item.onclick = () => {
+          if ( pieceAmount[index].value > 1 ) pieceAmount[index].value = Number(pieceAmount[index].value) - 1;
+      }
+  });
+}
+
+// date
+
+let datePicker = document.getElementById('date');
+
+if (datePicker != null) {
+  new AirDatepicker('#date', {
+    dateFormat: "dd MMMM yyyy"
+  });
+  
+  let delivery   = document.getElementById('delivery');
+  let selfPick   = document.getElementById('selfPick');
+  let payOffline = document.getElementById('payOffline');
+  let payOnline  = document.getElementById('payOnline');
+  
+  delivery.onclick = () => {
+    if ( delivery.classList.contains('button') == false ) {
+        delivery.classList.add('button');
+        selfPick.classList.remove('button');
+        document.querySelector('.delivery').style.display = 'block';
+        document.querySelector('.selfPick').style.display = 'none';
+    }
+  }
+  
+  selfPick.onclick = () => {
+    if ( selfPick.classList.contains('button') == false ) {
+        selfPick.classList.add('button');
+        delivery.classList.remove('button');
+        document.querySelector('.selfPick').style.display = 'block';
+        document.querySelector('.delivery').style.display = 'none';
+    }
+  }
+  
+  payOffline.onclick = () => {
+    if ( payOffline.classList.contains('button') == false ) {
+        payOffline.classList.add('button');
+        payOnline.classList.remove('button');
+        document.querySelector('.payOffline').style.display = 'block';
+        document.querySelector('.payOnline').style.display = 'none';
+    }
+  }
+  
+  payOnline.onclick = () => {
+    if ( payOnline.classList.contains('button') == false ) {
+        payOnline.classList.add('button');
+        payOffline.classList.remove('button');
+        document.querySelector('.payOnline').style.display = 'flex';
+        document.querySelector('.payOffline').style.display = 'none';
+    }
+  }
+  
+  //submit form 
+  let submitButton = document.getElementById('submit');
+  let nameField  = document.getElementById('name');
+  let phoneField = document.getElementById('phone');
+  let dateField  = document.getElementById('date');
+  let timeField  = document.getElementById('time');
+  
+  let errorFirst  = document.getElementById('errorFirst');
+  let errorSecond = document.getElementById('errorSecond');
+  
+  submitButton.onclick = (e) => {
+    e.preventDefault();
+  
+    if ( nameField.value == '' )  {
+        nameField.classList.add('invalid');
+        errorFirst.style.opacity = 1;
+    }
+    if ( phoneField.value == '' ) {
+        phoneField.classList.add('invalid');
+        errorFirst.style.opacity = 1;
+    }
+    if ( dateField.value == '' )  {
+        dateField.classList.add('invalid');
+        errorSecond.style.opacity = 1;
+    }
+    if ( timeField.selectedIndex == '0' ) {
+        timeField.classList.add('invalid');
+        errorSecond.style.opacity = 1;
+    }
+  }
+  
+  nameField.onchange = () => {
+    if ( nameField.value != '' ) nameField.classList.remove('invalid');
+  }
+  
+  phoneField.onchange = () => {
+    if ( phoneField.value != '' ) phoneField.classList.remove('invalid');
+  }
+  
+  dateField.blur = () => {
+    if ( dateField.value != '' ) dateField.classList.remove('invalid');
+  }
+  
+  timeField.onchange = () => {
+    if ( timeField.selectedIndex != '0' ) timeField.classList.remove('invalid');
+  }
+}
