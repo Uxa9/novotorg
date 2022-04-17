@@ -1,6 +1,6 @@
 // header
 
-let itemsInCart = document.getElementById('itemsInCart');
+var itemsInCart = document.getElementById('itemsInCart');
 
 if (itemsInCart != null) {
   if (Number(itemsInCart.innerText) > 0) {
@@ -9,10 +9,10 @@ if (itemsInCart != null) {
 }
 
 //open mobile menu
-let burgerMenu = document.getElementById('hamburgerMenu');
-let isMenuOpen = document.getElementById('showMobileMenu');
-let mobileMenu = document.querySelector('.mobile-menu');
-let body = document.querySelector('.wrapper');
+var burgerMenu = document.getElementById('hamburgerMenu');
+var isMenuOpen = document.getElementById('showMobileMenu');
+var mobileMenu = document.querySelector('.mobile-menu');
+var body = document.querySelector('.wrapper');
 
 if (burgerMenu != null) {
   burgerMenu.onclick = () => {
@@ -33,12 +33,12 @@ if (burgerMenu != null) {
 }
 
 //open search menu
-let searchButton = document.getElementById('searchButton');
-let headerLinks = document.querySelector('.header-menu');
-let links = document.querySelector('.header-phone-cart-search');
-let isSearchOpen = document.getElementById('isSearchOpen');
-let searchWrapper = document.querySelector('.searchFieldWrapper');
-let linksWrapper = document.querySelector('.header-phone-cart-search');
+var searchButton = document.getElementById('searchButton');
+var headerLinks = document.querySelector('.header-menu');
+var links = document.querySelector('.header-phone-cart-search');
+var isSearchOpen = document.getElementById('isSearchOpen');
+var searchWrapper = document.querySelector('.searchFieldWrapper');
+var linksWrapper = document.querySelector('.header-phone-cart-search');
 
 if (headerLinks != null) {
   headerLinks = headerLinks.querySelector('.header-links');
@@ -69,7 +69,7 @@ if (searchButton != null) {
 }
 
 //clear search
-let clearSearch = document.getElementById('clearSearch');
+var clearSearch = document.getElementById('clearSearch');
 
 if (clearSearch != null) {
   clearSearch.onclick = () => {
@@ -78,9 +78,9 @@ if (clearSearch != null) {
 }
 
 //same shit for mobile
-let searchButtonMobile = document.getElementById('searchButtonMobile');
-let isMobileSearchOpen = document.getElementById('showMobileSearch');
-let mobileSearch = document.querySelector('.search-menu');
+var searchButtonMobile = document.getElementById('searchButtonMobile');
+var isMobileSearchOpen = document.getElementById('showMobileSearch');
+var mobileSearch = document.querySelector('.search-menu');
 
 if (searchButtonMobile != null) {
   searchButtonMobile.onclick = () => {
@@ -94,8 +94,8 @@ if (searchButtonMobile != null) {
 }
 
 //clear search
-let clearSearchMobile = document.getElementById('clearSearchMobile');
-let searchFieldMobile = document.getElementById('searchFieldMobile');
+var clearSearchMobile = document.getElementById('clearSearchMobile');
+var searchFieldMobile = document.getElementById('searchFieldMobile');
 
 if (clearSearchMobile != null) {
   clearSearchMobile.onclick = () => {
@@ -103,7 +103,7 @@ if (clearSearchMobile != null) {
   }
 }
 
-let cancelMobileSearch = document.getElementById('cancelMobileSearch');
+var cancelMobileSearch = document.getElementById('cancelMobileSearch');
 
 if (cancelMobileSearch != null) {
   cancelMobileSearch.onclick = () => {
@@ -116,7 +116,7 @@ if (cancelMobileSearch != null) {
 
 // main page
 
-let imageSlider = document.getElementById('image-slider');
+var imageSlider = document.getElementById('image-slider');
 
 if (imageSlider != null) {
   var splide = new Splide('#image-slider', {
@@ -130,7 +130,7 @@ if (imageSlider != null) {
 
 // catalog
 
-let catalogSorter = document.getElementById('catalogSorter');
+var catalogSorter = document.getElementById('catalogSorter');
 
 if (catalogSorter != null) {
   var x, i, j, l, ll, selElmnt, a, b, c;
@@ -203,11 +203,11 @@ if (catalogSorter != null) {
 }
 
 // Переключатель размера торта
-let cakeWeight = document.getElementById('cakeRange');
+var cakeWeight = document.getElementById('cakeRange');
 
 if (cakeWeight != null) {
-  let cakeWeightValue = document.querySelector('.cake-weight-selector').children;
-  let outputCakeWeight = document.querySelector('.output-cake-weight');
+  var cakeWeightValue = document.querySelector('.cake-weight-selector').children;
+  var outputCakeWeight = document.querySelector('.output-cake-weight');
 
   Array.from(cakeWeightValue).forEach((element, index) => {
     element.onclick = () => {
@@ -254,7 +254,7 @@ if (cakeWeight != null) {
   }
 }
 
-let cakeDecor = document.getElementById('cake-decor');
+var cakeDecor = document.getElementById('cake-decor');
 
 if (cakeDecor != null) {
   var splide = new Splide('#cake-decor', {
@@ -268,9 +268,9 @@ if (cakeDecor != null) {
   splide.mount();
 }
 
-let dropArea = document.getElementById('dropArea');
-let formButton = document.getElementById('fileElem');
-let filesArray = [];
+var dropArea = document.getElementById('dropArea');
+var formButton = document.getElementById('fileElem');
+var filesArray = [];
 
 if (dropArea != null && formButton != null) {
   dropArea.onclick = (e) => {
@@ -279,7 +279,7 @@ if (dropArea != null && formButton != null) {
   formButton.addEventListener('change', buttonChange, false);
 
   function buttonChange(event) {
-    let files = formButton.files;
+    var files = formButton.files;
     handleFiles(files);
   }
 
@@ -311,21 +311,21 @@ if (dropArea != null && formButton != null) {
   dropArea.addEventListener('drop', handleDrop, false);
 
   function handleDrop(e) {
-    let dt = e.dataTransfer;
-    let files = dt.files;
+    var dt = e.dataTransfer;
+    var files = dt.files;
 
     handleFiles(files);
   }
 
   async function previewFile(file) {
-    let reader = new FileReader();
-    let gallery = document.getElementById('gallery');
+    var reader = new FileReader();
+    var gallery = document.getElementById('gallery');
     reader.readAsDataURL(file);
     reader.onloadend = await function () {
-      let imageContainer = document.createElement('div');
-      let img = document.createElement('img');
-      let crossHover = document.createElement('div');
-      let cross = document.createElement('div');
+      var imageContainer = document.createElement('div');
+      var img = document.createElement('img');
+      var crossHover = document.createElement('div');
+      var cross = document.createElement('div');
 
       imageContainer.classList.add('imageBlock');
       crossHover.classList.add('cross-hover');
@@ -358,7 +358,7 @@ if (dropArea != null && formButton != null) {
     filesArray = [...filesArray, ...files];
 
     if (files.length != 0) {
-      let dropAreaText = document.getElementById('dropArea').querySelectorAll('p');
+      var dropAreaText = document.getElementById('dropArea').querySelectorAll('p');
       dropAreaText[0].style.display = 'none';
       dropAreaText[1].style.display = 'none';
     }
@@ -377,7 +377,7 @@ if (dropArea != null && formButton != null) {
   }
 }
 
-let cakePageSlider = document.getElementById('cakePageSlider');
+var cakePageSlider = document.getElementById('cakePageSlider');
 
 if (cakePageSlider != null) {
   document.addEventListener('DOMContentLoaded', function () {
@@ -468,7 +468,7 @@ if (cakePageSlider != null) {
 }
 
 //clear user review
-let clearButton = document.getElementById('clearButton');
+var clearButton = document.getElementById('clearButton');
 
 if (clearButton != null) {
   clearButton.onclick = (e) => {
@@ -479,10 +479,10 @@ if (clearButton != null) {
 }
 
 //user rating
-let starsRatingWrapper = document.querySelector('.review-rating');
+var starsRatingWrapper = document.querySelector('.review-rating');
 
 if (starsRatingWrapper != null) {
-  let starsRating = starsRatingWrapper.querySelectorAll('i');
+  var starsRating = starsRatingWrapper.querySelectorAll('i');
   starsRating.forEach((star, index) => {
     star.onmouseover = (e) => {
       for (i = 0; i <= index; i++) {
@@ -513,9 +513,9 @@ if (starsRatingWrapper != null) {
     }
 
     //increase / decrease amount of pieces
-    let piecesAmount = document.getElementById('piecesAmount');
-    let increase = document.getElementById('increasePieces');
-    let decrease = document.getElementById('decreasePieces');
+    var piecesAmount = document.getElementById('piecesAmount');
+    var increase = document.getElementById('increasePieces');
+    var decrease = document.getElementById('decreasePieces');
 
     increase.onclick = () => piecesAmount.value = Number(piecesAmount.value) + 1;
     decrease.onclick = () => (piecesAmount.value != 1) && (piecesAmount.value = Number(piecesAmount.value) - 1);
@@ -523,8 +523,8 @@ if (starsRatingWrapper != null) {
 }
 
 // хуйню эту справа чтобы нормально катало
-let cardInfoText = document.querySelector('.card-info-text');
-let loadReviews = document.querySelector('.load-reviews');
+var cardInfoText = document.querySelector('.card-info-text');
+var loadReviews = document.querySelector('.load-reviews');
 
 if (cardInfoText != null) {
   if (loadReviews.getBoundingClientRect().y <= 500) {
@@ -532,7 +532,7 @@ if (cardInfoText != null) {
     cardInfoText.style.top = '1200px';
   }
   
-  let checkOffset = () => {
+  var checkOffset = () => {
     if (loadReviews.getBoundingClientRect().y <= 500) {
       cardInfoText.style.position = 'absolute';
       cardInfoText.style.top = '1200px';
@@ -545,7 +545,7 @@ if (cardInfoText != null) {
   document.addEventListener('scroll', checkOffset);
 }
 
-let newsPhotoGallery = document.getElementById('newsPhotoGallery');
+var newsPhotoGallery = document.getElementById('newsPhotoGallery');
 
 if ( newsPhotoGallery != null ) {
   lightGallery(document.getElementById('newsPhotoGallery'), {
@@ -556,7 +556,7 @@ if ( newsPhotoGallery != null ) {
 
 // тут насрано, но это для красивого select
 
-let shopListSelector = document.getElementById('shopListSelector');
+var shopListSelector = document.getElementById('shopListSelector');
 
 if (shopListSelector != null) {
   var x, i, j, l, ll, selElmnt, a, b, c;
@@ -633,12 +633,12 @@ if (shopListSelector != null) {
 
 // 
 
-let clearCartButton = document.getElementById('clearCart');
+var clearCartButton = document.getElementById('clearCart');
 
 if (clearCartButton != null) {
-  let popup = document.querySelector('.popup-wrapper');
-  let closePopup = document.getElementById('closePopup');
-  let body = document.querySelector('.wrapper');
+  var popup = document.querySelector('.popup-wrapper');
+  var closePopup = document.getElementById('closePopup');
+  var body = document.querySelector('.wrapper');
   
   clearCartButton.onclick = () => {
       popup.style.display = 'flex';
@@ -652,9 +652,9 @@ if (clearCartButton != null) {
   }
   
   // increase | decrease amounts
-  let increaseAmount = document.querySelectorAll('.plus');
-  let decreaseAmount = document.querySelectorAll('.minus');
-  let pieceAmount    = document.querySelectorAll('.piece-amount');
+  var increaseAmount = document.querySelectorAll('.plus');
+  var decreaseAmount = document.querySelectorAll('.minus');
+  var pieceAmount    = document.querySelectorAll('.piece-amount');
   
   increaseAmount.forEach((item, index) => {
       item.onclick = () => {
@@ -673,17 +673,17 @@ if (clearCartButton != null) {
 
 // date
 
-let datePicker = document.getElementById('date');
+var datePicker = document.getElementById('date');
 
 if (datePicker != null) {
   new AirDatepicker('#date', {
     dateFormat: "dd MMMM yyyy"
   });
   
-  let delivery   = document.getElementById('delivery');
-  let selfPick   = document.getElementById('selfPick');
-  let payOffline = document.getElementById('payOffline');
-  let payOnline  = document.getElementById('payOnline');
+  var delivery   = document.getElementById('delivery');
+  var selfPick   = document.getElementById('selfPick');
+  var payOffline = document.getElementById('payOffline');
+  var payOnline  = document.getElementById('payOnline');
   
   delivery.onclick = () => {
     if ( delivery.classList.contains('button') == false ) {
@@ -722,14 +722,14 @@ if (datePicker != null) {
   }
   
   //submit form 
-  let submitButton = document.getElementById('submit');
-  let nameField  = document.getElementById('name');
-  let phoneField = document.getElementById('phone');
-  let dateField  = document.getElementById('date');
-  let timeField  = document.getElementById('time');
+  var submitButton = document.getElementById('submit');
+  var nameField  = document.getElementById('name');
+  var phoneField = document.getElementById('phone');
+  var dateField  = document.getElementById('date');
+  var timeField  = document.getElementById('time');
   
-  let errorFirst  = document.getElementById('errorFirst');
-  let errorSecond = document.getElementById('errorSecond');
+  var errorFirst  = document.getElementById('errorFirst');
+  var errorSecond = document.getElementById('errorSecond');
   
   submitButton.onclick = (e) => {
     e.preventDefault();
