@@ -679,11 +679,15 @@ if (datePicker != null) {
   new AirDatepicker('#date', {
     dateFormat: "dd MMMM yyyy"
   });
-  
-  var delivery   = document.getElementById('delivery');
-  var selfPick   = document.getElementById('selfPick');
-  var payOffline = document.getElementById('payOffline');
-  var payOnline  = document.getElementById('payOnline');
+
+  var delivery        = document.getElementById('delivery');
+  var selfPick        = document.getElementById('selfPick');
+  var payOffline      = document.getElementById('payOffline');
+  var payOnline       = document.getElementById('payOnline');
+  var deliveryRadio   = document.getElementById('deliveryRadio');
+  var selfPickRadio   = document.getElementById('selfPickRadio');
+  var payOfflineRadio = document.getElementById('payOfflineRadio');
+  var payOnlineRadio  = document.getElementById('payOnlineRadio');
   
   delivery.onclick = () => {
     if ( delivery.classList.contains('button') == false ) {
@@ -691,6 +695,7 @@ if (datePicker != null) {
         selfPick.classList.remove('button');
         document.querySelector('.delivery').style.display = 'block';
         document.querySelector('.selfPick').style.display = 'none';
+        deliveryRadio.checked = true;
     }
   }
   
@@ -700,6 +705,7 @@ if (datePicker != null) {
         delivery.classList.remove('button');
         document.querySelector('.selfPick').style.display = 'block';
         document.querySelector('.delivery').style.display = 'none';
+        selfPickRadio.checked = true;
     }
   }
   
@@ -709,6 +715,7 @@ if (datePicker != null) {
         payOnline.classList.remove('button');
         document.querySelector('.payOffline').style.display = 'block';
         document.querySelector('.payOnline').style.display = 'none';
+        payOfflineRadio.checked = true;
     }
   }
   
@@ -718,6 +725,7 @@ if (datePicker != null) {
         payOffline.classList.remove('button');
         document.querySelector('.payOnline').style.display = 'flex';
         document.querySelector('.payOffline').style.display = 'none';
+        payOnlineRadio.checked = true;
     }
   }
   

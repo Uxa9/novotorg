@@ -147,6 +147,8 @@
                             <div class="buttons-wrapper">
                                 <input type="button" value="Доставка" class="button" id="delivery">
                                 <input type="button" value="Самовывоз" id="selfPick">
+                                <input hidden type="radio" name="deliveryType" id="deliveryRadio" checked>
+                                <input hidden type="radio" name="deliveryType" id="selfPickRadio">
                             </div>
                             <div class="delivery">
                                 <p>
@@ -194,6 +196,8 @@
                             <div class="buttons-wrapper">
                                 <input type="button" value="При получении" class="button" id="payOffline">
                                 <input type="button" value="Оплата онлайн" id="payOnline">
+                                <input hidden type="radio" name="paymentType" id="payOfflineRadio" checked>
+                                <input hidden type="radio" name="paymentType" id="payOnlineRadio">
                             </div>
                             <p class="payOffline">
                                 В магазине можно оплатить наличными или картой
