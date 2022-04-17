@@ -1,5 +1,13 @@
 // header
 
+let itemsInCart = document.getElementById('itemsInCart');
+
+if (itemsInCart != null) {
+  if (Number(itemsInCart.innerText) > 0) {
+    itemsInCart.style.display = 'flex';
+  }
+}
+
 //open mobile menu
 let burgerMenu = document.getElementById('hamburgerMenu');
 let isMenuOpen = document.getElementById('showMobileMenu');
@@ -87,10 +95,11 @@ if (searchButtonMobile != null) {
 
 //clear search
 let clearSearchMobile = document.getElementById('clearSearchMobile');
+let searchFieldMobile = document.getElementById('searchFieldMobile');
 
 if (clearSearchMobile != null) {
   clearSearchMobile.onclick = () => {
-    searchWrapper.querySelector('#searchFieldMobile').value = '';
+    searchFieldMobile.value = '';
   }
 }
 

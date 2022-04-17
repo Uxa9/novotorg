@@ -15,3 +15,18 @@
     color: #12335F;
     margin: 40px 0 24px;
 }
+
+.policy-page {
+    margin: 40px 0;
+}
+
+@media screen and (max-width: 450px) {
+    .policy-page h1 {
+        font-size: 32px;
+        word-wrap: break-word;
+    }
+
+    .policy-page {
+        margin: 0 0 40px;
+    }
+}

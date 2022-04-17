@@ -3,15 +3,15 @@
     justify-content: space-between;
 }
 
-.error-page img {
+.error-page .error-page img {
     margin: 46px 138px 0 0;
 }
 
-.error-page-text {
+.error-page .error-page-text {
     margin-top: 153px;
 }
 
-.error-page-text p {
+.error-page .error-page-text p {
     margin: 0;
     font-weight: 500;
     font-size: 16px;
@@ -21,17 +21,17 @@
     width: 352px;
 }
 
-.error-page-text div {
+.error-page .error-page-text div {
     margin-top: 48px;
     display: flex;
 }
 
-.error-page-text div a:first-child {
+.error-page .error-page-text div a:first-child {
     padding: 13px 52px;
     margin-right: 24px;
 }
 
-.error-page-text div a:last-child {
+.error-page .error-page-text div a:last-child {
     padding: 13px 45px;
     background: #EDF1F7;
     border-radius: 5px;
@@ -40,4 +40,49 @@
     line-height: 19px;
     text-align: center;
     color: #12335F;
+}
+
+@media screen and (max-width: 1251px) {
+    .error-page img {
+        margin-right: 0px;
+    }
+}
+
+@media screen and (max-width: 1071px) {
+    .error-page {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .error-page img {
+        width: 400px;
+    }
+
+    .error-page .error-page-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 40px 0 80px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 501px) {
+    .error-page {
+        margin-top: 40px;
+    }
+
+    .error-page img {
+        width: 90%;
+    }
+
+    .error-page .error-page-text div {
+        flex-direction: column;
+        width: 80%;
+    }
+
+    .error-page .error-page-text div a:first-child {
+        padding: 13px 52px;
+        margin: 0 0 20px;
+    }
 }
