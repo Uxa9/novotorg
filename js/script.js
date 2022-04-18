@@ -524,18 +524,18 @@ if (starsRatingWrapper != null) {
 
 // хуйню эту справа чтобы нормально катало
 var cardInfoText = document.querySelector('.card-info-text');
-var loadReviews = document.querySelector('.load-reviews');
+var recommendedCakes = document.querySelector('.recommended-cakes');
 
 if (cardInfoText != null) {
-  if (loadReviews.getBoundingClientRect().y <= 500) {
+  if (recommendedCakes.getBoundingClientRect().top <= 700) {
     cardInfoText.style.position = 'absolute';
-    cardInfoText.style.top = '1200px';
+    cardInfoText.style.top = `${recommendedCakes.offsetTop - 400}px`;
   }
   
   var checkOffset = () => {
-    if (loadReviews.getBoundingClientRect().y <= 500) {
+    if (recommendedCakes.getBoundingClientRect().top <= 700) {
       cardInfoText.style.position = 'absolute';
-      cardInfoText.style.top = '1200px';
+      cardInfoText.style.top = `${recommendedCakes.offsetTop - 400}px`;
     } else {
       cardInfoText.style.position = 'fixed';
       cardInfoText.style.top = 'auto';
@@ -661,12 +661,16 @@ if (clearCartButton != null) {
           console.log(item);
           console.log(pieceAmount[index]);
           pieceAmount[index].value = Number(pieceAmount[index].value) + 1;
+          document.querySelector('input[name=update_cart]').style.display = "block";
       }
   });
   
   decreaseAmount.forEach((item, index) => {
       item.onclick = () => {
-          if ( pieceAmount[index].value > 1 ) pieceAmount[index].value = Number(pieceAmount[index].value) - 1;
+          if ( pieceAmount[index].value > 1 ) {
+            pieceAmount[index].value = Number(pieceAmount[index].value) - 1;
+            document.querySelector('input[name=update_cart]').style.display = "block";
+          }
       }
   });
 }
@@ -730,7 +734,7 @@ if (datePicker != null) {
   }
   
   //submit form 
-  var submitButton = document.getElementById('submit');
+  var submitButton = document.getElementById('submitFormButton');
   var nameField  = document.getElementById('name');
   var phoneField = document.getElementById('phone');
   var dateField  = document.getElementById('date');
@@ -741,6 +745,13 @@ if (datePicker != null) {
   
   submitButton.onclick = (e) => {
     e.preventDefault();
+
+    if ( nameField.value         != '' && 
+         phoneField.value        != '' && 
+         dateField.value         != '' && 
+         timeField.selectedIndex != '0' ) {
+           document.querySelector('.order-wrapper').submit();
+         }
   
     if ( nameField.value == '' )  {
         nameField.classList.add('invalid');

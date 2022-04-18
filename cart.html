@@ -250,7 +250,12 @@
                             <p>Итого: 3 товара на 1 360 ₽ </p>
                             <p>Общий вес: 3 600 кг</p>
                         </div>
-                        <input type="submit" value="Оформить заказ" class="button">
+                        <div class="buttons-wrapper">
+                            <input type="submit" class="button" name="update_cart" value="Обновить корзину" />
+                            <a href="<?php echo wc_get_checkout_url() ?>">
+                                <input type="button" class="button" value="Оформить заказ" />
+                            </a>
+                        </div>
                     </div>
                 </div>
             </form>

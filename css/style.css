@@ -4066,9 +4066,19 @@ ul.page-numbers .hidden {
 }
 
 .cart-price input {
-    margin-top: 36px;
     width: 100%;
     padding: 13px 0;
+}
+
+.cart-price > .buttons-wrapper > input {
+    display: none;
+    margin-bottom: 10px;
+    background-color: #EDF1F7;
+    color: #2c2c2c !important;
+}
+
+.cart-price > .buttons-wrapper {
+    margin: 36px 0 10px;
 }
 
 .cart-content .empty-cart {
