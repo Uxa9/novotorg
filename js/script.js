@@ -517,8 +517,10 @@ if (starsRatingWrapper != null) {
     var increase = document.getElementById('increasePieces');
     var decrease = document.getElementById('decreasePieces');
 
-    increase.onclick = () => piecesAmount.value = Number(piecesAmount.value) + 1;
-    decrease.onclick = () => (piecesAmount.value != 1) && (piecesAmount.value = Number(piecesAmount.value) - 1);
+    if (increase != null && decrease != null) {
+      increase.onclick = () => piecesAmount.value = Number(piecesAmount.value) + 1;
+      decrease.onclick = () => (piecesAmount.value != 1) && (piecesAmount.value = Number(piecesAmount.value) - 1);
+    }
   });
 }
 
