@@ -40,17 +40,29 @@ a {
 }
 
 .button {
-    color: white !important;
+    color: white;
     background-color: #12335F;
     border-radius: 5px;
     font-size: 16px;
     font-weight: 600;
     border: none;
     cursor: pointer;
+    transition: all .5s;
 }
 
 .button a {
     color: white;
+    transition: all .5s;
+}
+
+.button:hover {
+    color: white !important;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    background-color: #1A4A8E !important;
+}
+
+.button:hover a {
+    color: white !important;
 }
 
 .selector {
@@ -950,6 +962,11 @@ a {
 .main-page-promos .promo {
     border-radius: 10px;
     max-width: 670px;
+    transition: all .5s;
+}
+
+.main-page-promos .promo:hover {
+    box-shadow: 0px 4px 30px 1px rgb(43 63 101 / 8%);
 }
 
 .main-page-promos .promo img {
@@ -4074,7 +4091,7 @@ ul.page-numbers .hidden {
     display: none;
     margin-bottom: 10px;
     background-color: #EDF1F7;
-    color: #2c2c2c !important;
+    color: #2c2c2c;
 }
 
 .cart-price > .buttons-wrapper {

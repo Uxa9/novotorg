@@ -577,7 +577,6 @@ if (shopListSelector != null) {
           c = document.createElement("DIV");
           c.innerHTML = selElmnt.options[j].innerHTML;
           c.addEventListener("click", function (e) {
-              console.log(c);
               var y, i, k, s, h, sl, yl;
               s = this.parentNode.parentNode.getElementsByTagName("select")[0];
               sl = s.length;
@@ -658,8 +657,6 @@ if (clearCartButton != null) {
   
   increaseAmount.forEach((item, index) => {
       item.onclick = () => {
-          console.log(item);
-          console.log(pieceAmount[index]);
           pieceAmount[index].value = Number(pieceAmount[index].value) + 1;
           document.querySelector('input[name=update_cart]').style.display = "block";
       }
