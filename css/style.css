@@ -1012,7 +1012,6 @@ a:active {
 .shops-cards {
     margin-top: 33px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     row-gap: 20px;
     column-gap: 20px;
     gap: 20px;
