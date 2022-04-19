@@ -2162,7 +2162,7 @@ ul.page-numbers .hidden {
     display: block;
 }
 
-.cross {
+.cake-assembler-wrapper .cross {
     width: 24px;
     height: 24px;
 
@@ -2178,7 +2178,8 @@ ul.page-numbers .hidden {
     transform: rotate(45deg);
 }
 
-.cross:before, .cross:after {
+.cake-assembler-wrapper .cross:before,
+.cake-assembler-wrapper .cross:after {
     display: block;
     content: "";
     height: 12px;
@@ -2191,7 +2192,7 @@ ul.page-numbers .hidden {
     transform: translateX(50%) translateY(-50%);
 }
 
-.cross:before {
+.cake-assembler-wrapper .cross:before {
     transform: translateX(50%) translateY(-50%) rotate(90deg);
 }
 
@@ -3956,12 +3957,12 @@ ul.page-numbers .hidden {
 
 .cart-content .popup div a:first-child .button {
     background-color: #EDF1F7;
-    color: #12335F !important;
+    color: #12335F;
 }
 
 .cart-content .cross {
-    width: 22px;
-    height: 22px;
+    width: 16px;
+    height: 16px;
     transform: rotate(45deg);
 
     position: absolute;
@@ -3975,11 +3976,20 @@ ul.page-numbers .hidden {
     display: block;
     content: '';
     width: 2px;
-    height: 22px;
+    height: 16px;
     background-color: #9B9B9B;
 
     position: absolute;
-    right: 10px;
+    right: 7px;
+}
+
+.cart-content .cross::after {
+    transform: rotate(90deg);
+}
+
+.cart-content .cross:hover {
+    filter: brightness(90%);
+    -webkit-filter: brightness(90%);
 }
 
 .cart-content .cart-header {
