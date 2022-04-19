@@ -1630,6 +1630,7 @@ ul.page-numbers .hidden {
 
 .price-calculator {
     max-width: 390px;
+    min-width: 310px;
     height: 244px;
     padding: 36px 24px 25px;
     background-color: white;
@@ -2059,7 +2060,7 @@ ul.page-numbers .hidden {
 }
 
 .selector {
-    margin-top: 38px;
+    margin-top: 0;
 }
 
 .drag-n-drop {
@@ -2746,7 +2747,7 @@ ul.page-numbers .hidden {
 }
 
 .news-feed {
-    margin-top: 68px;
+    margin-top: 60px;
     display: grid;
     justify-content: space-between;
     grid-template-columns: repeat(3, 1fr);    
@@ -3059,6 +3060,12 @@ ul.page-numbers .hidden {
     }
 }
 
+@media screen and (max-width: 600px) {
+    .promo-content .promos {
+        margin-top: 30px;
+    }
+}
+
 /* end of promos */
 
 /* master class */
@@ -3072,7 +3079,7 @@ ul.page-numbers .hidden {
 
 .master-class-content .master-class-banner {
     width: 100%;
-    margin-bottom: 20px;
+    margin: 60px 0 20px;
 }
 
 .master-class-content .master-class-banner img {
@@ -3171,7 +3178,7 @@ ul.page-numbers .hidden {
 /* missions */
 
 .mission-content .missions {
-    margin-bottom: 80px;
+    margin: 60px 0 80px;
 }
 
 .mission-content .our-mission {
@@ -3367,12 +3374,19 @@ ul.page-numbers .hidden {
     }
 }
 
+@media screen and (max-width: 600px) {
+    .mission-content .missions {
+        margin-top: 30px;
+    }
+}
+
 /* end of missions */
 
 /* history */
 
 .history-content .history {
     max-width: 900px;
+    margin-top: 60px;
 }
 
 .history-content .history header {
@@ -3514,6 +3528,10 @@ ul.page-numbers .hidden {
 
     .history-content .history header > div p:last-child {
         margin-top: 4px !important;
+    }
+
+    .history-content .history {
+        margin-top: 30px;
     }
 }
 
