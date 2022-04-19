@@ -46,8 +46,6 @@ a:hover {
 
 a:active {
     opacity: 1;
-    filter: brightness(90%);
-    -webkit-filter: brightness(90%);
 }
 
 .button {
@@ -83,6 +81,11 @@ a:active {
     color: #9B9B9B;
     font-size: 16px;
     overflow-x: scroll;
+}
+
+.selector .current-menu-item a {
+    color: white !important;
+    font-size: 16px;
 }
 
 .selector-selected a {
@@ -125,10 +128,20 @@ a:active {
     color: #12335F;
 }
 
+.selector .current-menu-item {
+    background-color: #12335F;
+    color: white;
+    border-radius: 32px;
+}
+
 .selector-selected {
     background-color: #12335F;
     color: white;
     border-radius: 32px;
+}
+
+.selector .current-menu-item:hover {
+    color: white !important;
 }
 
 .selector-selected:hover {
