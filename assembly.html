@@ -155,195 +155,726 @@
                                 <header>
                                     <h3>Количество ярусов</h3>
                                 </header>
-                                <div class="cake-assembler-option-wrapper cake-assembler-option-icons">
-                                    <div>
+                                <div class="cake-assembler-option-wrapper cake-assembler-option-icons" id="layerPicker">
+                                    <div class="selected">
                                         <img src="images/firstTier.svg" alt="">
-                                        <span>Квадрат</span>
+                                        <span>Один</span>
                                     </div>
                                     <div>
                                         <img src="images/secondTier.svg" alt="">
-                                        <span>Круг</span>
+                                        <span>Два</span>
                                     </div>
                                     <div>
                                         <img src="images/thirdTier.svg" alt="">
-                                        <span>Треугольник</span>
+                                        <span>Три</span>
                                     </div>
                                     <div>
                                         <img src="images/fourthTier.svg" alt="">
-                                        <span>Другое</span>
+                                        <span>Четыре</span>
                                     </div>
                                 </div>
                             </article>
-                            <article class="cake-assembler-option">
-                                <header>
-                                    <h3>Бисквит</h3>
-                                </header>
-                                <div class="catalogue cake-assembler-option-wrapper">
-                                    <div class="option">
-                                        <div class="option-image">
-                                            <img src="images/classic.png" alt="">
+                            <!-- при слове баян я всегда вспоминаю гадзу деда с баяном -->
+                            <div class="accordion">
+                                <div class="accordion-show">1 ярус</div>
+                                <div class="accordion-layer">
+                                    <article class="cake-assembler-option">
+                                        <header>
+                                            <h3>Бисквит</h3>
+                                        </header>
+                                        <div class="catalogue cake-assembler-option-wrapper">
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/classic.png" alt="">
+                                                </div>
+                                                <span>Классический белый</span>
+                                            </div>
+                                            <div class="option selected">
+                                                <div class="option-image">
+                                                    <img src="images/sourCream.png" alt="">
+                                                </div>
+                                                <span>Сметанный</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/honey.png" alt="">
+                                                </div>
+                                                <span>Медовый</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/sourCreamCacao.png" alt="">
+                                                </div>
+                                                <span>Сметанный с какао</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/milk.png" alt="">
+                                                </div>
+                                                <span>На сгущенном молоке</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/carrot.png" alt="">
+                                                </div>
+                                                <span>Морковный с грецким орехом и карамелью</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/redVelvet.png" alt="">
+                                                </div>
+                                                <span>Красный бархат</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/chokolate.png" alt="">
+                                                </div>
+                                                <span>Шоколадный</span>
+                                            </div>
                                         </div>
-                                        <span>Классический белый</span>
-                                    </div>
-                                    <div class="option selected">
-                                        <div class="option-image">
-                                            <img src="images/sourCream.png" alt="">
+                                    </article>
+                                    <article class="cake-assembler-option">
+                                        <header>
+                                            <h3>Крем</h3>
+                                        </header>
+                                        <div class="catalogue cake-assembler-option-wrapper">
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/classic.png" alt="">
+                                                </div>
+                                                <span>Классический белый</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/sourCream.png" alt="">
+                                                </div>
+                                                <span>Сметанный</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/honey.png" alt="">
+                                                </div>
+                                                <span>Медовый</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/sourCreamCacao.png" alt="">
+                                                </div>
+                                                <span>Сметанный с какао</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/milk.png" alt="">
+                                                </div>
+                                                <span>На сгущенном молоке</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/carrot.png" alt="">
+                                                </div>
+                                                <span>Морковный с грецким орехом и карамелью</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/redVelvet.png" alt="">
+                                                </div>
+                                                <span>Красный бархат</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/chokolate.png" alt="">
+                                                </div>
+                                                <span>Шоколадный</span>
+                                            </div>
                                         </div>
-                                        <span>Сметанный</span>
-                                    </div>
-                                    <div class="option">
-                                        <div class="option-image">
-                                            <img src="images/honey.png" alt="">
+                                    </article>
+                                    <article class="cake-assembler-option">
+                                        <header>
+                                            <h3>Начинка</h3>
+                                        </header>
+                                        <!-- <p class="assembly-warn">
+                                            Вы можете выбрать 2  начинки. 
+                                            Для добавления еще одной увеличьте 
+                                            количество ярусов.
+                                        </p> -->
+                                        <div class="catalogue cake-assembler-option-wrapper">
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/classic.png" alt="">
+                                                </div>
+                                                <span>Классический белый</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/sourCream.png" alt="">
+                                                </div>
+                                                <span>Сметанный</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/honey.png" alt="">
+                                                </div>
+                                                <span>Медовый</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/sourCreamCacao.png" alt="">
+                                                </div>
+                                                <span>Сметанный с какао</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/milk.png" alt="">
+                                                </div>
+                                                <span>На сгущенном молоке</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/carrot.png" alt="">
+                                                </div>
+                                                <span>Морковный с грецким орехом и карамелью</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/redVelvet.png" alt="">
+                                                </div>
+                                                <span>Красный бархат</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/chokolate.png" alt="">
+                                                </div>
+                                                <span>Шоколадный</span>
+                                            </div>
                                         </div>
-                                        <span>Медовый</span>
-                                    </div>
-                                    <div class="option">
-                                        <div class="option-image">
-                                            <img src="images/sourCreamCacao.png" alt="">
-                                        </div>
-                                        <span>Сметанный с какао</span>
-                                    </div>
-                                    <div class="option">
-                                        <div class="option-image">
-                                            <img src="images/milk.png" alt="">
-                                        </div>
-                                        <span>На сгущенном молоке</span>
-                                    </div>
-                                    <div class="option">
-                                        <div class="option-image">
-                                            <img src="images/carrot.png" alt="">
-                                        </div>
-                                        <span>Морковный с грецким орехом и карамелью</span>
-                                    </div>
-                                    <div class="option">
-                                        <div class="option-image">
-                                            <img src="images/redVelvet.png" alt="">
-                                        </div>
-                                        <span>Красный бархат</span>
-                                    </div>
-                                    <div class="option">
-                                        <div class="option-image">
-                                            <img src="images/chokolate.png" alt="">
-                                        </div>
-                                        <span>Шоколадный</span>
-                                    </div>
+                                    </article>
                                 </div>
-                            </article>
-                            <article class="cake-assembler-option">
-                                <header>
-                                    <h3>Крем</h3>
-                                </header>
-                                <div class="catalogue cake-assembler-option-wrapper">
-                                    <div class="option">
-                                        <div class="option-image">
-                                            <img src="images/classic.png" alt="">
-                                        </div>
-                                        <span>Классический белый</span>
+                                <div class="accordion-show">2 ярус</div>
+                                <div class="accordion-layer">
+                                    <div class="accordion-repeat-layer button">
+                                        Повторить ярус
+                                        <!-- <div class="accordion-layer-tooltip">Нажав на кнопку, Вы продублируете настройки предыдущего яруса</div> -->
                                     </div>
-                                    <div class="option">
-                                        <div class="option-image">
-                                            <img src="images/sourCream.png" alt="">
+                                    <article class="cake-assembler-option">
+                                        <header>
+                                            <h3>Бисквит</h3>
+                                        </header>
+                                        <div class="catalogue cake-assembler-option-wrapper">
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/classic.png" alt="">
+                                                </div>
+                                                <span>Классический белый</span>
+                                            </div>
+                                            <div class="option selected">
+                                                <div class="option-image">
+                                                    <img src="images/sourCream.png" alt="">
+                                                </div>
+                                                <span>Сметанный</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/honey.png" alt="">
+                                                </div>
+                                                <span>Медовый</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/sourCreamCacao.png" alt="">
+                                                </div>
+                                                <span>Сметанный с какао</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/milk.png" alt="">
+                                                </div>
+                                                <span>На сгущенном молоке</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/carrot.png" alt="">
+                                                </div>
+                                                <span>Морковный с грецким орехом и карамелью</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/redVelvet.png" alt="">
+                                                </div>
+                                                <span>Красный бархат</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/chokolate.png" alt="">
+                                                </div>
+                                                <span>Шоколадный</span>
+                                            </div>
                                         </div>
-                                        <span>Сметанный</span>
-                                    </div>
-                                    <div class="option">
-                                        <div class="option-image">
-                                            <img src="images/honey.png" alt="">
+                                    </article>
+                                    <article class="cake-assembler-option">
+                                        <header>
+                                            <h3>Крем</h3>
+                                        </header>
+                                        <div class="catalogue cake-assembler-option-wrapper">
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/classic.png" alt="">
+                                                </div>
+                                                <span>Классический белый</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/sourCream.png" alt="">
+                                                </div>
+                                                <span>Сметанный</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/honey.png" alt="">
+                                                </div>
+                                                <span>Медовый</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/sourCreamCacao.png" alt="">
+                                                </div>
+                                                <span>Сметанный с какао</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/milk.png" alt="">
+                                                </div>
+                                                <span>На сгущенном молоке</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/carrot.png" alt="">
+                                                </div>
+                                                <span>Морковный с грецким орехом и карамелью</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/redVelvet.png" alt="">
+                                                </div>
+                                                <span>Красный бархат</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/chokolate.png" alt="">
+                                                </div>
+                                                <span>Шоколадный</span>
+                                            </div>
                                         </div>
-                                        <span>Медовый</span>
-                                    </div>
-                                    <div class="option">
-                                        <div class="option-image">
-                                            <img src="images/sourCreamCacao.png" alt="">
+                                    </article>
+                                    <article class="cake-assembler-option">
+                                        <header>
+                                            <h3>Начинка</h3>
+                                        </header>
+                                        <!-- <p class="assembly-warn">
+                                            Вы можете выбрать 2  начинки. 
+                                            Для добавления еще одной увеличьте 
+                                            количество ярусов.
+                                        </p> -->
+                                        <div class="catalogue cake-assembler-option-wrapper">
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/classic.png" alt="">
+                                                </div>
+                                                <span>Классический белый</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/sourCream.png" alt="">
+                                                </div>
+                                                <span>Сметанный</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/honey.png" alt="">
+                                                </div>
+                                                <span>Медовый</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/sourCreamCacao.png" alt="">
+                                                </div>
+                                                <span>Сметанный с какао</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/milk.png" alt="">
+                                                </div>
+                                                <span>На сгущенном молоке</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/carrot.png" alt="">
+                                                </div>
+                                                <span>Морковный с грецким орехом и карамелью</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/redVelvet.png" alt="">
+                                                </div>
+                                                <span>Красный бархат</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/chokolate.png" alt="">
+                                                </div>
+                                                <span>Шоколадный</span>
+                                            </div>
                                         </div>
-                                        <span>Сметанный с какао</span>
-                                    </div>
-                                    <div class="option">
-                                        <div class="option-image">
-                                            <img src="images/milk.png" alt="">
-                                        </div>
-                                        <span>На сгущенном молоке</span>
-                                    </div>
-                                    <div class="option">
-                                        <div class="option-image">
-                                            <img src="images/carrot.png" alt="">
-                                        </div>
-                                        <span>Морковный с грецким орехом и карамелью</span>
-                                    </div>
-                                    <div class="option">
-                                        <div class="option-image">
-                                            <img src="images/redVelvet.png" alt="">
-                                        </div>
-                                        <span>Красный бархат</span>
-                                    </div>
-                                    <div class="option">
-                                        <div class="option-image">
-                                            <img src="images/chokolate.png" alt="">
-                                        </div>
-                                        <span>Шоколадный</span>
-                                    </div>
+                                    </article>
                                 </div>
-                            </article>
-                            <article class="cake-assembler-option">
-                                <header>
-                                    <h3>Начинка</h3>
-                                </header>
-                                <p class="assembly-warn">
-                                    Вы можете выбрать 2  начинки. 
-                                    Для добавления еще одной увеличьте 
-                                    количество ярусов.
-                                </p>
-                                <div class="catalogue cake-assembler-option-wrapper">
-                                    <div class="option">
-                                        <div class="option-image">
-                                            <img src="images/classic.png" alt="">
+                                <div class="accordion-show">3 ярус</div>
+                                <div class="accordion-layer">
+                                    <div class="accordion-repeat-layer">Повторить ярус</div>
+                                    <article class="cake-assembler-option">
+                                        <header>
+                                            <h3>Бисквит</h3>
+                                        </header>
+                                        <div class="catalogue cake-assembler-option-wrapper">
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/classic.png" alt="">
+                                                </div>
+                                                <span>Классический белый</span>
+                                            </div>
+                                            <div class="option selected">
+                                                <div class="option-image">
+                                                    <img src="images/sourCream.png" alt="">
+                                                </div>
+                                                <span>Сметанный</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/honey.png" alt="">
+                                                </div>
+                                                <span>Медовый</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/sourCreamCacao.png" alt="">
+                                                </div>
+                                                <span>Сметанный с какао</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/milk.png" alt="">
+                                                </div>
+                                                <span>На сгущенном молоке</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/carrot.png" alt="">
+                                                </div>
+                                                <span>Морковный с грецким орехом и карамелью</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/redVelvet.png" alt="">
+                                                </div>
+                                                <span>Красный бархат</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/chokolate.png" alt="">
+                                                </div>
+                                                <span>Шоколадный</span>
+                                            </div>
                                         </div>
-                                        <span>Классический белый</span>
-                                    </div>
-                                    <div class="option">
-                                        <div class="option-image">
-                                            <img src="images/sourCream.png" alt="">
+                                    </article>
+                                    <article class="cake-assembler-option">
+                                        <header>
+                                            <h3>Крем</h3>
+                                        </header>
+                                        <div class="catalogue cake-assembler-option-wrapper">
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/classic.png" alt="">
+                                                </div>
+                                                <span>Классический белый</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/sourCream.png" alt="">
+                                                </div>
+                                                <span>Сметанный</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/honey.png" alt="">
+                                                </div>
+                                                <span>Медовый</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/sourCreamCacao.png" alt="">
+                                                </div>
+                                                <span>Сметанный с какао</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/milk.png" alt="">
+                                                </div>
+                                                <span>На сгущенном молоке</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/carrot.png" alt="">
+                                                </div>
+                                                <span>Морковный с грецким орехом и карамелью</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/redVelvet.png" alt="">
+                                                </div>
+                                                <span>Красный бархат</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/chokolate.png" alt="">
+                                                </div>
+                                                <span>Шоколадный</span>
+                                            </div>
                                         </div>
-                                        <span>Сметанный</span>
-                                    </div>
-                                    <div class="option">
-                                        <div class="option-image">
-                                            <img src="images/honey.png" alt="">
+                                    </article>
+                                    <article class="cake-assembler-option">
+                                        <header>
+                                            <h3>Начинка</h3>
+                                        </header>
+                                        <!-- <p class="assembly-warn">
+                                            Вы можете выбрать 2  начинки. 
+                                            Для добавления еще одной увеличьте 
+                                            количество ярусов.
+                                        </p> -->
+                                        <div class="catalogue cake-assembler-option-wrapper">
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/classic.png" alt="">
+                                                </div>
+                                                <span>Классический белый</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/sourCream.png" alt="">
+                                                </div>
+                                                <span>Сметанный</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/honey.png" alt="">
+                                                </div>
+                                                <span>Медовый</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/sourCreamCacao.png" alt="">
+                                                </div>
+                                                <span>Сметанный с какао</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/milk.png" alt="">
+                                                </div>
+                                                <span>На сгущенном молоке</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/carrot.png" alt="">
+                                                </div>
+                                                <span>Морковный с грецким орехом и карамелью</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/redVelvet.png" alt="">
+                                                </div>
+                                                <span>Красный бархат</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/chokolate.png" alt="">
+                                                </div>
+                                                <span>Шоколадный</span>
+                                            </div>
                                         </div>
-                                        <span>Медовый</span>
-                                    </div>
-                                    <div class="option">
-                                        <div class="option-image">
-                                            <img src="images/sourCreamCacao.png" alt="">
-                                        </div>
-                                        <span>Сметанный с какао</span>
-                                    </div>
-                                    <div class="option">
-                                        <div class="option-image">
-                                            <img src="images/milk.png" alt="">
-                                        </div>
-                                        <span>На сгущенном молоке</span>
-                                    </div>
-                                    <div class="option">
-                                        <div class="option-image">
-                                            <img src="images/carrot.png" alt="">
-                                        </div>
-                                        <span>Морковный с грецким орехом и карамелью</span>
-                                    </div>
-                                    <div class="option">
-                                        <div class="option-image">
-                                            <img src="images/redVelvet.png" alt="">
-                                        </div>
-                                        <span>Красный бархат</span>
-                                    </div>
-                                    <div class="option">
-                                        <div class="option-image">
-                                            <img src="images/chokolate.png" alt="">
-                                        </div>
-                                        <span>Шоколадный</span>
-                                    </div>
+                                    </article>
                                 </div>
-                            </article>
+                                <div class="accordion-show">4 ярус</div>
+                                <div class="accordion-layer">
+                                    <div class="accordion-repeat-layer">Повторить ярус</div>
+                                    <article class="cake-assembler-option">
+                                        <header>
+                                            <h3>Бисквит</h3>
+                                        </header>
+                                        <div class="catalogue cake-assembler-option-wrapper">
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/classic.png" alt="">
+                                                </div>
+                                                <span>Классический белый</span>
+                                            </div>
+                                            <div class="option selected">
+                                                <div class="option-image">
+                                                    <img src="images/sourCream.png" alt="">
+                                                </div>
+                                                <span>Сметанный</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/honey.png" alt="">
+                                                </div>
+                                                <span>Медовый</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/sourCreamCacao.png" alt="">
+                                                </div>
+                                                <span>Сметанный с какао</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/milk.png" alt="">
+                                                </div>
+                                                <span>На сгущенном молоке</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/carrot.png" alt="">
+                                                </div>
+                                                <span>Морковный с грецким орехом и карамелью</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/redVelvet.png" alt="">
+                                                </div>
+                                                <span>Красный бархат</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/chokolate.png" alt="">
+                                                </div>
+                                                <span>Шоколадный</span>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="cake-assembler-option">
+                                        <header>
+                                            <h3>Крем</h3>
+                                        </header>
+                                        <div class="catalogue cake-assembler-option-wrapper">
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/classic.png" alt="">
+                                                </div>
+                                                <span>Классический белый</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/sourCream.png" alt="">
+                                                </div>
+                                                <span>Сметанный</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/honey.png" alt="">
+                                                </div>
+                                                <span>Медовый</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/sourCreamCacao.png" alt="">
+                                                </div>
+                                                <span>Сметанный с какао</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/milk.png" alt="">
+                                                </div>
+                                                <span>На сгущенном молоке</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/carrot.png" alt="">
+                                                </div>
+                                                <span>Морковный с грецким орехом и карамелью</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/redVelvet.png" alt="">
+                                                </div>
+                                                <span>Красный бархат</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/chokolate.png" alt="">
+                                                </div>
+                                                <span>Шоколадный</span>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article class="cake-assembler-option">
+                                        <header>
+                                            <h3>Начинка</h3>
+                                        </header>
+                                        <!-- <p class="assembly-warn">
+                                            Вы можете выбрать 2  начинки. 
+                                            Для добавления еще одной увеличьте 
+                                            количество ярусов.
+                                        </p> -->
+                                        <div class="catalogue cake-assembler-option-wrapper">
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/classic.png" alt="">
+                                                </div>
+                                                <span>Классический белый</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/sourCream.png" alt="">
+                                                </div>
+                                                <span>Сметанный</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/honey.png" alt="">
+                                                </div>
+                                                <span>Медовый</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/sourCreamCacao.png" alt="">
+                                                </div>
+                                                <span>Сметанный с какао</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/milk.png" alt="">
+                                                </div>
+                                                <span>На сгущенном молоке</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/carrot.png" alt="">
+                                                </div>
+                                                <span>Морковный с грецким орехом и карамелью</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/redVelvet.png" alt="">
+                                                </div>
+                                                <span>Красный бархат</span>
+                                            </div>
+                                            <div class="option">
+                                                <div class="option-image">
+                                                    <img src="images/chokolate.png" alt="">
+                                                </div>
+                                                <span>Шоколадный</span>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
                             <article class="cake-assembler-option cake-option-weight">
                                 <header>
                                     <h3>Вес</h3>

@@ -786,3 +786,46 @@ if (datePicker != null) {
     if ( timeField.selectedIndex != '0' ) timeField.classList.remove('invalid');
   }
 }
+
+// заводи баян григорий
+
+var acc = document.getElementsByClassName("accordion-show");
+
+if (acc != null) {
+  for (var i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("accordion-active");
+      var panel = this.nextElementSibling;
+      console.log(panel);
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        console.log(panel.scrollHeight);
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  }
+}
+
+var layers = document.getElementById('layerPicker').querySelectorAll('div');
+
+if (layers != null) {
+
+  var accordionLayers = document.querySelectorAll('.accordion-show');
+
+  for (var i = 0; i < layers.length; i++) {
+    const index = i;
+    layers[i].addEventListener('click', () => {
+      for (var j = 0; j < layers.length; j++) {
+        layers[j].classList.remove('selected');
+      }
+      layers[index].classList.add('selected');
+        for (var j = 0; j < index+1; j++) {
+          accordionLayers[j].style.display = "flex";
+        }
+        for (var j = index+1; j < layers.length; j++) {
+          accordionLayers[j].style.display = "none";
+        }
+    });
+  }
+}

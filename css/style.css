@@ -2208,6 +2208,97 @@ ul.page-numbers .hidden {
     transform: translateX(50%) translateY(-50%) rotate(90deg);
 }
 
+.cake-assembler-wrapper .accordion {
+    margin-bottom: 40px;
+}
+
+.cake-assembler-wrapper .accordion .accordion-show {
+    padding: 18px;
+    transition: .5s;
+    cursor: pointer;
+    box-shadow: 0px 4px 30px 1px rgb(43 63 101 / 8%);
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #2C2C2C;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.cake-assembler-wrapper .accordion .accordion-show:not(:first-child) {
+    display: none;
+}
+
+.cake-assembler-wrapper .accordion .accordion-show::after {
+    display: block;
+    content: '';
+    position: relative;
+    top: 5px;
+    border: 6px solid transparent;
+    border-color: #12335F transparent transparent transparent;
+}
+  
+.cake-assembler-wrapper .accordion .accordion-active::after  {
+    display: block;
+    content: '';
+    position: relative;
+    top: auto;
+    bottom: 5px;
+    border: 6px solid transparent;
+    border-color:  transparent transparent #12335F transparent;
+}
+
+.cake-assembler-wrapper .accordion .accordion-show:hover,
+.cake-assembler-wrapper .accordion .accordion-active {
+    transition: .5s;
+    border-color: #12335F;
+}
+
+.cake-assembler-wrapper .accordion .accordion-layer {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    margin-top: 20px;
+}
+
+.cake-assembler-wrapper .accordion .accordion-repeat-layer {
+    color: #2C2C2C;
+    font-weight: bold;
+    background-color: #F4F6FA;
+    padding: 20px 15px;
+    border-radius: 10px;
+    max-width: 200px;
+    text-align: center;
+    margin: 10px 0 20px;
+    position: relative;
+}
+
+.cake-assembler-wrapper .accordion .accordion-repeat-layer .accordion-layer-tooltip {
+    position: absolute;
+    background-color: #F4F6FA;
+    width: 250px;
+    right: -50px;
+    color: #2C2C2C;
+    padding: 10px 10px;
+    border-radius: 10px;
+    opacity: 0;
+    z-index: -1;
+    transition: .5s;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.cake-assembler-wrapper .accordion .accordion-repeat-layer:hover .accordion-layer-tooltip {
+    opacity: 1;
+    z-index: auto;
+}
+
 .dnd-and-text > div {
     display: flex;
     flex-direction: column;
