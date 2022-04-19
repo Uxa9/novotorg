@@ -37,6 +37,17 @@ ul {
 a {
     text-decoration: none;
     color: #12335F;
+    transition: all .5s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+a:active {
+    opacity: 1;
+    filter: brightness(90%);
+    -webkit-filter: brightness(90%);
 }
 
 .button {
@@ -81,6 +92,7 @@ a {
 
 .selector li a {
     color: #9B9B9B;
+    transition: color .5s;
 }
 
 .selector::-webkit-scrollbar {
@@ -109,6 +121,10 @@ a {
     color: #12335F;
 }
 
+.selector li:hover a {
+    color: #12335F;
+}
+
 .selector-selected {
     background-color: #12335F;
     color: white;
@@ -125,6 +141,7 @@ a {
     flex-wrap: wrap;
     margin: 0;
     list-style: none;
+    padding-left: 0;
 }
 
 .breadscrumbs a {
@@ -220,6 +237,11 @@ a {
     text-align: center;
     line-height: 44px;
     cursor: pointer;
+    transition: all .5s;
+}
+
+.amount-button:hover {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
 }
 
 .amount input[type=number] {
@@ -1366,6 +1388,10 @@ a {
     margin-top: 26px;
 }
 
+.catalog-filters-shop:hover {
+    box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.1);
+}
+
 .catalog-filters-shop {
     display: flex;
     justify-content: center;
@@ -1377,6 +1403,7 @@ a {
     margin-right: 22px;
     cursor: pointer;
     box-shadow: 0px 4px 30px 1px rgba(43, 63, 101, 0.08);
+    transition: all .5s;
 }
 
 .catalog-filters-shop span {
@@ -2845,6 +2872,12 @@ ul.page-numbers .hidden {
     align-self: center;
     white-space: nowrap;
     cursor: pointer;
+    transition: all .5s;
+}
+
+.news-content .load-news:hover {
+    color: white;
+    background-color: #1A4A8E;
 }
 
 /* end of news */
@@ -4340,7 +4373,7 @@ ul.page-numbers .hidden {
     border: 1px solid #E3E3E3;
     box-sizing: border-box;
     border-radius: 5px;
-    transition: border-color .5s;
+    /* transition: border-color .5s; */
     color: #2c2c2c;
 
     -moz-appearance:none;
@@ -4404,14 +4437,19 @@ ul.page-numbers .hidden {
     font-weight: 600;
     font-size: 16px;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0);
+    /* background-color: rgba(0, 0, 0, 0); */
     color: #12335F;
     overflow: hidden;
     transition: all .5s;
 }
 
+.order-content .buttons-wrapper input:hover {
+    background-color: #1A4A8E !important;
+    color: white;
+}  
+
 .order-content .button {
-    background-color: #12335F !important;
+    /* background-color: #12335F !important; */
     color: #FFFFFF !important;
 }
 
@@ -4489,7 +4527,7 @@ ul.page-numbers .hidden {
     padding: 32px 24px;
 
     position: sticky;
-    top: 100px;
+    top: 120px;
 }
 
 .order-content .order-total div {
