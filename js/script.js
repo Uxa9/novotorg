@@ -478,6 +478,20 @@ if (clearButton != null) {
   }
 }
 
+// textarea parent highlight 
+
+var userReview = document.getElementById('userReview');
+
+if (userReview != null) {
+  userReview.onfocus = () => {
+    document.getElementsByClassName('user-review-field')[0].classList.add('field-active');
+  }
+
+  userReview.onblur = () => {
+    document.getElementsByClassName('user-review-field')[0].classList.remove('field-active'); 
+  }
+}
+
 //user rating
 var starsRatingWrapper = document.querySelector('.review-rating');
 
@@ -815,27 +829,27 @@ if (acc != null) {
   }
 }
 
-if (document.getElementById('layerPicker') != null) {
-  var layers = document.getElementById('layerPicker').querySelectorAll('div');
+var layers = document.getElementById('layerPicker')
 
-  if (layers != null) {
+if (layers != null) {
 
-    var accordionLayers = document.querySelectorAll('.accordion-show');
+layers = layers.querySelectorAll('div');
 
-    for (var i = 0; i < layers.length; i++) {
-      const index = i;
-      layers[i].addEventListener('click', () => {
-        for (var j = 0; j < layers.length; j++) {
-          layers[j].classList.remove('selected');
+var accordionLayers = document.querySelectorAll('.accordion-show');
+
+  for (var i = 0; i < layers.length; i++) {
+    const index = i;
+    layers[i].addEventListener('click', () => {
+      for (var j = 0; j < layers.length; j++) {
+        layers[j].classList.remove('selected');
+      }
+      layers[index].classList.add('selected');
+        for (var j = 0; j < index+1; j++) {
+          accordionLayers[j].style.display = "flex";
         }
-        layers[index].classList.add('selected');
-          for (var j = 0; j < index+1; j++) {
-            accordionLayers[j].style.display = "flex";
-          }
-          for (var j = index+1; j < layers.length; j++) {
-            accordionLayers[j].style.display = "none";
-          }
-      });
-    }
+        for (var j = index+1; j < layers.length; j++) {
+          accordionLayers[j].style.display = "none";
+        }
+    });
   }
 }
