@@ -683,6 +683,8 @@ if (clearCartButton != null) {
       item.onclick = () => {
           pieceAmount[index].value = Number(pieceAmount[index].value) + 1;
           document.querySelector('input[name=update_cart]').style.display = "block";
+          var e = new CustomEvent("change");
+          pieceAmount[index].dispatchEvent(e);
       }
   });
   
@@ -691,6 +693,8 @@ if (clearCartButton != null) {
           if ( pieceAmount[index].value > 1 ) {
             pieceAmount[index].value = Number(pieceAmount[index].value) - 1;
             document.querySelector('input[name=update_cart]').style.display = "block";
+            var e = new CustomEvent("change");
+            pieceAmount[index].dispatchEvent(e);
           }
       }
   });
