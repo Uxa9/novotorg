@@ -478,6 +478,20 @@ if (clearButton != null) {
   }
 }
 
+// textarea parent highlight 
+
+var userReview = document.getElementById('userReview');
+
+if (userReview != null) {
+  userReview.onfocus = () => {
+    document.getElementsByClassName('user-review-field')[0].classList.add('field-active');
+  }
+
+  userReview.onblur = () => {
+    document.getElementsByClassName('user-review-field')[0].classList.remove('field-active'); 
+  }
+}
+
 //user rating
 var starsRatingWrapper = document.querySelector('.review-rating');
 
@@ -815,9 +829,11 @@ if (acc != null) {
   }
 }
 
-var layers = document.getElementById('layerPicker').querySelectorAll('div');
+var layers = document.getElementById('layerPicker')
 
 if (layers != null) {
+
+  layers = layers.querySelectorAll('div');
 
   var accordionLayers = document.querySelectorAll('.accordion-show');
 
