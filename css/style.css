@@ -4250,6 +4250,7 @@ ul.page-numbers .hidden {
 .cart-price input {
     width: 100%;
     padding: 13px 0;
+    -webkit-appearance: none;
 }
 
 .cart-price > .buttons-wrapper > input {
@@ -4257,6 +4258,7 @@ ul.page-numbers .hidden {
     margin-bottom: 10px;
     background-color: #EDF1F7;
     color: #2c2c2c;
+    -webkit-appearance: none;
 }
 
 .cart-price > .buttons-wrapper {

@@ -512,6 +512,14 @@ if (starsRatingWrapper != null) {
       document.getElementById('userRating').value = index;
     }
 
+    starsRatingWrapper.onmouseleave = () => {
+      starsRating.forEach(star => {
+        if (star.classList.contains('starring')) {
+          star.classList.remove('starring');
+        }
+      });
+    }
+
     //increase / decrease amount of pieces
     var piecesAmount = document.getElementById('piecesAmount');
     var increase = document.getElementById('increasePieces');
