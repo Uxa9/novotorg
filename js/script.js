@@ -815,25 +815,27 @@ if (acc != null) {
   }
 }
 
-var layers = document.getElementById('layerPicker').querySelectorAll('div');
+if (document.getElementById('layerPicker') != null) {
+  var layers = document.getElementById('layerPicker').querySelectorAll('div');
 
-if (layers != null) {
+  if (layers != null) {
 
-  var accordionLayers = document.querySelectorAll('.accordion-show');
+    var accordionLayers = document.querySelectorAll('.accordion-show');
 
-  for (var i = 0; i < layers.length; i++) {
-    const index = i;
-    layers[i].addEventListener('click', () => {
-      for (var j = 0; j < layers.length; j++) {
-        layers[j].classList.remove('selected');
-      }
-      layers[index].classList.add('selected');
-        for (var j = 0; j < index+1; j++) {
-          accordionLayers[j].style.display = "flex";
+    for (var i = 0; i < layers.length; i++) {
+      const index = i;
+      layers[i].addEventListener('click', () => {
+        for (var j = 0; j < layers.length; j++) {
+          layers[j].classList.remove('selected');
         }
-        for (var j = index+1; j < layers.length; j++) {
-          accordionLayers[j].style.display = "none";
-        }
-    });
+        layers[index].classList.add('selected');
+          for (var j = 0; j < index+1; j++) {
+            accordionLayers[j].style.display = "flex";
+          }
+          for (var j = index+1; j < layers.length; j++) {
+            accordionLayers[j].style.display = "none";
+          }
+      });
+    }
   }
 }
